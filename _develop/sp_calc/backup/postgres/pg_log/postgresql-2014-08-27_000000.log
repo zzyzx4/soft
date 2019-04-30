@@ -1,0 +1,6 @@
+2014-08-27 10:15:51 NOVST WARNING:  pgstat wait timeout
+2014-08-27 15:05:05 NOVST LOG:  received fast shutdown request
+2014-08-27 15:05:05 NOVST LOG:  aborting any active transactions
+2014-08-27 15:05:05 NOVST LOG:  autovacuum launcher shutting down
+2014-08-27 15:05:06 NOVST LOG:  shutting down
+2014-08-27 15:05:06 NOVST LOG:  database system is shut down

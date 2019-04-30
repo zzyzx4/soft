@@ -1,0 +1,4 @@
+2012-10-25 12:59:40 NOVST LOG:  database system was shut down at 2012-10-25 12:56:02 NOVST
+2012-10-25 12:59:40 NOVST FATAL:  the database system is starting up
+2012-10-25 12:59:40 NOVST LOG:  database system is ready to accept connections
+2012-10-25 12:59:41 NOVST LOG:  autovacuum launcher started

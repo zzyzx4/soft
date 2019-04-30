@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Схема отчет о зависимых - public</title>
+    <meta http-equiv="Content-Type" content="utf-8" />
+    <style type="text/css">
+      body {  font-family: verdana, helvetica, sans-serif; margin: 0px; padding: 0; }
+      h1 { font-weight: bold; font-size: 150%; border-bottom-style: solid; border-bottom-width: 2px; margin-top: 0px; padding-bottom: 0.5ex; color: #eeeeee; }
+      h2 { font-size: 130%; padding-bottom: 0.5ex; color: #009ACE; border-bottom-style: solid; border-bottom-width: 2px; }
+      h3 { font-size: 110%; padding-bottom: 0.5ex; color: #000000; }
+      th { text-align: left; background-color: #009ACE; color: #eeeeee; }
+      #ReportHeader { padding: 10px; background-color: #009ACE; color: #eeeeee; border-bottom-style: solid; border-bottom-width: 2px; border-color: #999999; }
+      #ReportHeader th { width: 25%; white-space: nowrap; vertical-align: top; }
+      #ReportHeader td { vertical-align: top; color: #eeeeee; }
+      #ReportNotes { padding: 10px; background-color: #eeeeee; font-size: 80%; border-bottom-style: solid; border-bottom-width: 2px; border-color: #999999; }
+      .ReportSQL { margin-bottom: 10px; padding: 10px; display: block; background-color: #eeeeee; font-family: monospace; }
+      #ReportDetails { margin-left: 10px; margin-right: 10px; margin-bottom: 10px; }
+      #ReportDetails td, th { font-size: 80%; margin-left: 2px; margin-right: 2px; }
+      #ReportDetails th { border-bottom-color: #777777; border-bottom-style: solid; border-bottom-width: 2px; }
+      .ReportDetailsOddDataRow { background-color: #dddddd; }
+      .ReportDetailsEvenDataRow { background-color: #eeeeee; }
+      .ReportTableHeaderCell { background-color: #dddddd; color: #009ACE; vertical-align: top; font-size: 80%; white-space: nowrap; }
+      .ReportTableValueCell { vertical-align: top; font-size: 80%; white-space: nowrap; }
+      .ReportTableInfo { font-size: 80%; font-style: italic; }
+      #ReportFooter { font-weight: bold; font-size: 80%; text-align: right; background-color: #009ACE; color: #eeeeee; margin-top: 10px; padding: 2px; border-bottom-style: solid; border-bottom-width: 2px; border-top-style: solid; border-top-width: 2px; border-color: #999999; }
+      #ReportFooter a { color: #ffffff; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div id="ReportHeader"><h1>Схема отчет о зависимых - public</h1><b>Общие : </b>18.06.2012 13:20:08<br /><b>Сервер: </b>PostgreSQL 9.0 (localhost:5432)<br /><b>База: </b>sp_calc<br /></div>
+    <div id="ReportDetails">
+      <h2>Схема зависит</h2>
+      <table>
+        <tr>
+          <th class="ReportTableHeaderCell" width="33.3333333333333%">Тип</th>
+          <th class="ReportTableHeaderCell" width="33.3333333333333%">Имя</th>
+          <th class="ReportTableHeaderCell" width="33.3333333333333%">Ограничение</th>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_group_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_group_permissions_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_message_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_permission_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_user_groups_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_user_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">auth_user_user_permissions_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_client_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_employee_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_materialprice_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_materialsubtype_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_materialsubtype_supplier_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_materialtype_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_order_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_ordertype_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_ordertype_work_type_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_pressdata_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_pressout_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_presstype_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_sizetype_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_supplier_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_workdata_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_workdata_material_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_workout_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_worktype_default_materials_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">calc_worktype_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">django_admin_log_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">django_content_type_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Sequence</td>
+          <td class="ReportTableValueCell">django_site_id_seq</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_group</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_group_permissions</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_message</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_permission</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_user</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_user_groups</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">auth_user_user_permissions</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_client</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_employee</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_materialprice</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_materialsubtype</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_materialsubtype_supplier</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_materialtype</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_order</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_ordertype</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_ordertype_work_type</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_pressdata</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_pressout</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_presstype</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_sizetype</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_supplier</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_workdata</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_workdata_material</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_workout</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_worktype</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">calc_worktype_default_materials</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">django_admin_log</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">django_content_type</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsOddDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">django_session</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+        <tr class="ReportDetailsEvenDataRow">
+          <td class="ReportTableValueCell">Table</td>
+          <td class="ReportTableValueCell">django_site</td>
+          <td class="ReportTableValueCell">normal</td>
+        </tr>
+      </table>
+      <br />
+    </div>
+    <div id="ReportFooter">
+Отчет создан  <a href="http://www.pgadmin.org/">pgAdmin III</a></div>
+    <br />
+  </body>
+</html>

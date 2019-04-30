@@ -1,0 +1,139 @@
+2014-09-28 23:12:46 NOVST LOG:  database system was shut down at 2014-09-28 23:12:42 NOVST
+2014-09-28 23:12:46 NOVST LOG:  database system is ready to accept connections
+2014-09-28 23:12:46 NOVST LOG:  autovacuum launcher started
+2014-09-28 23:23:46 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:23:56 NOVST ERROR:  column "dt" does not exist at character 22
+2014-09-28 23:23:56 NOVST QUERY:  SELECT bal_in+kredit-dt
+2014-09-28 23:23:56 NOVST CONTEXT:  PL/pgSQL function "tripdk_dt-add" line 28 at RAISE
+2014-09-28 23:23:56 NOVST STATEMENT:  SELECT * FROM public."tripdk_dt-add"('2014-09-28', 10)
+2014-09-28 23:25:27 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:25:30 NOVST ERROR:  null value in column "balance_out" violates not-null constraint
+2014-09-28 23:25:30 NOVST CONTEXT:  SQL statement "UPDATE calc_tripdk SET kt=kredit, balance_out=bal_in+kredit-dt_amount"
+	PL/pgSQL function "tripdk_dt-add" line 29 at SQL statement
+2014-09-28 23:25:30 NOVST STATEMENT:  SELECT * FROM public."tripdk_dt-add"('2014-09-28', 10)
+2014-09-28 23:26:13 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:26:17 NOVST ERROR:  null value in column "balance_out" violates not-null constraint
+2014-09-28 23:26:17 NOVST CONTEXT:  SQL statement "UPDATE calc_tripdk SET kt=kredit, balance_out=bal_in+kredit-dt_amount"
+	PL/pgSQL function "tripdk_dt-add" line 29 at SQL statement
+2014-09-28 23:26:17 NOVST STATEMENT:  SELECT * FROM public."tripdk_dt-add"('2014-09-28', 10)
+2014-09-28 23:27:27 NOVST ERROR:  syntax error at or near ";" at character 1163
+2014-09-28 23:27:27 NOVST STATEMENT:  CREATE OR REPLACE FUNCTION public."tripdk_dt-add" ( dt_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  tripdk_id NUMERIC;
+	  dest_id NUMERIC;
+	  r RECORD;
+	  r_refbook RECORD;
+	  kredit REAL;
+	  dist REAL;
+	  price REAL;
+	  bal_in REAL;
+	BEGIN
+	INSERT INTO calc_tripdk (a_date, balance_out, kt, dt)
+	                 VALUES (dt_date, 0, 0, dt_amount);
+	SELECT currval('calc_tripdk_id_seq') INTO tripdk_id;
+	
+	kredit=0; -- Водитель наездил
+	FOR r IN SELECT * FROM calc_triporder WHERE dk_id IS NULL AND a_date<=dt_date
+	LOOP
+	  SELECT distance INTO dist FROM calc_routerefbook WHERE id=r.id;
+	  FOR r_refbook IN SELECT * FROM calc_globalrefbook WHERE name='Бензин' ORDER BY a_date DESC 
+	  LOOP
+	    IF r_refbook.a_date<=r.a_date THEN price = r_refbook.num_value; EXIT; END IF;
+	  END LOOP;
+	  kredit=kredit+dist*price;
+	  UPDATE calc_triporder SET dk_id=tripdk_id WHERE id=r.id;
+	END LOOP;
+	SELECT balance_out INTO bal_in FROM calc_tripdk WHERE a_date<dt_date ORDER BY a_date DESC FETCH FIRST ROW ONLY; 
+	
+	IF bal_in IS NULL THEN bal_in=0;
+	RAISE NOTICE '(%)', bal_in;
+	UPDATE calc_tripdk SET kt=kredit, balance_out=bal_in+kredit-dt_amount;
+	
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER COST 100
+2014-09-28 23:27:32 NOVST ERROR:  syntax error at or near ";" at character 1163
+2014-09-28 23:27:32 NOVST STATEMENT:  CREATE OR REPLACE FUNCTION public."tripdk_dt-add" ( dt_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  tripdk_id NUMERIC;
+	  dest_id NUMERIC;
+	  r RECORD;
+	  r_refbook RECORD;
+	  kredit REAL;
+	  dist REAL;
+	  price REAL;
+	  bal_in REAL;
+	BEGIN
+	INSERT INTO calc_tripdk (a_date, balance_out, kt, dt)
+	                 VALUES (dt_date, 0, 0, dt_amount);
+	SELECT currval('calc_tripdk_id_seq') INTO tripdk_id;
+	
+	kredit=0; -- Водитель наездил
+	FOR r IN SELECT * FROM calc_triporder WHERE dk_id IS NULL AND a_date<=dt_date
+	LOOP
+	  SELECT distance INTO dist FROM calc_routerefbook WHERE id=r.id;
+	  FOR r_refbook IN SELECT * FROM calc_globalrefbook WHERE name='Бензин' ORDER BY a_date DESC 
+	  LOOP
+	    IF r_refbook.a_date<=r.a_date THEN price = r_refbook.num_value; EXIT; END IF;
+	  END LOOP;
+	  kredit=kredit+dist*price;
+	  UPDATE calc_triporder SET dk_id=tripdk_id WHERE id=r.id;
+	END LOOP;
+	SELECT balance_out INTO bal_in FROM calc_tripdk WHERE a_date<dt_date ORDER BY a_date DESC FETCH FIRST ROW ONLY; 
+	
+	IF bal_in IS NULL THEN bal_in=0;
+	RAISE NOTICE '(%)', bal_in;
+	UPDATE calc_tripdk SET kt=kredit, balance_out=bal_in+kredit-dt_amount;
+	
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER COST 100
+2014-09-28 23:27:34 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:27:43 NOVST ERROR:  syntax error at or near "END" at character 1055
+2014-09-28 23:27:43 NOVST STATEMENT:  CREATE OR REPLACE FUNCTION public."tripdk_dt-add" ( dt_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  tripdk_id NUMERIC;
+	  dest_id NUMERIC;
+	  r RECORD;
+	  r_refbook RECORD;
+	  kredit REAL;
+	  dist REAL;
+	  price REAL;
+	  bal_in REAL;
+	BEGIN
+	INSERT INTO calc_tripdk (a_date, balance_out, kt, dt)
+	                 VALUES (dt_date, 0, 0, dt_amount);
+	SELECT currval('calc_tripdk_id_seq') INTO tripdk_id;
+	
+	kredit=0; -- Водитель наездил
+	FOR r IN SELECT * FROM calc_triporder WHERE dk_id IS NULL AND a_date<=dt_date
+	LOOP
+	  SELECT distance INTO dist FROM calc_routerefbook WHERE id=r.id;
+	  FOR r_refbook IN SELECT * FROM calc_globalrefbook WHERE name='Бензин' ORDER BY a_date DESC 
+	  LOOP
+	    IF r_refbook.a_date<=r.a_date THEN price = r_refbook.num_value; EXIT; END IF;
+	  END LOOP;
+	  kredit=kredit+dist*price;
+	  UPDATE calc_triporder SET dk_id=tripdk_id WHERE id=r.id;
+	END LOOP;
+	SELECT balance_out INTO bal_in FROM calc_tripdk WHERE a_date<dt_date ORDER BY a_date DESC FETCH FIRST ROW ONLY; 
+	
+	IF bal_in IS NULL THEN bal_in=0 END IF;
+	RAISE NOTICE '(%)', bal_in;
+	UPDATE calc_tripdk SET kt=kredit, balance_out=bal_in+kredit-dt_amount;
+	
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER COST 100
+2014-09-28 23:27:45 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:27:50 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:27:54 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:28:12 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:30:02 NOVST ERROR:  update or delete on table "calc_tripdk" violates foreign key constraint "calc_triporder_dk_id_fkey" on table "calc_triporder"
+2014-09-28 23:30:02 NOVST DETAIL:  Key (id)=(14) is still referenced from table "calc_triporder".
+2014-09-28 23:30:02 NOVST STATEMENT:  DELETE FROM "public"."calc_tripdk" WHERE "id" = 14;
+2014-09-28 23:30:06 NOVST ERROR:  update or delete on table "calc_tripdk" violates foreign key constraint "calc_triporder_dk_id_fkey" on table "calc_triporder"
+2014-09-28 23:30:06 NOVST DETAIL:  Key (id)=(14) is still referenced from table "calc_triporder".
+2014-09-28 23:30:06 NOVST STATEMENT:  DELETE FROM "public"."calc_tripdk" WHERE "id" = 14;
+2014-09-28 23:30:19 NOVST ERROR:  insert or update on table "calc_triporder" violates foreign key constraint "calc_triporder_dk_id_fkey"
+2014-09-28 23:30:19 NOVST DETAIL:  Key (dk_id)=(0) is not present in table "calc_tripdk".
+2014-09-28 23:30:19 NOVST STATEMENT:  UPDATE "public"."calc_triporder" SET "dk_id"= 0 WHERE "id" = 1 AND "dk_id" = 14;
+2014-09-28 23:32:17 NOVST WARNING:  there is no transaction in progress
+2014-09-28 23:35:54 NOVST WARNING:  there is no transaction in progress

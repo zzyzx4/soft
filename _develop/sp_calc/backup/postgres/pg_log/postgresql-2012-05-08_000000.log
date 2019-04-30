@@ -1,0 +1,11 @@
+2012-05-08 11:46:32 NOVST WARNING:  pgstat wait timeout
+2012-05-08 11:48:23 NOVST WARNING:  worker took too long to start; cancelled
+2012-05-08 11:48:42 NOVST WARNING:  autovacuum worker started without a worker entry
+2012-05-08 11:49:33 NOVST WARNING:  pgstat wait timeout
+2012-05-08 11:50:44 NOVST WARNING:  pgstat wait timeout
+2012-05-08 11:50:51 NOVST WARNING:  pgstat wait timeout
+2012-05-08 15:48:27 NOVST LOG:  received fast shutdown request
+2012-05-08 15:48:27 NOVST LOG:  aborting any active transactions
+2012-05-08 15:48:27 NOVST LOG:  autovacuum launcher shutting down
+2012-05-08 15:48:28 NOVST LOG:  shutting down
+2012-05-08 15:48:30 NOVST LOG:  database system is shut down

@@ -1,0 +1,131 @@
+2013-03-19 16:44:56 NOVT WARNING:  pgstat wait timeout
+2013-03-19 16:45:45 NOVT WARNING:  pgstat wait timeout
+TopMemoryContext: 50680 total in 6 blocks; 6560 free (6 chunks); 44120 used
+  TOAST to main relid map: 8192 total in 1 blocks; 1800 free (0 chunks); 6392 used
+  TopTransactionContext: 8192 total in 1 blocks; 7792 free (2 chunks); 400 used
+  Statistics snapshot: 0 total in 0 blocks; 0 free (0 chunks); 0 used
+    Per-database function: 8192 total in 1 blocks; 4872 free (0 chunks); 3320 used
+    Per-database table: 24576 total in 2 blocks; 13040 free (5 chunks); 11536 used
+    Per-database function: 8192 total in 1 blocks; 4872 free (0 chunks); 3320 used
+    Per-database table: 24576 total in 2 blocks; 13040 free (5 chunks); 11536 used
+    Databases hash: 8192 total in 1 blocks; 3912 free (0 chunks); 4280 used
+  AV worker: 8192 total in 1 blocks; 3640 free (4 chunks); 4552 used
+    Autovacuum Portal: 8192 total in 1 blocks; 8176 free (0 chunks); 16 used
+  Operator class cache: 8192 total in 1 blocks; 3848 free (0 chunks); 4344 used
+  smgr relation table: 8192 total in 1 blocks; 2816 free (0 chunks); 5376 used
+  TransactionAbortContext: 32768 total in 1 blocks; 32752 free (0 chunks); 16 used
+  Portal hash: 8192 total in 1 blocks; 3912 free (0 chunks); 4280 used
+  PortalMemory: 0 total in 0 blocks; 0 free (0 chunks); 0 used
+  Relcache by OID: 8192 total in 1 blocks; 3376 free (0 chunks); 4816 used
+  CacheMemoryContext: 405552 total in 19 blocks; 34488 free (0 chunks); 371064 used
+    pg_db_role_setting_databaseid_rol_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_opclass_am_name_nsp_index: 1024 total in 1 blocks; 192 free (0 chunks); 832 used
+    pg_foreign_data_wrapper_name_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_enum_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_class_relname_nsp_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_foreign_server_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_statistic_relid_att_inh_index: 1024 total in 1 blocks; 192 free (0 chunks); 832 used
+    pg_cast_source_target_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_language_name_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_amop_fam_strat_index: 1024 total in 1 blocks; 88 free (0 chunks); 936 used
+    pg_index_indexrelid_index: 1024 total in 1 blocks; 304 free (0 chunks); 720 used
+    pg_ts_template_tmplname_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_ts_config_map_index: 1024 total in 1 blocks; 192 free (0 chunks); 832 used
+    pg_opclass_oid_index: 1024 total in 1 blocks; 304 free (0 chunks); 720 used
+    pg_foreign_data_wrapper_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_ts_dict_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_conversion_default_index: 1024 total in 1 blocks; 128 free (0 chunks); 896 used
+    pg_operator_oprname_l_r_n_index: 1024 total in 1 blocks; 128 free (0 chunks); 896 used
+    pg_trigger_tgrelid_tgname_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_enum_typid_label_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_ts_config_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_user_mapping_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_opfamily_am_name_nsp_index: 1024 total in 1 blocks; 192 free (0 chunks); 832 used
+    pg_type_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_aggregate_fnoid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_constraint_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_rewrite_rel_rulename_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_ts_parser_prsname_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_ts_config_cfgname_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_ts_parser_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_operator_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_namespace_nspname_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_ts_template_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_amop_opr_fam_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_default_acl_role_nsp_obj_index: 1024 total in 1 blocks; 192 free (0 chunks); 832 used
+    pg_ts_dict_dictname_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_type_typname_nsp_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_opfamily_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_class_oid_index: 1024 total in 1 blocks; 304 free (0 chunks); 720 used
+    pg_proc_proname_args_nsp_index: 1024 total in 1 blocks; 192 free (0 chunks); 832 used
+    pg_attribute_relid_attnum_index: 1024 total in 1 blocks; 240 free (0 chunks); 784 used
+    pg_proc_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_language_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_namespace_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_amproc_fam_proc_index: 1024 total in 1 blocks; 88 free (0 chunks); 936 used
+    pg_foreign_server_name_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_attribute_relid_attnam_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_conversion_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_user_mapping_user_server_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_conversion_name_nsp_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_authid_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_auth_members_member_role_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_tablespace_oid_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+    pg_database_datname_index: 1024 total in 1 blocks; 304 free (0 chunks); 720 used
+    pg_auth_members_role_member_index: 1024 total in 1 blocks; 280 free (0 chunks); 744 used
+    pg_database_oid_index: 1024 total in 1 blocks; 304 free (0 chunks); 720 used
+    pg_authid_rolname_index: 1024 total in 1 blocks; 344 free (0 chunks); 680 used
+  MdSmgr: 8192 total in 1 blocks; 8104 free (0 chunks); 88 used
+  LOCALLOCK hash: 8192 total in 1 blocks; 3912 free (0 chunks); 4280 used
+  Timezones: 79320 total in 2 blocks; 5968 free (0 chunks); 73352 used
+  ErrorContext: 8192 total in 1 blocks; 8176 free (0 chunks); 16 used
+2013-03-19 22:57:47 NOVT ERROR:  out of memory
+2013-03-19 22:57:47 NOVT DETAIL:  Failed on request of size 6600.
+2013-03-19 22:58:47 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:47 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:48 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:48 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:49 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:49 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:50 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:50 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:51 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:51 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:52 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:52 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:53 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:53 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:54 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:54 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:55 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:55 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:56 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:56 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:57 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:57 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-03-19 22:58:58 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-03-19 22:58:58 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	

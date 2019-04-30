@@ -1,0 +1,6 @@
+2014-05-27 21:10:02 NOVST ERROR:  null value in column "type_group_id" violates not-null constraint
+2014-05-27 21:10:02 NOVST STATEMENT:  INSERT INTO "calc_materialtype" ("title", "unit_of_meas", "one_for_order", "type_group_id") VALUES (E'Смазка', E'кг', false, NULL)
+2014-05-27 21:14:48 NOVST ERROR:  null value in column "type_group_id" violates not-null constraint
+2014-05-27 21:14:48 NOVST STATEMENT:  INSERT INTO "calc_materialtype" ("title", "unit_of_meas", "one_for_order", "type_group_id") VALUES (E'Смазка', E'кг', false, NULL)
+2014-05-27 21:16:50 NOVST ERROR:  null value in column "type_group_id" violates not-null constraint
+2014-05-27 21:16:50 NOVST STATEMENT:  INSERT INTO "calc_materialtype" ("title", "unit_of_meas", "one_for_order", "type_group_id") VALUES (E'Смазка', E'кг', false, NULL)

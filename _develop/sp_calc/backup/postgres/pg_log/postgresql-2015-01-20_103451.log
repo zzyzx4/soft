@@ -1,0 +1,6 @@
+2015-01-20 10:34:51 NOVT LOG:  database system was shut down at 2015-01-20 10:34:10 NOVT
+2015-01-20 10:34:51 NOVT LOG:  database system is ready to accept connections
+2015-01-20 10:34:51 NOVT FATAL:  the database system is starting up
+2015-01-20 10:34:51 NOVT LOG:  autovacuum launcher started
+2015-01-20 19:26:37 NOVT WARNING:  pgstat wait timeout
+2015-01-20 19:26:45 NOVT WARNING:  pgstat wait timeout

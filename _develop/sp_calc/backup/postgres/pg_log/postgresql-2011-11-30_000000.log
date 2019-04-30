@@ -1,0 +1,5 @@
+2011-11-30 12:50:17 NOVT LOG:  received fast shutdown request
+2011-11-30 12:50:18 NOVT LOG:  aborting any active transactions
+2011-11-30 12:50:20 NOVT LOG:  autovacuum launcher shutting down
+2011-11-30 12:50:23 NOVT LOG:  shutting down
+2011-11-30 12:50:28 NOVT LOG:  database system is shut down

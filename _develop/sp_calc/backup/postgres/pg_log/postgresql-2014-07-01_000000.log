@@ -1,0 +1,14 @@
+2014-07-01 09:56:49 NOVST WARNING:  pgstat wait timeout
+2014-07-01 15:39:35 NOVST WARNING:  pgstat wait timeout
+2014-07-01 15:39:42 NOVST WARNING:  pgstat wait timeout
+2014-07-01 17:22:54 NOVST WARNING:  pgstat wait timeout
+2014-07-01 21:35:56 NOVST WARNING:  pgstat wait timeout
+2014-07-01 21:49:58 NOVST LOG:  server process (PID 17300) was terminated by exception 0xC000012D
+2014-07-01 21:49:58 NOVST HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2014-07-01 21:49:58 NOVST LOG:  terminating any other active server processes
+2014-07-01 21:50:06 NOVST WARNING:  terminating connection because of crash of another server process
+2014-07-01 21:50:06 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2014-07-01 21:50:06 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2014-07-01 21:50:15 NOVST LOG:  all server processes terminated; reinitializing
+2014-07-01 21:50:21 NOVST FATAL:  could not create shared memory segment: 1455
+2014-07-01 21:50:21 NOVST DETAIL:  Failed system call was CreateFileMapping(size=37142528, name=Global/PostgreSQL:C:/workspace/Develop/projects/db/postgres).

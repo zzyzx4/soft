@@ -1,0 +1,6 @@
+2013-01-30 01:02:12 NOVT ERROR:  syntax error at or near "," at character 75
+2013-01-30 01:02:12 NOVT STATEMENT:  INSERT INTO course (timestamp, currency_id, buy_rate, sell_rate) VALUES (?, ?, ?, ?)
+2013-01-30 11:50:06 NOVT WARNING:  pgstat wait timeout
+2013-01-30 11:52:04 NOVT WARNING:  pgstat wait timeout
+2013-01-30 11:52:27 NOVT WARNING:  pgstat wait timeout
+2013-01-30 11:53:56 NOVT WARNING:  pgstat wait timeout

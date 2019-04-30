@@ -1,0 +1,84 @@
+2012-12-02 18:10:26 NOVT ERROR:  relation "calc_emploee" does not exist at character 33
+2012-12-02 18:10:26 NOVT STATEMENT:  select * from calc_workout
+	join calc_emploee on calc_emploee.id=calc_workout.emploee_id
+2012-12-02 18:18:40 NOVT ERROR:  syntax error at or near "join" at character 64
+2012-12-02 18:18:40 NOVT STATEMENT:  select first_name, last_name, calc_workdata.
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+2012-12-02 18:24:02 NOVT ERROR:  date/time field value out of range: "31.12.2012" at character 397
+2012-12-02 18:24:02 NOVT HINT:  Perhaps you need a different "datestyle" setting.
+2012-12-02 18:24:02 NOVT STATEMENT:  select first_name, last_name, calc_worktype.title
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+	join calc_order on calc_order.id=calc_workdata.order_id
+	where
+	  calc_order.start_date >='01.01.2012'
+	  and
+	  calc_order.start_date <='31.12.2012'
+2012-12-02 18:24:22 NOVT ERROR:  column "01.01.2012" does not exist at character 352
+2012-12-02 18:24:22 NOVT STATEMENT:  select first_name, last_name, calc_worktype.title
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+	join calc_order on calc_order.id=calc_workdata.order_id
+	where
+	  calc_order.start_date >="01.01.2012"
+	  and
+	  calc_order.start_date <="31.12.2012"
+2012-12-02 18:24:42 NOVT ERROR:  column "31.12.2012" does not exist at character 399
+2012-12-02 18:24:42 NOVT STATEMENT:  select first_name, last_name, calc_worktype.title
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+	join calc_order on calc_order.id=calc_workdata.order_id
+	where
+	  calc_order.start_date >= '01.01.2012'
+	  and
+	  calc_order.start_date <= "31.12.2012"
+2012-12-02 18:24:48 NOVT ERROR:  date/time field value out of range: "31.12.2012" at character 399
+2012-12-02 18:24:48 NOVT HINT:  Perhaps you need a different "datestyle" setting.
+2012-12-02 18:24:48 NOVT STATEMENT:  select first_name, last_name, calc_worktype.title
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+	join calc_order on calc_order.id=calc_workdata.order_id
+	where
+	  calc_order.start_date >= '01.01.2012'
+	  and
+	  calc_order.start_date <= '31.12.2012'
+2012-12-02 18:25:49 NOVT ERROR:  date/time field value out of range: "31-12-2012" at character 422
+2012-12-02 18:25:49 NOVT HINT:  Perhaps you need a different "datestyle" setting.
+2012-12-02 18:25:49 NOVT STATEMENT:  select first_name, last_name, calc_worktype.title, calc_order.start_date
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+	join calc_order on calc_order.id=calc_workdata.order_id
+	where
+	  calc_order.start_date >= '01-01-2012'
+	  and
+	  calc_order.start_date <= '31-12-2012'
+2012-12-02 18:54:41 NOVT ERROR:  syntax error at or near "'Кол-во'" at character 66
+2012-12-02 18:54:41 NOVT STATEMENT:  select first_name, last_name, calc_worktype.title, SUM(count) as 'Кол-во', SUM(duration) 
+	from calc_workout
+	join calc_employee on calc_employee.id=calc_workout.employee_id
+	join calc_workdata on calc_workdata.id=calc_workout.work_data_id
+	join calc_worktype on calc_worktype.id=calc_workdata.work_type_id
+	join calc_order on calc_order.id=calc_workdata.order_id
+	where
+	  (calc_order.start_date >= '2012-01-01'
+	  and
+	  calc_order.start_date <= '2012-12-01')
+	  or
+	  (calc_order.end_date >= '2012-01-01'
+	  and
+	  calc_order.end_date >= '2012-12-01')
+	GROUP BY first_name, last_name, calc_worktype.title
+	ORDER BY calc_worktype.title

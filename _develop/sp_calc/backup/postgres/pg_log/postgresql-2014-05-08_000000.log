@@ -1,0 +1,2 @@
+2014-05-08 00:36:41 NOVST ERROR:  column calc_order.ver does not exist at character 49
+2014-05-08 00:36:41 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."ver", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order"

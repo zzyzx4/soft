@@ -1,0 +1,11 @@
+2011-10-02 17:25:11 NOVST FATAL:  the database system is starting up
+2011-10-02 17:25:11 NOVST LOG:  database system was interrupted; last known up at 2011-09-24 00:17:14 NOVST
+2011-10-02 17:25:12 NOVST FATAL:  the database system is starting up
+2011-10-02 17:25:12 NOVST LOG:  database system was not properly shut down; automatic recovery in progress
+2011-10-02 17:25:13 NOVST LOG:  consistent recovery state reached at 0/16F5778
+2011-10-02 17:25:13 NOVST LOG:  record with zero length at 0/16F5778
+2011-10-02 17:25:13 NOVST LOG:  redo is not required
+2011-10-02 17:25:14 NOVST FATAL:  the database system is starting up
+2011-10-02 17:25:15 NOVST FATAL:  the database system is starting up
+2011-10-02 17:25:16 NOVST LOG:  database system is ready to accept connections
+2011-10-02 17:25:16 NOVST LOG:  autovacuum launcher started

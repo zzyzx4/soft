@@ -1,0 +1,4 @@
+2014-05-26 03:14:31 NOVST ERROR:  cannot drop table calc_supplier because other objects depend on it
+2014-05-26 03:14:31 NOVST DETAIL:  constraint calc_materialprice_supplier_id_fkey on table calc_materialprice depends on table calc_supplier
+2014-05-26 03:14:31 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-26 03:14:31 NOVST STATEMENT:  DROP TABLE public.calc_supplier

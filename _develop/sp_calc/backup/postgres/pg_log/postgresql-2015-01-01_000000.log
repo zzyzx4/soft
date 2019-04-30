@@ -1,0 +1,9 @@
+2015-01-04 17:30:05 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:08:13 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:09:07 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:10:42 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:14:12 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:14:17 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:15:18 NOVT WARNING:  worker took too long to start; cancelled
+2015-01-04 23:15:23 NOVT WARNING:  pgstat wait timeout
+2015-01-04 23:15:27 NOVT WARNING:  autovacuum worker started without a worker entry

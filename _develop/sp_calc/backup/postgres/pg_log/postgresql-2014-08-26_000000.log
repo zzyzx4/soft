@@ -1,0 +1,6 @@
+2014-08-26 11:55:38 NOVST WARNING:  pgstat wait timeout
+2014-08-26 11:57:18 NOVST WARNING:  pgstat wait timeout
+2014-08-26 11:57:23 NOVST WARNING:  pgstat wait timeout
+2014-08-26 13:17:07 NOVST WARNING:  worker took too long to start; cancelled
+2014-08-26 13:17:13 NOVST WARNING:  pgstat wait timeout
+2014-08-26 13:17:18 NOVST WARNING:  autovacuum worker started without a worker entry

@@ -1,0 +1,38 @@
+2014-11-03 00:44:58 NOVT WARNING:  pgstat wait timeout
+2014-11-03 00:46:23 NOVT WARNING:  pgstat wait timeout
+2014-11-03 00:46:43 NOVT WARNING:  pgstat wait timeout
+2014-11-03 01:26:23 NOVT WARNING:  pgstat wait timeout
+2014-11-03 01:26:24 NOVT WARNING:  pgstat wait timeout
+2014-11-03 09:10:34 NOVT WARNING:  pgstat wait timeout
+2014-11-03 09:10:41 NOVT WARNING:  pgstat wait timeout
+2014-11-03 09:11:02 NOVT WARNING:  pgstat wait timeout
+2014-11-03 09:11:07 NOVT WARNING:  pgstat wait timeout
+2014-11-03 11:00:20 NOVT WARNING:  pgstat wait timeout
+2014-11-03 11:36:29 NOVT ERROR:  column calc_order.order_datetime does not exist at character 83
+2014-11-03 11:36:29 NOVT STATEMENT:  SELECT "calc_order"."id", "calc_order"."client_id", "calc_order"."order_type_id", "calc_order"."order_datetime", "calc_order"."title", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."size_type_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price", "calc_order"."given_price" FROM "calc_order" ORDER BY "calc_order"."id" DESC
+2014-11-03 11:36:29 NOVT ERROR:  column calc_order.order_datetime does not exist at character 83
+2014-11-03 11:36:29 NOVT STATEMENT:  SELECT "calc_order"."id", "calc_order"."client_id", "calc_order"."order_type_id", "calc_order"."order_datetime", "calc_order"."title", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."size_type_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price", "calc_order"."given_price" FROM "calc_order" ORDER BY "calc_order"."id" DESC LIMIT 21
+2014-11-03 11:36:29 NOVT ERROR:  column calc_order.order_datetime does not exist at character 83
+2014-11-03 11:36:29 NOVT STATEMENT:  SELECT "calc_order"."id", "calc_order"."client_id", "calc_order"."order_type_id", "calc_order"."order_datetime", "calc_order"."title", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."size_type_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price", "calc_order"."given_price" FROM "calc_order" ORDER BY "calc_order"."id" DESC LIMIT 21
+2014-11-03 11:36:29 NOVT ERROR:  column calc_order.order_datetime does not exist at character 83
+2014-11-03 11:36:29 NOVT STATEMENT:  SELECT "calc_order"."id", "calc_order"."client_id", "calc_order"."order_type_id", "calc_order"."order_datetime", "calc_order"."title", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."size_type_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price", "calc_order"."given_price" FROM "calc_order" ORDER BY "calc_order"."id" DESC LIMIT 21
+2014-11-03 12:36:56 NOVT WARNING:  pgstat wait timeout
+2014-11-03 18:02:22 NOVT WARNING:  worker took too long to start; cancelled
+2014-11-03 18:02:55 NOVT WARNING:  autovacuum worker started without a worker entry
+2014-11-03 18:04:24 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:17:55 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:18:00 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:21:55 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:31:23 NOVT WARNING:  worker took too long to start; cancelled
+2014-11-03 19:31:49 NOVT WARNING:  autovacuum worker started without a worker entry
+2014-11-03 19:39:28 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:39:45 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:39:58 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:40:13 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:40:28 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:40:39 NOVT WARNING:  pgstat wait timeout
+2014-11-03 19:40:58 NOVT WARNING:  pgstat wait timeout
+2014-11-03 20:05:58 NOVT WARNING:  pgstat wait timeout
+2014-11-03 20:06:04 NOVT WARNING:  pgstat wait timeout
+2014-11-03 20:06:28 NOVT WARNING:  pgstat wait timeout
+2014-11-03 20:07:28 NOVT WARNING:  pgstat wait timeout

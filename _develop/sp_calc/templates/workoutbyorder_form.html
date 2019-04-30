@@ -1,0 +1,13 @@
+{% extends "dojango/base.html" %}
+
+{# setting the <title> attribute #}
+{% block dojango_page_title %}My first dojo page{% endblock %}
+{% block dojango_header_extra %}
+{% endblock %}
+{% block dojango_content %}
+      Тестовая страница
+        {% for workdata in object_list %}
+            <li>{{ workdata.order.title }}</li>
+        {% endfor %}
+
+{% endblock %}

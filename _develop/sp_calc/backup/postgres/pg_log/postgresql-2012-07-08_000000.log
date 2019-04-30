@@ -1,0 +1,83 @@
+2012-07-08 12:44:36 NOVST ERROR:  column calc_worktype.item_charge does not exist at character 55
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  column calc_worktype.item_charge does not exist at character 55
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" LIMIT 21
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:44:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:44:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:47:38 NOVST ERROR:  column "item_charge" contains null values
+2012-07-08 12:47:38 NOVST STATEMENT:  ALTER TABLE calc_worktype
+	   ADD COLUMN item_charge double precision NOT NULL;
+	
+2012-07-08 12:48:22 NOVST ERROR:  column "item_charge" contains null values
+2012-07-08 12:48:22 NOVST STATEMENT:  ALTER TABLE calc_worktype
+	   ADD COLUMN item_charge double precision NOT NULL;
+	
+2012-07-08 12:50:36 NOVST ERROR:  column calc_worktype.param_desc does not exist at character 120
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  column calc_worktype.param_desc does not exist at character 120
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" LIMIT 21
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:50:36 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:50:36 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:53:40 NOVST ERROR:  column calc_worktype.param_amount does not exist at character 150
+2012-07-08 12:53:40 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:40 NOVST ERROR:  column calc_worktype.param_amount does not exist at character 150
+2012-07-08 12:53:40 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3 
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" LIMIT 21
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 12:53:41 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-07-08 12:53:41 NOVST STATEMENT:  SELECT "calc_worktype"."id", "calc_worktype"."title", "calc_worktype"."item_charge", "calc_worktype"."fitting_charge", "calc_worktype"."param_desc", "calc_worktype"."param_amount" FROM "calc_worktype" WHERE "calc_worktype"."id" = 3  LIMIT 21
+2012-07-08 14:39:41 NOVST WARNING:  pgstat wait timeout
+2012-07-08 17:37:58 NOVST ERROR:  column calc_ordertype.page_amount does not exist at character 89
+2012-07-08 17:37:58 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype"

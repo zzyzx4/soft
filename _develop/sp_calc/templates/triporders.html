@@ -1,0 +1,82 @@
+<!--
+   Triporders.html
+   
+   Copyright 2014 user <user@Z830>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+{% extends "dojango/base.html" %}
+{% block dojango_post_dj_config %}
+	<script>
+		djConfig.parseOnLoad = true;
+	</script>
+{% endblock %}
+
+{# setting the <title> attribute #}
+{% block dojango_page_title %}Расходы по бензину{% endblock %}
+{% block dojango_header_extra %} {% endblock %}
+{% block dojango_content %}
+      
+
+<table>
+{% for triporder in object_list %}
+<tr>
+<td>
+{% ifchanged triporder.a_date %}
+{{ triporder.a_date }}
+{% endifchanged %}
+</td><td>{{ triporder.destination }}</td><td>{{ triporder.destination.distance }}</td>
+</tr>
+{% endfor %}
+<tr>
+<form action="/triporders/" method="post">
+    <td><input id="date" dojoType="dijit.form.DateTextBox"></td>
+    <td><select id="tripSelect" name="tripSelect" dojoType="dijit.form.ComboBox"
+            data-dojo-props="
+                value: '',
+                placeHolder: 'Укажите маршрут'">
+        </select></td>
+    <td></td>
+    <tr>
+        <td></td><td></td>
+        <td><button dojoType="dijit.form.Button" type="submit">Добавить</button></td>
+    </tr>
+</tr>
+</form>
+
+</table>
+
+
+<script type="text/javascript">
+    //dojo.require("dijit.InlineEditBox");
+    //dojo.require("dijit.form.FilteringSelect");
+
+    dojo.require("dijit/form/Button");
+    dojo.require("dijit/form/DateTextBox");
+    dojo.require("dijit/form/ComboBox");                
+    // scan page for widgets and instantiate them
+    // dojo.require("dojo.parser");	
+
+    require(["dojo/parser", "dojo/domReady!"]);
+    
+    
+</script>
+
+{% endblock %}
+

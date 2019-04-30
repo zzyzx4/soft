@@ -1,0 +1,10 @@
+2012-08-13 11:15:55 NOVST LOG:  database system was shut down at 2012-08-13 11:11:44 NOVST
+2012-08-13 11:15:55 NOVST LOG:  database system is ready to accept connections
+2012-08-13 11:15:55 NOVST LOG:  autovacuum launcher started
+2012-08-13 11:15:55 NOVST FATAL:  the database system is starting up
+2012-08-13 19:38:46 NOVST WARNING:  pgstat wait timeout
+2012-08-13 21:11:04 NOVST LOG:  received fast shutdown request
+2012-08-13 21:11:04 NOVST LOG:  aborting any active transactions
+2012-08-13 21:11:04 NOVST LOG:  autovacuum launcher shutting down
+2012-08-13 21:11:11 NOVST LOG:  shutting down
+2012-08-13 21:11:21 NOVST LOG:  database system is shut down

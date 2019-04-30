@@ -1,0 +1,7 @@
+2012-07-03 12:05:49 NOVST LOG:  database system was shut down at 2012-07-03 11:21:17 NOVST
+2012-07-03 12:05:49 NOVST FATAL:  the database system is starting up
+2012-07-03 12:05:50 NOVST FATAL:  the database system is starting up
+2012-07-03 12:05:50 NOVST LOG:  database system is ready to accept connections
+2012-07-03 12:05:51 NOVST LOG:  autovacuum launcher started
+2012-07-03 12:53:58 NOVST WARNING:  pgstat wait timeout
+2012-07-03 12:59:33 NOVST WARNING:  pgstat wait timeout

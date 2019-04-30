@@ -1,0 +1,30 @@
+2014-09-24 17:17:59 NOVST WARNING:  worker took too long to start; cancelled
+2014-09-24 17:18:23 NOVST WARNING:  autovacuum worker started without a worker entry
+2014-09-24 17:33:14 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:35:34 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:35:41 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:35:55 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:36:03 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:36:15 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:36:23 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:36:38 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:36:45 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:36:55 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:37:03 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:37:15 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:37:23 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:37:35 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:39:36 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:39:55 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:40:03 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:42:16 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:42:24 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:42:43 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:44:17 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:44:24 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:47:57 NOVST WARNING:  pgstat wait timeout
+2014-09-24 17:48:05 NOVST WARNING:  pgstat wait timeout
+2014-09-24 18:06:23 NOVST WARNING:  pgstat wait timeout
+2014-09-24 19:38:30 NOVST WARNING:  pgstat wait timeout
+2014-09-24 19:39:50 NOVST WARNING:  pgstat wait timeout
+2014-09-24 20:09:41 NOVST WARNING:  pgstat wait timeout

@@ -1,0 +1,4 @@
+2012-01-25 16:05:32 NOVT LOG:  database system was shut down at 2012-01-25 16:01:37 NOVT
+2012-01-25 16:05:32 NOVT FATAL:  the database system is starting up
+2012-01-25 16:05:33 NOVT LOG:  database system is ready to accept connections
+2012-01-25 16:05:33 NOVT LOG:  autovacuum launcher started

@@ -1,0 +1,7 @@
+2014-01-03 11:21:37 NOVT LOG:  database system was interrupted; last known up at 2013-10-29 22:12:58 NOVT
+2014-01-03 11:21:37 NOVT LOG:  database system was not properly shut down; automatic recovery in progress
+2014-01-03 11:21:37 NOVT LOG:  consistent recovery state reached at 0/3625D98
+2014-01-03 11:21:37 NOVT LOG:  record with zero length at 0/3625D98
+2014-01-03 11:21:37 NOVT LOG:  redo is not required
+2014-01-03 11:21:37 NOVT LOG:  database system is ready to accept connections
+2014-01-03 11:21:37 NOVT LOG:  autovacuum launcher started

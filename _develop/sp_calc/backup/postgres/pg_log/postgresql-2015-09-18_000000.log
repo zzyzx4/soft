@@ -1,0 +1,87 @@
+2015-09-18 14:35:13 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:13 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype"
+2015-09-18 14:35:13 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:13 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:35:13 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:13 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:35:13 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:13 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:35:17 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:17 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype"
+2015-09-18 14:35:17 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:17 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:35:17 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:17 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:35:17 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:35:17 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:58:29 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:58:29 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype"
+2015-09-18 14:58:29 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:58:29 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:58:29 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:58:29 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 14:58:29 NOVST ERROR:  column calc_ordertype.singlesheet does not exist at character 89
+2015-09-18 14:58:29 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."singlesheet" FROM "calc_ordertype" LIMIT 21
+2015-09-18 15:03:16 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:03:16 NOVST DETAIL:  constraint calc_order_order_type_id_fkey on table calc_order depends on table calc_ordertype
+	constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+	constraint calc_ordertype_size_type_ordertype_id_fkey on table calc_ordertype_size_type depends on table calc_ordertype
+2015-09-18 15:03:16 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:03:16 NOVST STATEMENT:  DROP TABLE public.calc_ordertype
+2015-09-18 15:03:58 NOVST ERROR:  cannot drop table calc_order because other objects depend on it
+2015-09-18 15:03:58 NOVST DETAIL:  constraint calc_workdata_order_id_fkey on table calc_workdata depends on table calc_order
+	constraint calc_pressdata_order_id_fkey on table calc_pressdata depends on table calc_order
+	constraint calc_pricecutoff_order_id_fkey on table calc_pricecutoff depends on table calc_order
+2015-09-18 15:03:58 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:03:58 NOVST STATEMENT:  DROP TABLE public.calc_order
+2015-09-18 15:04:42 NOVST ERROR:  cannot drop table calc_order because other objects depend on it
+2015-09-18 15:04:42 NOVST DETAIL:  constraint calc_workdata_order_id_fkey on table calc_workdata depends on table calc_order
+	constraint calc_pressdata_order_id_fkey on table calc_pressdata depends on table calc_order
+	constraint calc_pricecutoff_order_id_fkey on table calc_pricecutoff depends on table calc_order
+2015-09-18 15:04:42 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:04:42 NOVST STATEMENT:  DROP TABLE public.calc_order
+2015-09-18 15:04:53 NOVST ERROR:  cannot drop table calc_workdata because other objects depend on it
+2015-09-18 15:04:53 NOVST DETAIL:  constraint calc_workout_work_data_id_fkey on table calc_workout depends on table calc_workdata
+	constraint workdata_id_refs_id_73e33c6e on table calc_workdata_material depends on table calc_workdata
+2015-09-18 15:04:53 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:04:53 NOVST STATEMENT:  DROP TABLE public.calc_workdata
+2015-09-18 15:05:34 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:05:34 NOVST DETAIL:  constraint calc_order_order_type_id_fkey on table calc_order depends on table calc_ordertype
+	constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+	constraint calc_ordertype_size_type_ordertype_id_fkey on table calc_ordertype_size_type depends on table calc_ordertype
+2015-09-18 15:05:34 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:05:34 NOVST STATEMENT:  DROP TABLE public.calc_ordertype
+2015-09-18 15:05:57 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:05:57 NOVST DETAIL:  constraint calc_order_order_type_id_fkey on table calc_order depends on table calc_ordertype
+	constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+2015-09-18 15:05:57 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:05:57 NOVST STATEMENT:  DROP TABLE public.calc_ordertype
+2015-09-18 15:06:19 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:06:19 NOVST DETAIL:  constraint calc_order_order_type_id_fkey on table calc_order depends on table calc_ordertype
+	constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+2015-09-18 15:06:19 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:06:19 NOVST STATEMENT:  DROP TABLE public.calc_ordertype
+2015-09-18 15:06:28 NOVST ERROR:  cannot drop table calc_order because other objects depend on it
+2015-09-18 15:06:28 NOVST DETAIL:  constraint calc_workdata_order_id_fkey on table calc_workdata depends on table calc_order
+	constraint calc_pressdata_order_id_fkey on table calc_pressdata depends on table calc_order
+	constraint calc_pricecutoff_order_id_fkey on table calc_pricecutoff depends on table calc_order
+2015-09-18 15:06:28 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:06:28 NOVST STATEMENT:  DROP TABLE public.calc_order
+2015-09-18 15:07:10 NOVST ERROR:  cannot drop table calc_pricecutoff because other objects depend on it
+2015-09-18 15:07:10 NOVST DETAIL:  constraint pricecutoff_id_refs_id_4f4671de on table calc_pricecutoff_material_price depends on table calc_pricecutoff
+2015-09-18 15:07:10 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:07:10 NOVST STATEMENT:  DROP TABLE public.calc_pricecutoff
+2015-09-18 15:13:24 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:13:24 NOVST DETAIL:  constraint calc_order_order_type_id_fkey on table calc_order depends on table calc_ordertype
+	constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+2015-09-18 15:13:24 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:13:24 NOVST STATEMENT:  DROP TABLE public.calc_ordertype
+2015-09-18 15:13:48 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:13:48 NOVST DETAIL:  constraint calc_order_order_type_id_fkey on table calc_order depends on table calc_ordertype
+	constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+2015-09-18 15:13:48 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:13:48 NOVST STATEMENT:  DROP TABLE public.calc_ordertype
+2015-09-18 15:14:48 NOVST ERROR:  cannot drop table calc_ordertype because other objects depend on it
+2015-09-18 15:14:48 NOVST DETAIL:  constraint ordertype_id_refs_id_389aca62 on table calc_ordertype_work_type depends on table calc_ordertype
+2015-09-18 15:14:48 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-18 15:14:48 NOVST STATEMENT:  DROP TABLE public.calc_ordertype

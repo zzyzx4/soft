@@ -1,0 +1,5 @@
+2014-02-17 11:43:06 NOVT LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2014-02-17 11:43:06 NOVT LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2014-02-17 11:43:06 NOVT LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2014-02-17 11:43:06 NOVT LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2014-02-17 11:43:11 NOVT WARNING:  pgstat wait timeout

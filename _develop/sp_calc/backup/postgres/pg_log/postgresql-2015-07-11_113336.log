@@ -1,0 +1,6 @@
+2015-07-11 11:33:37 NOVST LOG:  database system was shut down at 2015-07-11 11:32:55 NOVST
+2015-07-11 11:33:37 NOVST FATAL:  the database system is starting up
+2015-07-11 11:33:37 NOVST LOG:  database system is ready to accept connections
+2015-07-11 11:33:37 NOVST LOG:  autovacuum launcher started
+2015-07-11 11:42:37 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-07-11 11:42:37 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device

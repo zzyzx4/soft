@@ -1,0 +1,50 @@
+2013-08-12 14:07:37 NOVST ERROR:  column calc_materialprice.material_id does not exist at character 35
+2013-08-12 14:07:37 NOVST STATEMENT:  SELECT "calc_materialprice"."id", "calc_materialprice"."material_id", "calc_materialprice"."supplier_id", "calc_materialprice"."start_date", "calc_materialprice"."end_date", "calc_materialprice"."price" FROM "calc_materialprice" ORDER BY "calc_materialprice"."id" DESC
+2013-08-12 14:07:38 NOVST ERROR:  column calc_materialprice.material_id does not exist at character 35
+2013-08-12 14:07:38 NOVST STATEMENT:  SELECT "calc_materialprice"."id", "calc_materialprice"."material_id", "calc_materialprice"."supplier_id", "calc_materialprice"."start_date", "calc_materialprice"."end_date", "calc_materialprice"."price" FROM "calc_materialprice" ORDER BY "calc_materialprice"."id" DESC LIMIT 21
+2013-08-12 14:07:38 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2013-08-12 14:07:38 NOVST STATEMENT:  SELECT "calc_materialprice"."id", "calc_materialprice"."material_id", "calc_materialprice"."supplier_id", "calc_materialprice"."start_date", "calc_materialprice"."end_date", "calc_materialprice"."price" FROM "calc_materialprice" ORDER BY "calc_materialprice"."id" DESC LIMIT 21
+2013-08-12 14:08:48 NOVST ERROR:  column calc_materialprice.material_id does not exist at character 35
+2013-08-12 14:08:48 NOVST STATEMENT:  SELECT "calc_materialprice"."id", "calc_materialprice"."material_id", "calc_materialprice"."supplier_id", "calc_materialprice"."start_date", "calc_materialprice"."end_date", "calc_materialprice"."price" FROM "calc_materialprice" ORDER BY "calc_materialprice"."id" DESC
+2013-08-12 14:08:48 NOVST ERROR:  column calc_materialprice.material_id does not exist at character 35
+2013-08-12 14:08:48 NOVST STATEMENT:  SELECT "calc_materialprice"."id", "calc_materialprice"."material_id", "calc_materialprice"."supplier_id", "calc_materialprice"."start_date", "calc_materialprice"."end_date", "calc_materialprice"."price" FROM "calc_materialprice" ORDER BY "calc_materialprice"."id" DESC LIMIT 21
+2013-08-12 14:08:48 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2013-08-12 14:08:48 NOVST STATEMENT:  SELECT "calc_materialprice"."id", "calc_materialprice"."material_id", "calc_materialprice"."supplier_id", "calc_materialprice"."start_date", "calc_materialprice"."end_date", "calc_materialprice"."price" FROM "calc_materialprice" ORDER BY "calc_materialprice"."id" DESC LIMIT 21
+2013-08-12 18:07:03 NOVST ERROR:  cannot drop table calc_presstype because other objects depend on it
+2013-08-12 18:07:03 NOVST DETAIL:  constraint calc_pressdata_press_type_id_fkey on table calc_pressdata depends on table calc_presstype
+2013-08-12 18:07:03 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 18:07:03 NOVST STATEMENT:  DROP TABLE public.calc_presstype
+2013-08-12 18:30:45 NOVST ERROR:  cannot drop table calc_pressdata because other objects depend on it
+2013-08-12 18:30:45 NOVST DETAIL:  constraint calc_pressout_press_data_id_fkey on table calc_pressout depends on table calc_pressdata
+2013-08-12 18:30:45 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 18:30:45 NOVST STATEMENT:  DROP TABLE public.calc_pressdata
+2013-08-12 18:40:48 NOVST ERROR:  column "fitting_paper" of relation "calc_presstype" does not exist at character 94
+2013-08-12 18:40:48 NOVST STATEMENT:  INSERT INTO "calc_presstype" ("title", "material_type_id", "fitting_charge", "fitting_time", "fitting_paper", "press_charge", "press_speed", "plate_id", "colorside_amount") VALUES (E'Печать на меловке 4+4', 2, 500.0, 0.25, 30, 0.5, 6500, 3, 8.0)
+2013-08-12 18:41:27 NOVST ERROR:  cannot drop table calc_presstype because other objects depend on it
+2013-08-12 18:41:27 NOVST DETAIL:  constraint calc_pressdata_press_type_id_fkey on table calc_pressdata depends on table calc_presstype
+2013-08-12 18:41:27 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 18:41:27 NOVST STATEMENT:  DROP TABLE public.calc_presstype
+2013-08-12 18:41:43 NOVST ERROR:  cannot drop table calc_presstype because other objects depend on it
+2013-08-12 18:41:43 NOVST DETAIL:  constraint calc_pressdata_press_type_id_fkey on table calc_pressdata depends on table calc_presstype
+2013-08-12 18:41:43 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 18:41:43 NOVST STATEMENT:  DROP TABLE public.calc_presstype
+2013-08-12 18:42:13 NOVST ERROR:  cannot drop table calc_pressdata because other objects depend on it
+2013-08-12 18:42:13 NOVST DETAIL:  constraint calc_pressout_press_data_id_fkey on table calc_pressout depends on table calc_pressdata
+2013-08-12 18:42:13 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 18:42:13 NOVST STATEMENT:  DROP TABLE public.calc_pressdata
+2013-08-12 21:23:57 NOVST ERROR:  column "amount_on_ps" contains null values
+2013-08-12 21:23:57 NOVST STATEMENT:  ALTER TABLE calc_sizetype
+	   ADD COLUMN amount_on_ps integer NOT NULL;
+	
+2013-08-12 23:05:44 NOVST ERROR:  cannot drop table calc_materialsubtype because other objects depend on it
+2013-08-12 23:05:44 NOVST DETAIL:  constraint materialsubtype_id_refs_id_62043281 on table calc_materialsubtype_supplier depends on table calc_materialsubtype
+2013-08-12 23:05:44 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 23:05:44 NOVST STATEMENT:  DROP TABLE public.calc_materialsubtype
+2013-08-12 23:08:32 NOVST ERROR:  cannot drop table calc_presstype because other objects depend on it
+2013-08-12 23:08:32 NOVST DETAIL:  constraint calc_pressdata_press_type_id_fkey on table calc_pressdata depends on table calc_presstype
+2013-08-12 23:08:32 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 23:08:32 NOVST STATEMENT:  DROP TABLE public.calc_presstype
+2013-08-12 23:08:46 NOVST ERROR:  cannot drop table calc_pressdata because other objects depend on it
+2013-08-12 23:08:46 NOVST DETAIL:  constraint calc_pressout_press_data_id_fkey on table calc_pressout depends on table calc_pressdata
+2013-08-12 23:08:46 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-12 23:08:46 NOVST STATEMENT:  DROP TABLE public.calc_pressdata

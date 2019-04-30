@@ -1,0 +1,21 @@
+2013-08-14 23:36:59 NOVST ERROR:  cannot drop table calc_machine because other objects depend on it
+2013-08-14 23:36:59 NOVST DETAIL:  constraint machine_id_refs_id_2db8aaa4 on table calc_machine_material_type depends on table calc_machine
+	constraint calc_presstype_machine_id_fkey on table calc_presstype depends on table calc_machine
+2013-08-14 23:36:59 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-14 23:36:59 NOVST STATEMENT:  DROP TABLE public.calc_machine
+2013-08-14 23:37:19 NOVST ERROR:  cannot drop table calc_machine because other objects depend on it
+2013-08-14 23:37:19 NOVST DETAIL:  constraint calc_presstype_machine_id_fkey on table calc_presstype depends on table calc_machine
+2013-08-14 23:37:19 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-14 23:37:19 NOVST STATEMENT:  DROP TABLE public.calc_machine
+2013-08-14 23:37:40 NOVST ERROR:  cannot drop table calc_presstype because other objects depend on it
+2013-08-14 23:37:40 NOVST DETAIL:  constraint calc_pressdata_press_type_id_fkey on table calc_pressdata depends on table calc_presstype
+2013-08-14 23:37:40 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-14 23:37:40 NOVST STATEMENT:  DROP TABLE public.calc_presstype
+2013-08-14 23:37:50 NOVST ERROR:  cannot drop table calc_pressdata because other objects depend on it
+2013-08-14 23:37:50 NOVST DETAIL:  constraint calc_pressout_press_data_id_fkey on table calc_pressout depends on table calc_pressdata
+2013-08-14 23:37:50 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-14 23:37:50 NOVST STATEMENT:  DROP TABLE public.calc_pressdata
+2013-08-14 23:38:35 NOVST ERROR:  cannot drop table calc_machine because other objects depend on it
+2013-08-14 23:38:35 NOVST DETAIL:  constraint calc_presstype_machine_id_fkey on table calc_presstype depends on table calc_machine
+2013-08-14 23:38:35 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-08-14 23:38:35 NOVST STATEMENT:  DROP TABLE public.calc_machine

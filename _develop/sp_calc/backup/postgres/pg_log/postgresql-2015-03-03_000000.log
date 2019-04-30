@@ -1,0 +1,11 @@
+2015-03-03 10:19:52 NOVT WARNING:  pgstat wait timeout
+2015-03-03 10:23:50 NOVT WARNING:  pgstat wait timeout
+2015-03-03 10:45:46 NOVT LOG:  server process (PID 8684) was terminated by exception 0xC000012D
+2015-03-03 10:45:46 NOVT HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2015-03-03 10:45:46 NOVT LOG:  terminating any other active server processes
+2015-03-03 10:45:46 NOVT WARNING:  terminating connection because of crash of another server process
+2015-03-03 10:45:46 NOVT DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2015-03-03 10:45:46 NOVT HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2015-03-03 10:45:46 NOVT LOG:  all server processes terminated; reinitializing
+2015-03-03 10:45:46 NOVT FATAL:  could not create shared memory segment: 1455
+2015-03-03 10:45:46 NOVT DETAIL:  Failed system call was CreateFileMapping(size=37150720, name=Global/PostgreSQL:C:/workspace/Develop/projects/db/postgres).

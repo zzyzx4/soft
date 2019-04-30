@@ -1,0 +1,24 @@
+2013-03-23 15:39:33 NOVT ERROR:  there is no unique constraint matching given keys for referenced table "finance"
+2013-03-23 15:39:33 NOVT STATEMENT:  ALTER TABLE deposit ADD CONSTRAINT afteropen_fk FOREIGN KEY (afteropen_finance) REFERENCES finance (finance_id)
+	   ON UPDATE CASCADE ON DELETE CASCADE;
+	CREATE INDEX fki_afteropen_fk ON deposit(afteropen_finance);
+	
+2013-03-23 15:40:19 NOVT ERROR:  there is no unique constraint matching given keys for referenced table "finance"
+2013-03-23 15:40:19 NOVT STATEMENT:  ALTER TABLE deposit ADD CONSTRAINT afteropen_fk FOREIGN KEY (afteropen_finance) REFERENCES finance (finance_id) MATCH FULL
+	   ON UPDATE CASCADE ON DELETE CASCADE;
+	CREATE INDEX fki_afteropen_fk ON deposit(afteropen_finance);
+	
+2013-03-23 15:42:47 NOVT ERROR:  there is no unique constraint matching given keys for referenced table "finance"
+2013-03-23 15:42:47 NOVT STATEMENT:  ALTER TABLE deposit ADD CONSTRAINT afteropen_fk FOREIGN KEY (afteropen_finance) REFERENCES finance (finance_id)
+	   ON UPDATE NO ACTION ON DELETE NO ACTION;
+	
+2013-03-23 19:04:09 NOVT FATAL:  password authentication failed for user "user"
+2013-03-23 22:09:23 NOVT LOG:  server process (PID 2808) was terminated by exception 0xC000012D
+2013-03-23 22:09:23 NOVT HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2013-03-23 22:09:23 NOVT LOG:  terminating any other active server processes
+2013-03-23 22:09:27 NOVT WARNING:  terminating connection because of crash of another server process
+2013-03-23 22:09:27 NOVT DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2013-03-23 22:09:27 NOVT HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2013-03-23 22:09:28 NOVT LOG:  all server processes terminated; reinitializing
+2013-03-23 22:09:39 NOVT FATAL:  pre-existing shared memory block is still in use
+2013-03-23 22:09:39 NOVT HINT:  Check if there are any old server processes still running, and terminate them.

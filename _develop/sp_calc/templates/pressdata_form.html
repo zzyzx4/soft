@@ -1,0 +1,165 @@
+    
+<div id="PressData_dialog" dojoType="dijit.Dialog" title="Задание на печать" style="text-align:center;">
+
+    <div dojoType="dojo.store.Memory" data-dojo-id="PressData_action" data-dojo-props="data: [{action: 'unknown'}]"></div>
+    <table>
+        {{pressdata_form.as_table}}
+    </table>
+    <button dojoType="dijit.form.Button" onclick="PressData_save()">Save</button>
+    <button dojoType="dijit.form.Button" onclick="dijit.byId('PressData_dialog').hide()">Cancel</button>
+
+    добавить помогайку считающую кол-во печ листов в зависимости от формата изделия, формата печатного листа и кол-ва страниц
+    <div>Стоиомсть бумаги: {{paper_sum}}</div>
+    <div>Стоимость форм: {{master_sum}}</div>
+    <div>Стоимость др. матер.: {{material_sum}}</div> 
+    <div>Цена работ: {{press_sum}}</div>
+    <span id="info"></span>                
+            
+</div>
+
+
+<script type="text/javascript">
+
+    function PressData_dialog(action)
+    {
+        if (action == "add") {
+            PressData_action.put({id:1, action:"add"});
+            dijit.byId("PressData_dialog").show();
+        }
+        if (action == "edit") { // ПОДГРУЗИТЬ РЕДАКТИРУЕМЫЕ ДАННЫЕ
+            PressData_action.put({id:1, action:"edit"});
+            dijit.byId("PressData_dialog").show();
+        }
+        if (action == "del") {
+            var sel_items = dijit.byId("grid_pane").selection.getSelected();
+            if (sel_items.length) {
+                dojo.forEach(sel_items, function(sel_item){
+                    PressData_store.remove(sel_item.id);
+                });
+
+                var i=0;
+                dojo.forEach(PressData_store.query(), function(raw){
+                    i++;
+                    PressData_store.remove(raw.id);
+                    raw.id=i;
+                    PressData_store.put(raw);
+                });
+
+                var Grid_data = new dojo.data.ObjectStore({objectStore: PressData_store});
+                dijit.byId("grid_pane").setStore(Grid_data);
+
+                if (PressData_store.data.length>0) {
+                    dijit.byId("PressData_edit").set('disabled', false);
+                    dijit.byId("PressData_del").set('disabled', false);
+                }
+                else {
+                    dijit.byId("PressData_edit").set('disabled', true);
+                    dijit.byId("PressData_del").set('disabled', true);
+                }
+            
+            }
+            
+        }
+            
+    }
+    function PressData_save(){
+        var action = PressData_action.get(1).action;
+        if (action == "add") {
+            
+            var count = PressData_store.data.length;
+            
+            var addData = { id:count+1,
+                            id_paper_type: dijit.byId("id_paper_type").get("value"), 
+                            paper_type: dijit.byId("id_paper_type").get("displayedValue"),
+                            id_paper: dijit.byId("id_paper").get("value"),
+                            paper: dijit.byId("id_paper").get("displayedValue"),
+                            id_machine: dijit.byId("id_machine").get("value"),
+                            machine: dijit.byId("id_machine").get("displayedValue"),
+                            id_press_type: dijit.byId("id_press_type").get("value"),
+                            press_type: dijit.byId("id_press_type").get("displayedValue"),
+                            sheet_amount: dijit.byId("SheetAmount_numberinput").value,
+                            note: dijit.byId("id_note").value};
+
+            PressData_store.add(addData);
+            var Grid_data = new dojo.data.ObjectStore({objectStore: PressData_store});
+            //var Grid_data = new dojo.data.ObjectStore({ objectStore:new dojo.store.Memory({ data: someData }) });
+            dijit.byId("grid_pane").setStore(Grid_data);
+            if (PressData_store.data.length>0) {
+                dijit.byId("PressData_edit").set('disabled', false);
+                dijit.byId("PressData_del").set('disabled', false);
+            }
+        }
+        if (action == "edit"){
+            var sel_items = dijit.byId("grid_pane").selection.getSelected();
+            var raw;
+            if (sel_items.length) {
+                dojo.forEach(sel_items, function(sel_item){
+                    raw = sel_item;
+                });
+            }
+            raw.id_paper_type = dijit.byId("id_paper_type").get("Value");
+            raw.paper_type = dijit.byId("id_paper_type").get("displayedValue");
+            raw.id_paper = dijit.byId("id_paper").get("Value");
+            raw.paper = dijit.byId("id_paper").get("displayedValue");
+            raw.id_machine = dijit.byId("id_machine").get("Value");
+            raw.machine = dijit.byId("id_machine").get("displayedValue");
+            raw.id_press_type = dijit.byId("id_press_type").get("Value");
+            raw.press_type = dijit.byId("id_press_type").get("displayedValue");
+            raw.sheet_amount = dijit.byId("SheetAmount_numberinput").value;
+            raw.note = dijit.byId("id_note").value;
+
+            PressData_store.put(raw);
+            var Grid_data = new dojo.data.ObjectStore({objectStore: PressData_store});
+            dijit.byId("grid_pane").setStore(Grid_data);
+
+        }
+        dijit.byId('PressData_dialog').hide();
+    }
+    
+    function ChainDataGet(view_name, base_data, depend_control_name)
+    {
+        //if (depend_control_name == "id_firstside_presstype") 
+        //  {for (var i in base_data) {alert(depend_control_name+"("+i+": "+base_data[i]+")");};}
+        //var paper_type_val=dijit.byId("id_paper_type").get("value");
+        //a_content = {machine_id:1, paper_type_id:paper_type_val};
+        dojo.xhrPost({url: "/"+view_name+"/",
+                 handleAs: "json",
+                 content: base_data,
+                 //handleAs: "text",
+                 //postData: dojo.toJson({firstname:form.firstname.value, surname:form.surname.value}),
+                 preventCache: true,
+                 load: function(response, ioargs) {
+                            if (response.success){
+                                var data = new Array();
+                                var dic = {};
+                                dic["value"] = ""; //если не присвоить пустую строку 
+                                                   //то значение нельзя выбрать повторно 
+                                dic["selected"] = "selected"; 
+                                dic["label"] = "---------";
+                                data.push(dic);
+                                for (var i in response)
+                                {
+                                   dic = {};
+                                   if (i!="success") 
+                                   {
+                                     dic["value"] = i;
+                                     dic["label"] = response[i];
+                                     //alert (i+": "+ response[i]);
+
+                                     data.push(dic); 
+                                   }
+                                }
+                                
+                                //alert(dijit.byId(depend_control_name).get("id"));
+                                dijit.byId(depend_control_name).set("options", data).startup();
+                                dijit.byId(depend_control_name).onChange();
+                            }
+                            },
+                 error:function(error,ioargs){ // This happens on a 500 error or alikes.
+                                        dojo.byId("info").innerHTML = "An unexpected error occurred: " + error; 
+                                        // + " - " + ioargs.xhr.status;
+                                        }
+                });
+    }
+</script>
+
