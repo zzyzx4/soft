@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+Список документов
+{% endblock %}
+
+{% block content %}
+
+{% for doc in docs %}
+    {{ doc.document.storage }}
+  {% endfor %}
+<img src="{{MEDIA_URL}}{{ docs}}" />
+{% endblock %}
