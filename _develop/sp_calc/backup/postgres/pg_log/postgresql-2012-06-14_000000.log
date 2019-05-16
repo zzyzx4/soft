@@ -1,0 +1,18 @@
+2012-06-14 18:23:06 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 18:23:06 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-14', 1.0, E'test')
+2012-06-14 18:51:03 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 18:51:03 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-15', 1.0, E'test')
+2012-06-14 18:59:39 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 18:59:39 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-14', 1.0, E'test')
+2012-06-14 19:16:24 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 19:16:24 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-14', 1.0, E'test')
+2012-06-14 19:17:04 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 19:17:04 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-14', 1.0, E'test')
+2012-06-14 19:22:39 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 19:22:39 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-14', 1.0, E'')
+2012-06-14 19:24:00 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 19:24:00 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 4, 1, E'2012-06-14', 1.0, E'')
+2012-06-14 19:32:55 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 19:32:55 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 2, 1, E'2012-06-14', 1.0, E'')
+2012-06-14 19:33:50 NOVST ERROR:  null value in column "employee_id" violates not-null constraint
+2012-06-14 19:33:50 NOVST STATEMENT:  INSERT INTO "calc_workout" ("employee_id", "work_data_id", "count", "a_date", "duration", "note") VALUES (NULL, 4, 1, E'2012-06-14', 1.0, E'')

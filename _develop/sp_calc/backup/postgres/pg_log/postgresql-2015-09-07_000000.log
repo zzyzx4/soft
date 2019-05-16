@@ -1,0 +1,4 @@
+2015-09-07 01:55:39 NOVST ERROR:  cannot drop table calc_tripdk because other objects depend on it
+2015-09-07 01:55:39 NOVST DETAIL:  constraint calc_triporder_dk_id_fkey on table calc_triporder depends on table calc_tripdk
+2015-09-07 01:55:39 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2015-09-07 01:55:39 NOVST STATEMENT:  DROP TABLE public.calc_tripdk

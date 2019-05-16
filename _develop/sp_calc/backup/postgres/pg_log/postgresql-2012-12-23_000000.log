@@ -1,0 +1,6 @@
+2012-12-23 21:24:55 NOVT FATAL:  password authentication failed for user "postgres"
+2012-12-23 21:24:55 NOVT FATAL:  password authentication failed for user "postgres"
+2012-12-23 22:55:18 NOVT ERROR:  syntax error at or near "FIRST" at character 46
+2012-12-23 22:55:18 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp FIRST 1 DESCENDING
+2012-12-23 22:56:54 NOVT ERROR:  syntax error at or near "FIRST" at character 46
+2012-12-23 22:56:54 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp FIRST 1 DESCENDING

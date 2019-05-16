@@ -1,0 +1,10 @@
+2015-07-10 15:38:25 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-07-10 15:38:25 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-07-10 15:38:25 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-07-10 15:38:25 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-07-10 15:38:30 NOVST WARNING:  pgstat wait timeout
+2015-07-10 15:42:12 NOVST LOG:  received fast shutdown request
+2015-07-10 15:42:12 NOVST LOG:  aborting any active transactions
+2015-07-10 15:42:12 NOVST LOG:  autovacuum launcher shutting down
+2015-07-10 15:42:12 NOVST LOG:  shutting down
+2015-07-10 15:42:12 NOVST LOG:  database system is shut down

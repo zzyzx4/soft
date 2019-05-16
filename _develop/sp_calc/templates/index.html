@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+ 
+{% extends "_typo_base.html" %}
+	
+{% load staticfiles %}
+
+{# setting the <title> attribute #}
+{% block dojango_page_title %}INDEX{% endblock %}
+
+{% block app_body %}    
+
+	<!-- modal window -->
+	<div class="modal_window">
+		<div class="modal_content">
+			<div class="close_modal"></div>
+			<div class="title_modal">
+				обратный звонок
+			</div>
+			<form action="#">
+				<label>
+					<span>
+						Ваше имя:
+					</span>
+					<input type="text" class='required' required>
+				</label>
+				<label>
+					<span>
+						Ваш телефон:
+					</span>
+					<input type="tel" class='required' required>
+				</label>
+				<input type="submit" value='Отправить' class='submit_input active_no'>
+			</form>
+		</div>
+	</div>
+	<!-- modal window -->
+	<div class="fon_paper"></div>
+	<div id="vs-container" class="vs-container">
+		<div class="codrops-top clearfix">
+			<div class="header">
+				<div class="mobile_logo">
+					<a href="#">
+						<img src="{% static 'img/mobile_logo.png' %}" alt="">
+					</a>
+				</div>
+				<div class="left_header">
+					<p>
+						<a href="mailto:info@sp.kz">
+							info@s7.kz
+						</a>
+					</p>
+					<p>
+						<a href="tel:+77273528202">
+							+7 (727) 352-82-02
+						</a>
+					</p>
+				</div>
+				<div class="logo">
+					<a href="#">
+						<img src="{% static 'img/logo.svg' %}" alt="">
+					</a>
+				</div>
+				<div class="callback">
+					обратный звонок
+				</div>
+				<div class="clear"></div>
+				<div class="date_line">
+					<div class="left_date">
+						www.s7.kz
+					</div>
+					<div class="date_right">
+						18 февраля 2016 г.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contain_header">
+			<header class="vs-header">
+				<ul class="vs-nav">
+					<li>
+						<a href="#section-1">
+							НА ПЕРВОЙ ПОЛОСЕ
+						</a>
+					</li>
+					<li>
+						<a href="#section-2">
+							КНИЖНОЕ ПРОИЗВОДСТВО
+						</a>
+					</li>
+					<li>
+						<a href="#section-3">
+							ДРУГАЯ ПРОДУКЦИЯ
+						</a>
+					</li>
+				</ul>
+			</header>
+		</div>
+		<div class="vs-wrapper">
+			<section id="section-1">
+				<div class="content_section">
+					<div class="title_page">
+						на первой полосе
+					</div>
+					<div class="contain_float">
+						<div class="left_content">
+							<h3>
+								Добро пожаловать
+							</h3>
+							<p>
+								<b>
+									Типография Service Press основана в 1999 году.
+								</b>
+							</p>
+							<p>
+								<img src="{% static 'img/old_1.png' %}" alt="">
+								<span>
+									В начале своей деятельности мы печатали обычные визитки, фирменные бланки и делали копии документов.
+								</span>
+							</p>
+							<p>
+								Сейчас Service Press – современное полиграфическое предприятие европейского формата и издательство с регистрацией в Национальной Государственная Книжная Палате Республики Казахстан.
+							</p>
+							<div class="block_img">
+								<img src="{% static 'img/img_1.jpg' %}" alt="">
+							</div>
+							<p>
+								<b>
+									Основная специализация – изготовление книг и высококлассная многокрасочная печать. 
+								</b>
+							</p>
+							<p>
+								Оборачиваясь назад можно сказать что это не малый путь и мы прошли его с самого начала. Да мы начинали с печати визиток, фирменных бланков и ксерокса. С годами мы выросли и изменились. Со временем мы пришли к тому, что должны вноисть в клад в современную науку и искусство. 
+
+							</p>
+							<div class="img_slider">
+								<a class="fancybox_4" data-fancybox-group="button" href="{% static 'img/img_7.jpg' %}" title="lorem text">
+									<img src="{% static 'img/img_7.jpg' %}" alt="" title='lorem'>
+								</a>
+							</div>
+						</div>
+						<div class="centr_content">
+							<p class="text_big">
+								<img src="{% static 'img/img_2.png' %}" alt="">
+								<span>
+									<b>
+										Как вы думаете сколько времени нужно на изготовление книги в твердом переплете?
+									</b>
+								</span>
+							</p>
+							<p class="text_middle">
+								Переплёт в его современном понимании появился во II веке н.э. 
+							</p>
+							<p class="text_middle">
+								<b>
+									Изготовленный  из  склеенных  слоев  папируса,  обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков 
+								</b>
+							</p>
+							<h3>
+								акции
+							</h3>
+							<ul class="ul_list_1">
+								<li>
+									<img src="{% static 'img/img_3.jpg' %}" alt="">
+									<div class="text_list_1">
+										<p>
+											<b>
+												Изготовленный  из  склеенных  слоев  папируса.  
+											</b>
+										</p>
+										<p>
+											обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="{% static 'img/img_3.jpg' %}" alt="">
+									<div class="text_list_1">
+										<p>
+											<b>
+												Изготовленный  из  склеенных  слоев  папируса.  
+											</b>
+										</p>
+										<p>
+											обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="img_slider">
+								<a class="fancybox_4" data-fancybox-group="button" href="{% static 'img/img_8.jpg' %}" title="lorem text">
+									<img src="{% static 'img/img_8.jpg' %}" alt="" title='lorem'>
+								</a>
+							</div>
+						</div>
+						<div class="right_content">
+							<div class="left_mobile">
+								<h3>
+									наши преимущества
+								</h3>
+								<p>
+									<b>
+										Не много о том, что отличает нас от большинства наших конкурентов:
+									</b>
+								</p>
+								<ul class="list_ul_2">
+									<li>
+										<img src="{% static 'img/svg/icone_1.svg' %}" alt="">
+										<span>
+											большой опыт издательской деятельности
+										</span>
+									</li>
+									<li>
+										<img src="{% static 'img/svg/icone_2.svg' %}" alt="">
+										<span>
+											издание как экслюзивных подарочных книг так и учебных изданий и пособий
+										</span>
+									</li>
+									<li>
+										<img src="{% static 'img/svg/icone_3.svg' %}" alt="">
+										<span>
+											отличное соотношение 
+											цена\качество
+										</span>
+									</li>
+									<li>
+										<img src="{% static 'img/svg/icone_4.svg' %}" alt="">
+										<span>
+											профессиональный коллектив
+										</span>
+									</li>
+									<li>
+										<img src="{% static 'img/svg/icone_5.svg' %}" alt="">
+										<span>
+											расширенный график работы
+										</span>
+									</li>
+								</ul>
+							</div>
+							<div class="right_mobile">
+									<ul class="img_calaps">
+										<li>
+											<a class="fancybox" data-fancybox-group="button" href="{% static 'img/img_4.jpg' %}">
+												<img src="{% static 'img/img_4.jpg' %}" alt="">
+											</a>
+										</li>
+										<li>
+											<a class="fancybox" data-fancybox-group="button" href="/calc/static/img/img_5.jpg">
+												<img src="/calc/static/img/img_5.jpg" alt="">
+											</a>
+										</li>
+										<li>
+											<a class="fancybox" data-fancybox-group="button" href="/calc/static/img/img_6.jpg">
+												<img src="/calc/static/img/img_6.jpg" alt="">
+											</a>
+										</li>
+									</ul>
+								<h3>
+									напишите нам
+								</h3>
+								<form action="#">
+									<label>
+										<span>
+											Ваше имя:
+										</span>
+										<input type="text" class='required' required>
+									</label>
+									<label>
+										<span>
+											Ваш e-mail:
+										</span>
+										<input type="email" class='required' required>
+									</label>
+									<label>
+										<span>
+											Cообщение:
+										</span>
+										<textarea required class='required'></textarea>
+									</label>
+									<input type="submit" value='Отправить' class='submit_input active_no'>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<footer>
+						<div class="line_top"></div>
+						<div class="line_top_big"></div>
+						<div class="copirait">
+							© 2016, Типография
+						</div>
+						<div class="developer">
+							Design by <a href="#">Uglevich</a>
+						</div>
+					</footer>
+				</div>
+			</section>
+			<section id="section-2">
+				<div class="content_section">
+					<div class="title_page">
+						КНИЖНОЕ ПРОИЗВОДСТВО 
+					</div>
+					<div class="contain_float">
+						<div class="left_content">
+							<h3>
+								Добро пожаловать
+							</h3>
+							<p>
+								<b>
+									Мы рады привествовать Вас на нашем сайте и хотим немного рассказать о нас.
+								</b>
+							</p>
+							<p>
+								<img src="/calc/static/img/old_1.png" alt="">
+								<span>
+									На полиграфическом рынке мы с 1999 года и по сей день продолжаем активно работать и развиваться.
+								</span>
+							</p>
+							<p>
+								Оборачиваясь назад можно сказать что это не малый путь и мы прошли его с самого начала. Да мы начинали с печати визиток, фирменных бланков и ксерокса. С годами мы выросли и изменились. Со временем мы пришли к тому, что должны вноисть в клад в современную науку и искусство. 
+							</p>
+							<div class="block_img">
+								<img src="/calc/static/img/img_1.jpg" alt="">
+							</div>
+							<p>
+								<b>
+									Так мы стали издавать книги. А позже это стало основным нашим направлением. Теперь у нас за плечами более 7-ми лет издательской деятельности и нам есть, что предложить Вам.
+								</b>
+							</p>
+							<p>
+								Оборачиваясь назад можно сказать что это не малый путь и мы прошли его с самого начала. Да мы начинали с печати визиток, фирменных бланков и ксерокса. С годами мы выросли и изменились. Со временем мы пришли к тому, что должны вноисть в клад в современную науку и искусство. 
+							</p>
+							<div class="img_slider">
+								<a class="fancybox_5" data-fancybox-group="button" href="/calc/static/img/img_7.jpg" title="lorem text">
+									<img src="/calc/static/img/img_7.jpg" alt="" title='lorem'>
+								</a>
+							</div>
+						</div>
+						<div class="centr_content">
+							<p class="text_big">
+								<img src="/calc/static/img/img_2.png" alt="">
+								<span>
+									<b>
+										Как вы думаете сколько времени нужно на изготовление книги в твердом переплете?
+									</b>
+								</span>
+							</p>
+							<p class="text_middle">
+								Переплёт в его современном понимании появился во II веке н.э. 
+							</p>
+							<p class="text_middle">
+								<b>
+									Изготовленный  из  склеенных  слоев  папируса,  обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков 
+								</b>
+							</p>
+							<h3>
+								акции
+							</h3>
+							<ul class="ul_list_1">
+								<li>
+									<img src="/calc/static/img/img_3.jpg" alt="">
+									<div class="text_list_1">
+										<p>
+											<b>
+												Изготовленный  из  склеенных  слоев  папируса.  
+											</b>
+										</p>
+										<p>
+											обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="/calc/static/img/img_3.jpg" alt="">
+									<div class="text_list_1">
+										<p>
+											<b>
+												Изготовленный  из  склеенных  слоев  папируса.  
+											</b>
+										</p>
+										<p>
+											обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="img_slider">
+								<a class="fancybox_5" data-fancybox-group="button" href="/calc/static/img/img_8.jpg" title="lorem text">
+									<img src="/calc/static/img/img_8.jpg" alt="" title='lorem'>
+								</a>
+							</div>
+						</div>
+						<div class="right_content">
+							<div class="left_mobile">
+								<h3>
+									наши преимущества
+								</h3>
+								<p>
+									<b>
+										Не много о том, что отличает нас от большинства наших конкурентов:
+									</b>
+								</p>
+								<ul class="list_ul_2">
+									<li>
+										<img src="/calc/static/img/svg/icone_1.svg" alt="">
+										<span>
+											большой опыт издательской деятельности
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_2.svg" alt="">
+										<span>
+											издание как экслюзивных подарочных книг так и учебных изданий и пособий
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_3.svg" alt="">
+										<span>
+											отличное соотношение 
+											цена\качество
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_4.svg" alt="">
+										<span>
+											профессиональный коллектив
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_5.svg" alt="">
+										<span>
+											расширенный график работы
+										</span>
+									</li>
+								</ul>
+							</div>
+							<div class="right_mobile">
+								<ul class="img_calaps">
+									<li>
+										<a class="fancybox_2" data-fancybox-group="button" href="/calc/static/img/img_4.jpg">
+											<img src="/calc/static/img/img_4.jpg" alt="">
+										</a>
+									</li>
+									<li>
+										<a class="fancybox_2" data-fancybox-group="button" href="/calc/static/img/img_5.jpg">
+											<img src="/calc/static/img/img_5.jpg" alt="">
+										</a>
+									</li>
+									<li>
+										<a class="fancybox_2" data-fancybox-group="button" href="/calc/static/img/img_6.jpg">
+											<img src="/calc/static/img/img_6.jpg" alt="">
+										</a>
+									</li>
+								</ul>
+								<h3>
+									напишите нам
+								</h3>
+								<form action="#">
+									<label>
+										<span>
+											Ваше имя:
+										</span>
+										<input type="text" class='required' required>
+									</label>
+									<label>
+										<span>
+											Ваш e-mail:
+										</span>
+										<input type="email" class='required' required>
+									</label>
+									<label>
+										<span>
+											Cообщение:
+										</span>
+										<textarea required class='required'></textarea>
+									</label>
+									<input type="submit" value='Отправить' class='submit_input active_no'>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<footer>
+						<div class="line_top"></div>
+						<div class="line_top_big"></div>
+						<div class="copirait">
+							© 2016, Типография
+						</div>
+						<div class="developer">
+							Design by <a href="#">Uglevich</a>
+						</div>
+					</footer>
+				</div>
+			</section>
+			<section id="section-3">
+				<div class="content_section">
+					<div class="title_page">
+						ДРУГАЯ ПРОДУКЦИЯ 
+					</div>
+					<div class="contain_float">
+						<div class="left_content">
+							<h3>
+								Добро пожаловать
+							</h3>
+							<p>
+								<b>
+									Мы рады привествовать Вас на нашем сайте и хотим немного рассказать о нас.
+								</b>
+							</p>
+							<p>
+								<img src="/calc/static/img/old_1.png" alt="">
+								<span>
+									На полиграфическом рынке мы с 1999 года и по сей день продолжаем активно работать и развиваться.
+								</span>
+							</p>
+							<p>
+								Оборачиваясь назад можно сказать что это не малый путь и мы прошли его с самого начала. Да мы начинали с печати визиток, фирменных бланков и ксерокса. С годами мы выросли и изменились. Со временем мы пришли к тому, что должны вноисть в клад в современную науку и искусство. 
+							</p>
+							<div class="block_img">
+								<img src="/calc/static/img/img_1.jpg" alt="">
+							</div>
+							<p>
+								<b>
+									Так мы стали издавать книги. А позже это стало основным нашим направлением. Теперь у нас за плечами более 7-ми лет издательской деятельности и нам есть, что предложить Вам.
+								</b>
+							</p>
+							<p>
+								Оборачиваясь назад можно сказать что это не малый путь и мы прошли его с самого начала. Да мы начинали с печати визиток, фирменных бланков и ксерокса. С годами мы выросли и изменились. Со временем мы пришли к тому, что должны вноисть в клад в современную науку и искусство. 
+							</p>
+							<div class="img_slider">
+								<a class="fancybox_6" data-fancybox-group="button" href="/calc/static/img/img_7.jpg" title="lorem text">
+									<img src="/calc/static/img/img_7.jpg" alt="" title='lorem'>
+								</a>
+							</div>
+						</div>
+						<div class="centr_content">
+							<p class="text_big">
+								<img src="img/img_2.png" alt="">
+								<span>
+									<b>
+										Как вы думаете сколько времени нужно на изготовление книги в твердом переплете?
+									</b>
+								</span>
+							</p>
+							<p class="text_middle">
+								Переплёт в его современном понимании появился во II веке н.э. 
+							</p>
+							<p class="text_middle">
+								<b>
+									Изготовленный  из  склеенных  слоев  папируса,  обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков 
+								</b>
+							</p>
+							<h3>
+								акции
+							</h3>
+							<ul class="ul_list_1">
+								<li>
+									<img src="/calc/static/img/img_3.jpg" alt="">
+									<div class="text_list_1">
+										<p>
+											<b>
+												Изготовленный  из  склеенных  слоев  папируса.  
+											</b>
+										</p>
+										<p>
+											обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков
+										</p>
+									</div>
+								</li>
+								<li>
+									<img src="/calc/static/img/img_3.jpg" alt="">
+									<div class="text_list_1">
+										<p>
+											<b>
+												Изготовленный  из  склеенных  слоев  папируса.  
+											</b>
+										</p>
+										<p>
+											обтянутый  кожей, выполнял свои прямые функции: соединял и предохранял тетрадь книжного блока. В IV веке для скрепления многотетрадных блоков
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="img_slider">
+								<a class="fancybox_6" data-fancybox-group="button" href="/calc/static/img/img_8.jpg" title="lorem text">
+									<img src="/calc/static/img/img_8.jpg" alt="" title='lorem'>
+								</a>
+							</div>
+						</div>
+						<div class="right_content">
+							<div class="left_mobile">
+								<h3>
+									наши преимущества
+								</h3>
+								<p>
+									<b>
+										Не много о том, что отличает нас от большинства наших конкурентов:
+									</b>
+								</p>
+								<ul class="list_ul_2">
+									<li>
+										<img src="/calc/static/img/svg/icone_1.svg" alt="">
+										<span>
+											большой опыт издательской деятельности
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_2.svg" alt="">
+										<span>
+											издание как экслюзивных подарочных книг так и учебных изданий и пособий
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_3.svg" alt="">
+										<span>
+											отличное соотношение 
+											цена\качество
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_4.svg" alt="">
+										<span>
+											профессиональный коллектив
+										</span>
+									</li>
+									<li>
+										<img src="/calc/static/img/svg/icone_5.svg" alt="">
+										<span>
+											расширенный график работы
+										</span>
+									</li>
+								</ul>
+							</div>
+							<div class="right_mobile">
+								<ul class="img_calaps">
+									<li>
+										<a class="fancybox_3" data-fancybox-group="button" href="/calc/static/img/img_4.jpg">
+											<img src="/calc/static/img/img_4.jpg" alt="">
+										</a>
+									</li>
+									<li>
+										<a class="fancybox_3" data-fancybox-group="button" href="/calc/static/img/img_5.jpg">
+											<img src="/calc/static/img/img_5.jpg" alt="">
+										</a>
+									</li>
+									<li>
+										<a class="fancybox_3" data-fancybox-group="button" href="/calc/static/img/img_6.jpg">
+											<img src="/calc/static/img/img_6.jpg" alt="">
+										</a>
+									</li>
+								</ul>
+								<h3>
+									напишите нам
+								</h3>
+								<form action="#">
+									<label>
+										<span>
+											Ваше имя:
+										</span>
+										<input type="text" class='required' required>
+									</label>
+									<label>
+										<span>
+											Ваш e-mail:
+										</span>
+										<input type="email" class='required' required>
+									</label>
+									<label>
+										<span>
+											Cообщение:
+										</span>
+										<textarea required class='required'></textarea>
+									</label>
+									<input type="submit" value='Отправить' class='submit_input active_no'>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<footer>
+						<div class="line_top"></div>
+						<div class="line_top_big"></div>
+						<div class="copirait">
+							© 2016, Типография
+						</div>
+						<div class="developer">
+							Design by <a href="#">Uglevich</a>
+						</div>
+					</footer>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="fon_paper footer_fon"></div>
+	<!-- script -->
+	<script src="{% static 'js/modernizr.custom.js' %}"></script>
+	<script src="{% static 'js/classie.js' %}"></script>
+	<script src="{% static 'js/hammer.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<script src="{% static 'js/function.js' %}"></script>
+	<!-- galary -->
+	<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*fancybox right_saitbar*/
+			$('.fancybox').fancybox();
+			$('.fancybox_2').fancybox();
+			$('.fancybox_3').fancybox();
+			/*fancybox right_saitbar end*/
+			$('.fancybox_4').fancybox();
+			$('.fancybox_5').fancybox();
+			$('.fancybox_6').fancybox();
+		});
+	</script>
+	<!-- galary -->
+	<!-- script -->
+
+{% endblock app_body %}

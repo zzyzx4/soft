@@ -1,0 +1,12 @@
+2013-03-21 10:46:25 NOVT ERROR:  column "timestamp" of relation "course" does not exist at character 21
+2013-03-21 10:46:25 NOVT STATEMENT:  INSERT INTO course (timestamp, currency_id, buy_rate, sell_rate) VALUES (E'2013-03-21 10:46:23.249000', E'1', E'-', E'-')
+2013-03-21 10:47:44 NOVT FATAL:  password authentication failed for user "postgres"
+2013-03-21 10:47:44 NOVT FATAL:  password authentication failed for user "postgres"
+2013-03-21 10:47:54 NOVT FATAL:  password authentication failed for user "postgres"
+2013-03-21 10:47:54 NOVT FATAL:  password authentication failed for user "postgres"
+2013-03-21 10:48:53 NOVT ERROR:  invalid input syntax for type real: "-" at character 112
+2013-03-21 10:48:53 NOVT STATEMENT:  INSERT INTO course (time_stamp, currency_id, buy_rate, sell_rate) VALUES (E'2013-03-21 10:48:53.372000', E'1', E'-', E'-')
+2013-03-21 10:56:48 NOVT ERROR:  syntax error at or near "," at character 76
+2013-03-21 10:56:48 NOVT STATEMENT:  INSERT INTO course (time_stamp, currency_id, buy_rate, sell_rate) VALUES (?, ?, ?, ?)
+2013-03-21 10:59:20 NOVT ERROR:  invalid input syntax for type real: "-" at character 109
+2013-03-21 10:59:20 NOVT STATEMENT:  INSERT INTO course (time_stamp, currency_id, buy_rate, sell_rate) VALUES (E'2013-03-21 10:59:20.440000', 1, E'-', E'-')

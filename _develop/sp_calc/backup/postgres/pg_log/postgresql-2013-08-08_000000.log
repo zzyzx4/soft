@@ -1,0 +1,10 @@
+2013-08-08 17:19:05 NOVST ERROR:  column calc_client.tel does not exist at character 83
+2013-08-08 17:19:05 NOVST STATEMENT:  SELECT "calc_client"."id", "calc_client"."first_name", "calc_client"."last_name", "calc_client"."tel", "calc_client"."email", "calc_client"."over_data" FROM "calc_client"
+2013-08-08 17:22:37 NOVST ERROR:  column "tel" contains null values
+2013-08-08 17:22:37 NOVST STATEMENT:  ALTER TABLE calc_client
+	   ALTER COLUMN tel SET NOT NULL;
+	
+2013-08-08 17:24:53 NOVST ERROR:  column calc_client.email does not exist at character 104
+2013-08-08 17:24:53 NOVST STATEMENT:  SELECT "calc_client"."id", "calc_client"."first_name", "calc_client"."last_name", "calc_client"."tel", "calc_client"."email", "calc_client"."over_data" FROM "calc_client"
+2013-08-08 17:26:25 NOVST ERROR:  column calc_client.over_data does not exist at character 127
+2013-08-08 17:26:25 NOVST STATEMENT:  SELECT "calc_client"."id", "calc_client"."first_name", "calc_client"."last_name", "calc_client"."tel", "calc_client"."email", "calc_client"."over_data" FROM "calc_client"

@@ -1,0 +1,84 @@
+2013-01-21 22:20:37 NOVT ERROR:  relation "finance_pkey" already exists
+2013-01-21 22:20:37 NOVT STATEMENT:  CREATE TABLE deposit
+	(
+	  finance_id serial NOT NULL,
+	  prev_currency integer,
+	  prev_amount real,
+	  currency integer,
+	  amount real,
+	  time_stamp timestamp without time zone,
+	  course_id serial NOT NULL,
+	  CONSTRAINT finance_pkey PRIMARY KEY (finance_id),
+	  CONSTRAINT course FOREIGN KEY (course_id)
+	      REFERENCES course (course_id) MATCH SIMPLE
+	      ON UPDATE CASCADE ON DELETE CASCADE
+	)
+	WITH (
+	  OIDS=FALSE
+	);
+	ALTER TABLE finance OWNER TO postgres;
+	
+	-- Index: fki_course
+	
+	-- DROP INDEX fki_course;
+	
+	CREATE INDEX fki_course
+	  ON finance
+	  USING btree
+	  (course_id);
+2013-01-21 22:21:21 NOVT ERROR:  column "deposit_id" named in key does not exist
+2013-01-21 22:21:21 NOVT STATEMENT:  CREATE TABLE deposit
+	(
+	  finance_id serial NOT NULL,
+	  prev_currency integer,
+	  prev_amount real,
+	  currency integer,
+	  amount real,
+	  time_stamp timestamp without time zone,
+	  course_id serial NOT NULL,
+	  CONSTRAINT finance_pkey PRIMARY KEY (deposit_id),
+	  CONSTRAINT course FOREIGN KEY (course_id)
+	      REFERENCES course (course_id) MATCH SIMPLE
+	      ON UPDATE CASCADE ON DELETE CASCADE
+	)
+	WITH (
+	  OIDS=FALSE
+	);
+	ALTER TABLE finance OWNER TO postgres;
+	
+	-- Index: fki_course
+	
+	-- DROP INDEX fki_course;
+	
+	CREATE INDEX fki_course
+	  ON finance
+	  USING btree
+	  (course_id);
+2013-01-21 22:21:53 NOVT ERROR:  relation "fki_course" already exists
+2013-01-21 22:21:53 NOVT STATEMENT:  CREATE TABLE deposit
+	(
+	  deposit_id serial NOT NULL,
+	  prev_currency integer,
+	  prev_amount real,
+	  currency integer,
+	  amount real,
+	  time_stamp timestamp without time zone,
+	  course_id serial NOT NULL,
+	  CONSTRAINT deposit_pk PRIMARY KEY (deposit_id),
+	  CONSTRAINT course FOREIGN KEY (course_id)
+	      REFERENCES course (course_id) MATCH SIMPLE
+	      ON UPDATE CASCADE ON DELETE CASCADE
+	)
+	WITH (
+	  OIDS=FALSE
+	);
+	ALTER TABLE finance OWNER TO postgres;
+	
+	-- Index: fki_course
+	
+	-- DROP INDEX fki_course;
+	
+	CREATE INDEX fki_course
+	  ON finance
+	  USING btree
+	  (course_id);

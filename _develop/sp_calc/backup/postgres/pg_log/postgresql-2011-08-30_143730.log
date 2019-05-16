@@ -1,0 +1,32 @@
+2011-08-30 14:37:31 NOVST LOG:  database system was shut down at 2011-08-30 14:37:02 NOVST
+2011-08-30 14:37:31 NOVST FATAL:  the database system is starting up
+2011-08-30 14:37:31 NOVST LOG:  database system is ready to accept connections
+2011-08-30 14:37:31 NOVST LOG:  autovacuum launcher started
+2011-08-30 15:05:37 NOVST LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2011-08-30 15:05:37 NOVST LOG:  unexpected EOF on client connection
+2011-08-30 15:13:54 NOVST WARNING:  pgstat wait timeout
+2011-08-30 15:14:05 NOVST WARNING:  pgstat wait timeout
+2011-08-30 16:06:24 NOVST LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2011-08-30 16:06:24 NOVST LOG:  unexpected EOF on client connection
+2011-08-30 16:13:51 NOVST LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2011-08-30 16:13:51 NOVST LOG:  unexpected EOF on client connection
+2011-08-30 16:25:07 NOVST LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2011-08-30 16:25:07 NOVST LOG:  unexpected EOF on client connection
+2011-08-30 16:41:36 NOVST WARNING:  pgstat wait timeout
+2011-08-30 17:05:53 NOVST LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2011-08-30 17:05:53 NOVST LOG:  unexpected EOF on client connection
+2011-08-30 18:12:10 NOVST WARNING:  pgstat wait timeout
+2011-08-30 18:58:55 NOVST LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2011-08-30 18:58:55 NOVST LOG:  unexpected EOF on client connection
+2011-08-30 21:39:39 NOVST WARNING:  pgstat wait timeout
+2011-08-30 22:03:39 NOVST LOG:  received fast shutdown request
+2011-08-30 22:03:39 NOVST LOG:  aborting any active transactions
+2011-08-30 22:03:39 NOVST LOG:  autovacuum launcher shutting down
+2011-08-30 22:03:43 NOVST LOG:  shutting down
+2011-08-30 22:03:44 NOVST LOG:  database system is shut down

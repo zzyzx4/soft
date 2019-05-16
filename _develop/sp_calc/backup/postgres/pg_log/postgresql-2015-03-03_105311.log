@@ -1,0 +1,9 @@
+2015-03-03 10:53:16 NOVT LOG:  database system was interrupted; last known up at 2015-03-02 13:29:44 NOVT
+2015-03-03 10:53:16 NOVT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-03-03 10:53:16 NOVT LOG:  database system was not properly shut down; automatic recovery in progress
+2015-03-03 10:53:16 NOVT LOG:  consistent recovery state reached at 0/47830D8
+2015-03-03 10:53:16 NOVT LOG:  record with zero length at 0/47830D8
+2015-03-03 10:53:16 NOVT LOG:  redo is not required
+2015-03-03 10:53:16 NOVT LOG:  database system is ready to accept connections
+2015-03-03 10:53:16 NOVT LOG:  autovacuum launcher started

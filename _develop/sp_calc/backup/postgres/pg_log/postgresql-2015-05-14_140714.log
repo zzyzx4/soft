@@ -1,0 +1,17 @@
+2015-05-14 14:07:15 NOVST FATAL:  the database system is starting up
+2015-05-14 14:07:15 NOVST LOG:  database system was shut down at 2015-05-14 14:06:24 NOVST
+2015-05-14 14:07:15 NOVST LOG:  database system is ready to accept connections
+2015-05-14 14:07:15 NOVST LOG:  autovacuum launcher started
+2015-05-14 15:42:16 NOVST LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2015-05-14 15:42:16 NOVST LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2015-05-14 21:19:17 NOVST LOG:  server process (PID 8024) was terminated by exception 0xC000012D
+2015-05-14 21:19:17 NOVST HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2015-05-14 21:19:17 NOVST LOG:  terminating any other active server processes
+2015-05-14 21:19:18 NOVST WARNING:  terminating connection because of crash of another server process
+2015-05-14 21:19:18 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2015-05-14 21:19:18 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2015-05-14 21:19:18 NOVST LOG:  all server processes terminated; reinitializing
+2015-05-14 21:19:18 NOVST FATAL:  could not create shared memory segment: 1455
+2015-05-14 21:19:18 NOVST DETAIL:  Failed system call was CreateFileMapping(size=37150720, name=Global/PostgreSQL:C:/workspace/Develop/projects/db/postgres).

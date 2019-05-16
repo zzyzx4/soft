@@ -1,0 +1,83 @@
+2012-05-05 13:09:42 NOVST LOG:  database system was interrupted; last known up at 2012-05-05 11:57:05 NOVST
+2012-05-05 13:09:42 NOVST LOG:  database system was not properly shut down; automatic recovery in progress
+2012-05-05 13:09:43 NOVST FATAL:  the database system is starting up
+2012-05-05 13:09:43 NOVST LOG:  consistent recovery state reached at 0/1AC7408
+2012-05-05 13:09:43 NOVST LOG:  record with zero length at 0/1AC7408
+2012-05-05 13:09:43 NOVST LOG:  redo is not required
+2012-05-05 13:09:43 NOVST LOG:  database system is ready to accept connections
+2012-05-05 13:09:44 NOVST LOG:  autovacuum launcher started
+2012-05-05 13:42:08 NOVST ERROR:  null value in column "end_date" violates not-null constraint
+2012-05-05 13:42:08 NOVST STATEMENT:  INSERT INTO "books_materialprice" ("material_type_id", "material_subtype_id", "supplier_id", "start_date", "end_date", "price") VALUES (1, 1, 1, E'2012-05-05', NULL, 10.0)
+2012-05-05 13:51:01 NOVST ERROR:  cannot drop table books_worktype because other objects depend on it
+2012-05-05 13:51:01 NOVST DETAIL:  constraint worktype_id_refs_id_165b3218 on table books_worktype_default_materials depends on table books_worktype
+	constraint books_ordertype_work_type_worktype_id_fkey on table books_ordertype_work_type depends on table books_worktype
+	constraint books_workdata_work_type_id_fkey on table books_workdata depends on table books_worktype
+2012-05-05 13:51:01 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 13:51:01 NOVST STATEMENT:  DROP TABLE public.books_worktype
+2012-05-05 13:51:21 NOVST ERROR:  cannot drop table books_worktype because other objects depend on it
+2012-05-05 13:51:21 NOVST DETAIL:  constraint books_ordertype_work_type_worktype_id_fkey on table books_ordertype_work_type depends on table books_worktype
+	constraint books_workdata_work_type_id_fkey on table books_workdata depends on table books_worktype
+2012-05-05 13:51:21 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 13:51:21 NOVST STATEMENT:  DROP TABLE public.books_worktype
+2012-05-05 13:51:52 NOVST ERROR:  cannot drop table books_worktype because other objects depend on it
+2012-05-05 13:51:52 NOVST DETAIL:  constraint books_workdata_work_type_id_fkey on table books_workdata depends on table books_worktype
+2012-05-05 13:51:52 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 13:51:52 NOVST STATEMENT:  DROP TABLE public.books_worktype
+2012-05-05 13:52:11 NOVST ERROR:  cannot drop table books_workdata because other objects depend on it
+2012-05-05 13:52:11 NOVST DETAIL:  constraint workdata_id_refs_id_46432b0a on table books_workdata_material depends on table books_workdata
+	constraint books_order_work_workdata_id_fkey on table books_order_work depends on table books_workdata
+2012-05-05 13:52:11 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 13:52:11 NOVST STATEMENT:  DROP TABLE public.books_workdata
+2012-05-05 14:11:30 NOVST ERROR:  relation "books_ordertype_work_type" does not exist at character 133
+2012-05-05 14:11:30 NOVST STATEMENT:  SELECT "books_ordertype_work_type"."id", "books_ordertype_work_type"."ordertype_id", "books_ordertype_work_type"."worktype_id" FROM "books_ordertype_work_type" WHERE "books_ordertype_work_type"."ordertype_id" = 1 
+2012-05-05 14:11:30 NOVST ERROR:  relation "books_ordertype_work_type" does not exist at character 133
+2012-05-05 14:11:30 NOVST STATEMENT:  SELECT "books_ordertype_work_type"."id", "books_ordertype_work_type"."ordertype_id", "books_ordertype_work_type"."worktype_id" FROM "books_ordertype_work_type" WHERE "books_ordertype_work_type"."ordertype_id" = 1  LIMIT 21
+2012-05-05 14:13:52 NOVST ERROR:  cannot drop table books_ordertype because other objects depend on it
+2012-05-05 14:13:52 NOVST DETAIL:  constraint books_order_order_type_id_fkey on table books_order depends on table books_ordertype
+2012-05-05 14:13:52 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 14:13:52 NOVST STATEMENT:  DROP TABLE public.books_ordertype
+2012-05-05 14:31:10 NOVST ERROR:  null value in column "material_type_id" violates not-null constraint
+2012-05-05 14:31:10 NOVST STATEMENT:  INSERT INTO "books_materialprice" ("material_subtype_id", "supplier_id", "start_date", "end_date", "price") VALUES (1, 1, E'2012-05-05', NULL, 10.0)
+2012-05-05 16:40:19 NOVST ERROR:  null value in column "salary" violates not-null constraint
+2012-05-05 16:40:19 NOVST STATEMENT:  INSERT INTO "books_employee" ("first_name", "last_name", "salary") VALUES (E'Екатерина', E'Василиади', NULL)
+2012-05-05 16:41:01 NOVST ERROR:  null value in column "salary" violates not-null constraint
+2012-05-05 16:41:01 NOVST STATEMENT:  INSERT INTO "books_employee" ("first_name", "last_name", "salary") VALUES (E'Екатерина', E'Василиади', NULL)
+2012-05-05 16:41:30 NOVST ERROR:  cannot drop table books_employee because other objects depend on it
+2012-05-05 16:41:30 NOVST DETAIL:  constraint books_workout_emploee_id_fkey on table books_workout depends on table books_employee
+2012-05-05 16:41:30 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 16:41:30 NOVST STATEMENT:  DROP TABLE public.books_employee
+2012-05-05 16:51:04 NOVST ERROR:  null value in column "end_date" violates not-null constraint
+2012-05-05 16:51:04 NOVST STATEMENT:  INSERT INTO "books_order" ("title", "client_id", "order_date", "deadline_date", "start_date", "end_date", "order_type_id", "size_id", "circ") VALUES (E'Книга №3 - Автомобильдерге', 1, E'2012-04-26', E'2012-05-22', E'2012-04-26', NULL, 1, 1, 300)
+2012-05-05 17:01:22 NOVST ERROR:  column books_workdata_material.materialsubtype_id does not exist at character 81
+2012-05-05 17:01:22 NOVST STATEMENT:  SELECT "books_workdata_material"."id", "books_workdata_material"."workdata_id", "books_workdata_material"."materialsubtype_id" FROM "books_workdata_material" WHERE "books_workdata_material"."workdata_id" = 1 
+2012-05-05 17:01:22 NOVST ERROR:  column books_workdata_material.materialsubtype_id does not exist at character 81
+2012-05-05 17:01:22 NOVST STATEMENT:  SELECT "books_workdata_material"."id", "books_workdata_material"."workdata_id", "books_workdata_material"."materialsubtype_id" FROM "books_workdata_material" WHERE "books_workdata_material"."workdata_id" = 1  LIMIT 21
+2012-05-05 17:38:05 NOVST ERROR:  column books_worktype_default_materials.materialsubtype_id does not exist at character 99
+2012-05-05 17:38:05 NOVST STATEMENT:  SELECT "books_worktype_default_materials"."id", "books_worktype_default_materials"."worktype_id", "books_worktype_default_materials"."materialsubtype_id" FROM "books_worktype_default_materials" WHERE "books_worktype_default_materials"."worktype_id" = 3 
+2012-05-05 17:38:05 NOVST ERROR:  column books_worktype_default_materials.materialsubtype_id does not exist at character 99
+2012-05-05 17:38:05 NOVST STATEMENT:  SELECT "books_worktype_default_materials"."id", "books_worktype_default_materials"."worktype_id", "books_worktype_default_materials"."materialsubtype_id" FROM "books_worktype_default_materials" WHERE "books_worktype_default_materials"."worktype_id" = 3  LIMIT 21
+2012-05-05 17:41:13 NOVST ERROR:  relation "books_worktype_default_materials" does not exist at character 160
+2012-05-05 17:41:13 NOVST STATEMENT:  SELECT "books_worktype_default_materials"."id", "books_worktype_default_materials"."worktype_id", "books_worktype_default_materials"."materialsubtype_id" FROM "books_worktype_default_materials" WHERE "books_worktype_default_materials"."worktype_id" = 4 
+2012-05-05 17:41:13 NOVST ERROR:  relation "books_worktype_default_materials" does not exist at character 160
+2012-05-05 17:41:13 NOVST STATEMENT:  SELECT "books_worktype_default_materials"."id", "books_worktype_default_materials"."worktype_id", "books_worktype_default_materials"."materialsubtype_id" FROM "books_worktype_default_materials" WHERE "books_worktype_default_materials"."worktype_id" = 4  LIMIT 21
+2012-05-05 17:45:21 NOVST ERROR:  cannot drop table books_worktype because other objects depend on it
+2012-05-05 17:45:21 NOVST DETAIL:  constraint books_ordertype_work_type_worktype_id_fkey on table books_ordertype_work_type depends on table books_worktype
+	constraint books_workdata_work_type_id_fkey on table books_workdata depends on table books_worktype
+2012-05-05 17:45:21 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-05-05 17:45:21 NOVST STATEMENT:  DROP TABLE public.books_worktype
+2012-05-05 17:45:37 NOVST ERROR:  relation "books_worktype" does not exist at character 13
+2012-05-05 17:45:37 NOVST STATEMENT:  INSERT INTO "books_worktype" ("title", "each_item_charge", "fitting_charge") VALUES (E'Ниткошвейка', 3.0, 2000.0)
+2012-05-05 19:30:32 NOVST ERROR:  column books_workdata.work_amount does not exist at character 129
+2012-05-05 19:30:32 NOVST STATEMENT:  SELECT "books_workdata"."id", "books_workdata"."order_id", "books_workdata"."work_type_id", "books_workdata"."material_amount", "books_workdata"."work_amount", "books_workdata"."note" FROM "books_workdata" ORDER BY "books_workdata"."id" DESC
+2012-05-05 19:30:32 NOVST ERROR:  column books_workdata.work_amount does not exist at character 129
+2012-05-05 19:30:32 NOVST STATEMENT:  SELECT "books_workdata"."id", "books_workdata"."order_id", "books_workdata"."work_type_id", "books_workdata"."material_amount", "books_workdata"."work_amount", "books_workdata"."note" FROM "books_workdata" ORDER BY "books_workdata"."id" DESC LIMIT 21
+2012-05-05 19:30:32 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-05-05 19:30:32 NOVST STATEMENT:  SELECT "books_workdata"."id", "books_workdata"."order_id", "books_workdata"."work_type_id", "books_workdata"."material_amount", "books_workdata"."work_amount", "books_workdata"."note" FROM "books_workdata" ORDER BY "books_workdata"."id" DESC LIMIT 21
+2012-05-05 19:32:06 NOVST ERROR:  column "work_amount" contains null values
+2012-05-05 19:32:06 NOVST STATEMENT:  ALTER TABLE books_workdata
+	   ADD COLUMN work_amount integer NOT NULL;
+	
+2012-05-05 20:02:55 NOVST ERROR:  column "work_amount" contains null values
+2012-05-05 20:02:55 NOVST STATEMENT:  ALTER TABLE books_workdata
+	   ALTER COLUMN work_amount SET NOT NULL;
+	

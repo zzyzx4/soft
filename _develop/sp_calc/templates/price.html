@@ -1,0 +1,291 @@
+<!--
+   price.html
+   
+   Copyright 2013 user <user@Z830>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+{% extends "_typo_base.html" %}
+
+{# setting the <title> attribute #}
+{% block dojango_page_title %}Прайс-лист на полиграфические материалы{% endblock %}
+
+{% block app_body %}    
+    
+    <!-- "main" BorderContainer just contains page title and another BorderContainer -->
+	<div id="main" dojoType="dijit.layout.BorderContainer">
+        
+        <div id="header" dojoType="dijit.layout.ContentPane" region="top">
+                <h1 dojoType="dijit.layout.ContentPane">Прайс-лист</h1>
+        </div>
+            <!-- "mainSplit" BorderContainer has all the real content -->
+        <div id="mainSplit" dojoType="dijit.layout.BorderContainer" design="sidebar" region="center">
+            <div dojoType="dijit.layout.ContentPane" duration="200"
+				minSize="100" style="width: 300px;" id="leftPane" region="leading" splitter="true">
+                    <h3 dojoType="dijit.layout.ContentPane" region="top">Материалы</h3>
+                    <div id="materialTree"></div>
+            </div>
+            <div dojoType="dijit.layout.ContentPane" region="center" id="MaterialPane">
+                   	<button dojoType="dijit.form.Button" iconClass="plusIcon" onClick='MaterialPrice_dialog("add")'>
+						Новая номенклатура
+					</button>
+					<button dojoType="dijit.form.ComboButton" iconClass="noteIcon"
+						optionsTitle='Варианты редактирования'
+						onClick='MaterialPrice_dialog("price")'>
+						<span>Изменить цену</span>
+						<div dojoType="dijit.Menu" id="saveMenu" style="display: none;">
+                            <!-- iconClass="dijitEditorIcon dijitEditorIconNewPage" -->
+							<div dojoType="dijit.MenuItem"
+                                iconClass="noteIcon" 
+								onClick='MaterialPrice_dialog("price")'>
+								Изменить цену
+							</div>
+							<div dojoType="dijit.MenuItem"
+								onClick='MaterialPrice_dialog("edit")'>
+								Расширенное редактирование
+							</div>
+						</div>
+					</button>
+
+                   	<button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconDelete" disabled='true' onClick='MaterialPrice_dialog("notexist")'>
+						Товар не существует
+					</button>
+                    <div id="info"></div>
+                    <hr class="spacer">
+                    <div dojoType="dojo.store.Memory" data-dojo-id="PriceData_store"></div>
+                    <div dojoType="dojox.grid.DataGrid" jsId="aGrid" id="Price_grid" elasticView="2" autoHeight="true"
+                        data-dojo-props="structure: [[{name:'ID', field:'id', width:'25px'}, 
+                                                    {name:'Поставщик', field:'supplier__title', width: '150px'}, 
+                                                    {name:'Наименование товара', field:'nomen_title', width: '200px'}, 
+                                                    {name:'Дата актуальности', field:'start_date', width: '120px'}, 
+                                                    {name:'Цена (тг)', field:'price', width: '50px'} ]]">
+                    </div>
+                    <!-- <div id="hand0"></div> Для ресайза таблицы но не работает-->
+            </div>
+        </div>
+        
+    </div><!-- end of "main" BorderContainer -->
+	
+    {% block press_data%}
+        {% include "materialprice_form.html" %}
+    {% endblock press_data%}
+
+        
+<script type="text/javascript">
+
+	dojo.require("dijit.TitlePane");
+
+    //dojo.require("dojo.json");
+    dojo.require("dijit.tree.TreeStoreModel");
+    dojo.require("dojo.store.Memory");
+    dojo.require("dojo.data.ObjectStore");
+	dojo.require("dijit.form.Button");
+    dojo.require("dijit/form/Select");
+	dojo.require("dijit.form.FilteringSelect");
+    dojo.require("dijit.form.ValidationTextBox");
+	dojo.require("dijit.form.DateTextBox");
+    dojo.require("dojo.date.locale");
+
+    //dojo.require("dojo/store/Observable");
+	//dojo.require("dojo.data.ItemFileReadStore");
+    //dojo.require("dijit.tree.ForestStoreModel");
+    //dojo.require("dijit/tree/ObjectStoreModel");
+
+    //dojo.require("dojo.dom");
+    dojo.require("dijit.Tree");
+    dojo.require("dojo._base.declare");
+
+    dojo.require("dijit.layout.BorderContainer");
+    dojo.require("dijit.layout.ContentPane");
+
+    //dojo.require("dojo.data.ItemFileWriteStore");
+    dojo.require("dojox.grid._CheckBoxSelector");
+    dojo.require("dojox.grid.DataGrid");
+
+    dojo.require("dijit.Dialog");
+
+    
+    // scan page for widgets and instantiate them
+    //dojo.require("dojo.parser");	
+    require(["dojo/parser", "dojo/domReady!"]);
+
+    dojo.require("dojox.layout.ResizeHandle");
+
+    a_data = [{id: 'world', name: 'The earth', type: 'planet', population: '6 billion'},
+              {id: 'AF', name:'Africa', type:'continent', population:'900 million', area: '30,221,532 sq km',
+                    timezone: '-1 UTC to +4 UTC', parent: 'world'},
+                { id: 'EG', name:'Egypt', type:'country', parent: 'AF' },
+                { id: 'KE', name:'Kenya', type:'country', parent: 'AF' },
+            { id: 'OC', name:'Oceania', type:'continent', population:'21 million', parent: 'world'},
+                { id: 'ES', name:'Spain', type:'country', parent: 'EU' },
+                { id: 'IT', name:'Italy', type:'country', parent: 'EU' },
+            { id: 'NA', name:'North America', type:'continent', parent: 'world' },
+            { id: 'SA', name:'South America', type:'continent', parent: 'world' }
+        ];
+
+    var Material_ID;
+    
+    function create_MaterialTree(a_data)
+    {
+        var myStore = new dojo.store.Memory(
+            {data: a_data
+            //,getChildren: function(object)
+            //    {return this.query({parent: object.id});}
+            });
+   
+        oldstyle_store = dojo.data.ObjectStore({objectStore: myStore});
+
+        oldstyle_store.getLabel = function(object){
+            // just get the name
+            return object.name;
+        };
+    
+        //  oldstyle_store = new dojo.store.Observable(oldstyle_store);
+
+        myForestStoreModel = function(store,query){
+            return dojo._base.declare(dijit.tree.ForestStoreModel,{
+                constructor: function(store,query){},
+                getChildren: function(parentItem, onComplete, onError){
+                    if(parentItem === this.root){
+                        this.inherited(arguments);  
+                    }else{
+                        t = this.store.objectStore.query({parent: parentItem.id});
+                        onComplete(t);
+                    }
+                }
+            });
+        };
+    
+    
+        myModel = new dijit.tree.TreeStoreModel({
+            store:  oldstyle_store,
+            query: { id: 'root' },
+            //rootId: "world",
+            //rootLabel: "Materials"//,
+            mayHaveChildren: function(object){
+                bHaveChild=Boolean(this.store.objectStore.query({parent: object.id}).length>0);
+                return bHaveChild},
+            //childrenAttrs: ["children"]
+        });
+
+        myModel.getChildren = function(parentItem, onComplete, onError)
+        {
+            onComplete(this.store.objectStore.query({parent: parentItem.id}));
+        };
+                
+        new dijit.Tree({
+                model: myModel,
+                onClick: function(item) {show_MaterialGrid(item);},
+                showRoot: false,
+            }, "materialTree");    
+    }
+
+    function show_MaterialGrid(item)
+    {
+        if (item.rectype=="m") //Ветка типа "материал" 
+        {
+          Material_ID=item.id
+          dojo.byId("info").innerHTML = "material_id = " + Material_ID; 
+  
+          dojo.xhrGet(
+            {url: "/material_data_ajaxget/",
+            handleAs: "json",
+            content: {"material_id": Material_ID},
+            preventCache: true,
+            load: function(response, ioargs) {
+                if (response.success){
+                    material_data = response["material_data"];
+                    
+                    PriceData_store.query().forEach(function(item){ //Чистим PriceData_store
+                        var id=PriceData_store.getIdentity(item);
+                        PriceData_store.remove(id);
+                    });
+                    for (i in material_data)                        //Заполняем PriceData_store
+                        {PriceData_store.add(material_data[i]);}
+
+                    grid_data = new dojo.data.ObjectStore({objectStore: PriceData_store});
+                    dijit.byId("Price_grid").setStore(grid_data);
+                    
+                }
+            },
+            error:function(error,ioargs){ // This happens on a 500 error or alikes.
+                dojo.byId("info").innerHTML = "An unexpected error occurred: " + error; 
+                                        // + " - " + ioargs.xhr.status;
+            }
+        });
+        
+        }
+        else 
+        {
+            dojo.byId("info").innerHTML = "";
+            PriceData_store.query().forEach(function(item){ //Чистим PriceData_store
+                var id=PriceData_store.getIdentity(item);
+                PriceData_store.remove(id);
+            });
+            
+            grid_data = new dojo.data.ObjectStore({objectStore: PriceData_store});
+            dijit.byId("Price_grid").setStore(grid_data);
+        }
+
+    }
+
+
+    dojo.ready(function(){
+        
+
+    });
+    
+    dojo.addOnLoad(function() {
+        dojo.parser.parse(dojo.byId('container')); 
+
+	//		var hand = new dojox.layout.ResizeHandle({ ПРЕДНАЗНАЧЕНО ДЛЯ РЕСАЙЗА ТАБЛИЦЫ, НО НЕ РАБОТАЕТ
+	//			targetContainer: dojo.byId("MaterialPane"),
+	//			animateSizing: false,
+	//			onResize: function(e){
+	//				setTimeout(dojo.hitch(aGrid,"update",e),25);
+	//			}
+	//		},"hand0");    
+    
+        dojo.xhrGet(
+            {url: "/material_tree_ajaxget/",
+            handleAs: "json",
+            //content: base_data,
+            //handleAs: "text",
+            //postData: dojo.toJson({firstname:form.firstname.value, surname:form.surname.value}),
+            preventCache: true,
+            load: function(response, ioargs) {
+                if (response.success){
+                    a_data = response["material_list"];
+                    create_MaterialTree(a_data);
+                 }
+            },
+            error:function(error,ioargs){ // This happens on a 500 error or alikes.
+                dojo.byId("info").innerHTML = "An unexpected error occurred: " + error; 
+                                        // + " - " + ioargs.xhr.status;
+            }
+        });
+       
+    });
+
+    dojo.ready(function(){
+    
+    });
+
+</script>
+
+{% endblock app_body %}

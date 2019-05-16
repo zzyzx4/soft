@@ -1,0 +1,39 @@
+{% extends "dojango/base.html" %}
+ 
+{% block dojango_page_title %}Simple AJAX with dojango{% endblock %}
+ 
+{% block dojango_header_extra %}
+
+<script type="text/javascript">
+  function userFormSubmit()
+  {
+   var form = dojo.byId("userForm");
+   dojo.xhrPost({url: "/simple-ajax-set/",
+                 handleAs: "json",
+                 content:{firstname:form.firstname.value, surname:form.surname.value},
+                 //handleAs: "text",
+                 //postData: dojo.toJson({firstname:form.firstname.value, surname:form.surname.value}),
+                 preventCache: true,
+                 load: function(response, ioargs) {
+                            if (response.success){
+                                dojo.byId("info").innerHTML = "Submitted successfully";
+                            } else {
+                                dojo.byId("info").innerHTML = "Error: " + ioargs.xhr.status;
+                            }
+                        },
+                  error:function(error,ioargs){ // This happens on a 500 error or alikes.
+                                        dojo.byId("info").innerHTML = "An unexpected error occurred: " + error + " - " + ioargs.xhr.status;
+                                        }
+                });
+  }
+
+</script>
+{% endblock %}
+ 
+{% block dojango_content %}
+ <form id="userForm" onsubmit="userFormSubmit(); return false;" action="/simple-ajax-set/">
+  First name: <input id="firstname" /><br />
+  Surname: <input id="surname" /><br />
+  <input type="submit" value="Submit" /> <span id="info"></span>
+ </form>
+{% endblock %}

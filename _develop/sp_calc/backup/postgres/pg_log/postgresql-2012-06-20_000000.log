@@ -1,0 +1,61 @@
+2012-06-20 12:43:04 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:44:27 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:45:58 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:46:29 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:46:36 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:46:57 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:47:05 NOVST WARNING:  pgstat wait timeout
+2012-06-20 12:47:27 NOVST WARNING:  pgstat wait timeout
+2012-06-20 14:29:29 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-06-20 14:29:29 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1') 
+2012-06-20 14:29:30 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-06-20 14:29:30 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" LIMIT 21
+2012-06-20 14:29:30 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:30 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:29:30 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:30 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" LIMIT 21
+2012-06-20 14:29:30 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:30 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:29:30 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:30 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:29:33 NOVST ERROR:  column calc_ordertype.page_amount does not exist at character 89
+2012-06-20 14:29:33 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype" WHERE "calc_ordertype"."id" = 1 
+2012-06-20 14:29:34 NOVST ERROR:  column calc_ordertype.page_amount does not exist at character 89
+2012-06-20 14:29:34 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype" LIMIT 21
+2012-06-20 14:29:34 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:34 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype" WHERE "calc_ordertype"."id" = 1  LIMIT 21
+2012-06-20 14:29:34 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:34 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype" LIMIT 21
+2012-06-20 14:29:34 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:34 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype" WHERE "calc_ordertype"."id" = 1  LIMIT 21
+2012-06-20 14:29:34 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:29:34 NOVST STATEMENT:  SELECT "calc_ordertype"."id", "calc_ordertype"."title", "calc_ordertype"."description", "calc_ordertype"."page_amount" FROM "calc_ordertype" WHERE "calc_ordertype"."id" = 1  LIMIT 21
+2012-06-20 14:30:44 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-06-20 14:30:44 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1') 
+2012-06-20 14:30:44 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-06-20 14:30:44 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" LIMIT 21
+2012-06-20 14:30:44 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:30:44 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:30:44 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:30:44 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" LIMIT 21
+2012-06-20 14:30:44 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:30:44 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:30:44 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:30:44 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:33:42 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-06-20 14:33:42 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1') 
+2012-06-20 14:33:42 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-06-20 14:33:42 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" LIMIT 21
+2012-06-20 14:33:43 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:33:43 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:33:43 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:33:43 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" LIMIT 21
+2012-06-20 14:33:43 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:33:43 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 14:33:43 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2012-06-20 14:33:43 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order" WHERE UPPER("calc_order"."id"::text) = UPPER(E'1')  LIMIT 21
+2012-06-20 18:32:52 NOVST LOG:  received fast shutdown request
+2012-06-20 18:32:52 NOVST LOG:  aborting any active transactions
+2012-06-20 18:32:52 NOVST LOG:  autovacuum launcher shutting down
+2012-06-20 18:32:55 NOVST LOG:  shutting down
+2012-06-20 18:32:55 NOVST LOG:  database system is shut down

@@ -1,0 +1,14 @@
+2012-07-07 22:30:27 NOVST LOG:  database system was interrupted; last known up at 2012-07-07 22:20:59 NOVST
+2012-07-07 22:30:27 NOVST FATAL:  the database system is starting up
+2012-07-07 22:30:28 NOVST LOG:  database system was not properly shut down; automatic recovery in progress
+2012-07-07 22:30:28 NOVST LOG:  consistent recovery state reached at 0/28D3FA8
+2012-07-07 22:30:28 NOVST LOG:  record with zero length at 0/28D3FA8
+2012-07-07 22:30:28 NOVST LOG:  redo is not required
+2012-07-07 22:30:28 NOVST FATAL:  the database system is starting up
+2012-07-07 22:30:29 NOVST FATAL:  the database system is starting up
+2012-07-07 22:30:29 NOVST LOG:  database system is ready to accept connections
+2012-07-07 22:30:29 NOVST LOG:  autovacuum launcher started
+2012-07-07 22:37:30 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-07-07 22:37:30 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order"
+2012-07-07 22:53:20 NOVST ERROR:  column calc_order.page_amount does not exist at character 238
+2012-07-07 22:53:20 NOVST STATEMENT:  SELECT "calc_order"."id", "calc_order"."title", "calc_order"."client_id", "calc_order"."order_date", "calc_order"."deadline_date", "calc_order"."start_date", "calc_order"."end_date", "calc_order"."order_type_id", "calc_order"."size_id", "calc_order"."page_amount", "calc_order"."circ", "calc_order"."price" FROM "calc_order"

@@ -1,0 +1,10 @@
+2014-10-27 18:54:17 NOVT LOG:  database system was shut down at 2014-10-27 18:53:32 NOVT
+2014-10-27 18:54:17 NOVT LOG:  database system is ready to accept connections
+2014-10-27 18:54:17 NOVT LOG:  autovacuum launcher started
+2014-10-27 19:14:32 NOVT WARNING:  pgstat wait timeout
+2014-10-27 19:14:41 NOVT WARNING:  pgstat wait timeout
+2014-10-27 22:26:33 NOVT LOG:  received fast shutdown request
+2014-10-27 22:26:33 NOVT LOG:  aborting any active transactions
+2014-10-27 22:26:33 NOVT LOG:  autovacuum launcher shutting down
+2014-10-27 22:26:33 NOVT LOG:  shutting down
+2014-10-27 22:26:33 NOVT LOG:  database system is shut down

@@ -1,0 +1,136 @@
+    
+<div id="MaterialPrice_dialog" dojoType="dijit.Dialog" title="Цена материала" style="text-align:center;">
+
+    <div dojoType="dojo.store.Memory" data-dojo-id="MaterialPrice_action" data-dojo-props="data: [{action: 'unknown'}]"></div>
+    <table>
+        {{materialprice_form.as_table}}
+    </table>
+    <div>Стоимость упаковки: </div>
+    
+    <button dojoType="dijit.form.Button" onclick="MaterialPrice_save()">Сохранить</button>
+    <button dojoType="dijit.form.Button" onclick="dijit.byId('MaterialPrice_dialog').hide()">Отмена</button>
+    <span id="info"></span>                
+            
+</div>
+
+<script type="text/javascript">
+
+    function MaterialPrice_dialog(action)
+    {
+        var sel_item = dijit.byId("Price_grid").selection.getSelected();
+
+        MaterialPrice_action.put({id:1, action:action});
+        if (action == "add") {
+            dijit.byId("id_material").set('value', Material_ID);
+            dijit.byId("id_supplier").set('disabled', false);
+            dijit.byId("id_nomen_title").set('disabled', false);
+            dijit.byId("id_start_date").set('disabled', false);
+            dijit.byId("id_packing").set('disabled', false);
+            dijit.byId("id_price").set('disabled', false);
+            
+            alert(sel_item.length);
+            if (sel_item.length) {
+                dojo.forEach(sel_item, function(sel_item){
+                    dijit.byId("id_supplier").set('value', sel_item.supplier__id);
+                    dijit.byId("id_nomen_title").set('value', null);
+                    dijit.byId("id_start_date").set('value', null);
+                    //dijit.byId("id_end_date").set('value', null);
+                    dijit.byId("id_packing").set('value', null);
+                    dijit.byId("id_price").set('value', null);
+                });
+            }
+            
+            dijit.byId("MaterialPrice_dialog").show();
+        }
+        if (action == "edit") {
+            if (sel_item.length) {
+                dijit.byId("id_supplier").set('disabled', true);
+                dijit.byId("id_nomen_title").set('disabled', false);
+                dijit.byId("id_start_date").set('disabled', false);
+                dijit.byId("id_packing").set('disabled', false);
+                dijit.byId("id_price").set('disabled', false);
+                
+                dojo.forEach(sel_item, function(sel_item){
+                    dijit.byId("id_supplier").set('value', sel_item.supplier__id);
+                    dijit.byId("id_material").set('value',Material_ID);
+                    dijit.byId("id_nomen_title").set('value', sel_item.nomen_title);
+                    dijit.byId("id_start_date").set('value', sel_item.start_date);
+                    dijit.byId("id_end_date").set('value', sel_item.end_date);
+                    dijit.byId("id_packing").set('value', sel_item.packing);
+                    dijit.byId("id_price").set('value', sel_item.price);
+                    MaterialPrice_action.put({id:2, materialprice_id:sel_item.id});
+                });
+                dijit.byId("MaterialPrice_dialog").show();
+            }
+        }
+
+        if (action == "price") {
+            if (sel_item.length) {
+                dijit.byId("id_supplier").set('disabled', true);
+                dijit.byId("id_nomen_title").set('disabled', true);
+                dijit.byId("id_start_date").set('disabled', false);
+                dijit.byId("id_packing").set('disabled', true);
+                dijit.byId("id_price").set('disabled', false);
+                dojo.forEach(sel_item, function(sel_item){
+                    dijit.byId("id_supplier").set('value', sel_item.supplier__id);
+                    dijit.byId("id_material").set('value',Material_ID);
+                    dijit.byId("id_nomen_title").set('value', sel_item.nomen_title);
+                    dijit.byId("id_start_date").set('value', sel_item.start_date);
+                    dijit.byId("id_packing").set('value', sel_item.packing);
+                    dijit.byId("id_price").set('value', sel_item.price);
+                    MaterialPrice_action.put({id:2, materialprice_id:sel_item.id});
+                });
+                dijit.byId("MaterialPrice_dialog").show();
+            }
+            
+        }
+
+        if (action == "notexist") { //Больше не существует
+        
+        }
+
+    }
+    
+    function MaterialPrice_save()
+    {
+    //Валидация
+    //Сохранение
+    //Закрытие
+        var action = MaterialPrice_action.get(1).action;
+        var start_date = new Date(dijit.byId("id_start_date").get('value'));
+        //alert (dojo.date.locale.format(start_date, {selector:'date', formatLength:'short'}));
+        var end_date = new Date(dijit.byId("id_end_date").get('value'));
+        if (action == "add" | action == "edit" | action == "price") {
+            materialprice_id = null;
+            if (action == "edit") {materialprice_id=MaterialPrice_action.get(2).materialprice_id;}
+            dojo.xhrPost({
+                url: "/materialprice_ajaxpost/",
+                handleAs: "json",
+                content: {
+                          "materialprice_id": materialprice_id,
+                          "id_material": Material_ID, 
+                          "id_supplier": dijit.byId("id_supplier").get('value'),
+                          "id_nomen_title": dijit.byId("id_nomen_title").get('value'),
+                          "id_start_date": dojo.date.locale.format(start_date, {selector:'date', datePattern: 'yyyy-MM-dd', }),
+                          "id_end_date": dojo.date.locale.format(end_date, {selector:'date', datePattern: 'yyyy-MM-dd', }),
+                          "id_packing": dijit.byId("id_packing").get('value'),
+                          "id_price": dijit.byId("id_price").get('value'),
+                        },
+                load:function(response, ioargs) {
+                    if (response.success){
+                    }
+                },
+                error:function(error,ioargs){ // This happens on a 500 error or alikes.
+                    dojo.byId("info").innerHTML = "An unexpected error occurred: " + error; 
+                                        // + " - " + ioargs.xhr.status;
+                }
+            });
+        }
+        if (action == "notexist") {
+        }
+        dijit.byId('MaterialPrice_dialog').hide();
+        show_MaterialGrid(dijit.byId("materialTree").attr("selectedItem"));
+
+    }
+    
+</script>

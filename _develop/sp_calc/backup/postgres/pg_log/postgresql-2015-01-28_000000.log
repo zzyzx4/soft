@@ -1,0 +1,48 @@
+2015-01-28 00:27:41 NOVT WARNING:  pgstat wait timeout
+2015-01-28 01:03:43 NOVT WARNING:  pgstat wait timeout
+2015-01-28 01:15:42 NOVT WARNING:  pgstat wait timeout
+2015-01-28 03:30:50 NOVT WARNING:  pgstat wait timeout
+2015-01-28 03:30:57 NOVT WARNING:  pgstat wait timeout
+2015-01-28 03:32:50 NOVT WARNING:  pgstat wait timeout
+2015-01-28 03:32:55 NOVT WARNING:  pgstat wait timeout
+2015-01-28 04:42:53 NOVT WARNING:  pgstat wait timeout
+2015-01-28 04:45:52 NOVT WARNING:  pgstat wait timeout
+2015-01-28 04:45:59 NOVT WARNING:  pgstat wait timeout
+2015-01-28 04:46:52 NOVT WARNING:  pgstat wait timeout
+2015-01-28 04:47:05 NOVT WARNING:  pgstat wait timeout
+2015-01-28 04:47:52 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:21:53 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:22:01 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:22:53 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:23:00 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:23:55 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:24:11 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:42:54 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:43:01 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:43:55 NOVT WARNING:  pgstat wait timeout
+2015-01-28 05:44:04 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:16:00 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:16:07 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:24:06 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:24:17 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:25:01 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:25:13 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:49:01 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:49:06 NOVT WARNING:  pgstat wait timeout
+2015-01-28 08:53:12 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:03:55 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:39:55 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:40:01 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:40:55 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:57:04 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:57:14 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:58:05 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:58:15 NOVT WARNING:  pgstat wait timeout
+2015-01-28 10:59:06 NOVT WARNING:  pgstat wait timeout
+2015-01-28 11:06:20 NOVT WARNING:  pgstat wait timeout
+2015-01-28 12:36:31 NOVT WARNING:  pgstat wait timeout
+2015-01-28 12:48:31 NOVT LOG:  received fast shutdown request
+2015-01-28 12:48:31 NOVT LOG:  aborting any active transactions
+2015-01-28 12:48:31 NOVT LOG:  autovacuum launcher shutting down
+2015-01-28 12:48:31 NOVT LOG:  shutting down
+2015-01-28 12:48:31 NOVT LOG:  database system is shut down

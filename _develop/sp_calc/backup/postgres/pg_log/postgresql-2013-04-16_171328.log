@@ -1,0 +1,9 @@
+2013-04-16 17:13:28 NOVST LOG:  database system was interrupted; last known up at 2013-04-16 12:16:45 NOVST
+2013-04-16 17:13:28 NOVST LOG:  database system was not properly shut down; automatic recovery in progress
+2013-04-16 17:13:28 NOVST FATAL:  the database system is starting up
+2013-04-16 17:13:28 NOVST LOG:  consistent recovery state reached at 0/3073638
+2013-04-16 17:13:28 NOVST LOG:  record with zero length at 0/3073638
+2013-04-16 17:13:28 NOVST LOG:  redo is not required
+2013-04-16 17:13:29 NOVST LOG:  database system is ready to accept connections
+2013-04-16 17:13:29 NOVST LOG:  autovacuum launcher started
+2013-04-16 22:19:36 NOVST WARNING:  pgstat wait timeout

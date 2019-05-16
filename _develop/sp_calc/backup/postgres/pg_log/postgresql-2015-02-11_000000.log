@@ -1,0 +1,6 @@
+2014-12-02 16:05:23 NOVT LOG:  received fast shutdown request
+2014-12-02 16:05:23 NOVT LOG:  aborting any active transactions
+2014-12-02 16:05:23 NOVT LOG:  autovacuum launcher shutting down
+2014-12-02 16:05:23 NOVT LOG:  shutting down
+2014-12-02 16:05:23 NOVT LOG:  database system is shut down
+2014-12-02 16:05:23 NOVT LOG:  last_statrequest 2015-02-11 02:08:42.772+06 is later than collector's time 2014-12-02 16:05:23.877+06

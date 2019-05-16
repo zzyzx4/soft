@@ -1,0 +1,220 @@
+<!--
+   calc.html
+   
+   Copyright 2013 user <user@Z830>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+{% extends "_typo_base.html" %}
+
+{# setting the <title> attribute #}
+{% block dojango_page_title %}Полиграфический калькулятор{% endblock %}
+
+{% block app_body %}    
+    
+    <!-- "main" BorderContainer just contains page title and another BorderContainer -->
+	<div id="main" dojoType="dijit.layout.BorderContainer">
+        <div id="header" dojoType="dijit.layout.ContentPane" region="top">
+            <h1 dojoType="dijit.layout.ContentPane">Полиграфический калькулятор</h1>
+            <hr class="spacer">
+            <div dojoType="dijit.layout.ContentPane">
+                <table>
+                    {{ ordertype_form.as_table }}
+                </table>
+            </div>
+            <hr class="spacer">
+            <button id="Calc_Button" dojoType="dijit.form.Button" iconClass="plusIcon" onClick='CalculateOrder()'>
+                CALC
+            </button>
+        </div>
+        <!-- "mainSplit" BorderContainer has all the real content -->
+		<div id="mainSplit" dojoType="dijit.layout.ContentPane" region="center">
+            
+            <div id="CommonData_pane">
+                <div id="common_pane" dojoType="dijit.TitlePane" title="Основные данные по заказу" >
+    
+                    {% block general_data %}
+                    <table>
+                        {{ commondata_form.as_table }}
+                    </table>
+                    {% endblock general_data %}
+
+                </div>
+            
+                <div dojoType="dijit.layout.ContentPane" class="myResPane" >
+                    Возможно цена за 1 шт
+                    <br>
+                    Возможно стоимость заказа
+                </div>
+            </div>
+            
+            <div> 
+                <div dojoType="dijit.TitlePane" title="Печатные работы">
+                    <div dojoType="dojo.store.Memory" data-dojo-id="PressData_store"></div>
+                    
+                    <div dojoType="dojox.grid.DataGrid" id="grid_pane" style="height: 94px"
+                        data-dojo-props="structure: [{type:'dojox.grid._CheckBoxSelector'}, [{name:'ID', field:'id', width:'15px'}, {name:'Тип бумаги', field:'paper_type', width: '150px'}, {name:'Бумага (плотность)', field:'paper', width: '150px'}, {name:'Печатное обородование', field:'machine', width: '150px'}, {name:'Тип печати', field:'press_type', width: '150px'}, {name:'# печ л', field:'sheet_amount', width: '30px'}, {name:'Информация для печатника', field:'note', width: '150px'}]]">
+                    </div>
+                    <hr class="spacer">
+						<button id="PressData_add" dojoType="dijit.form.Button" iconClass="plusIcon" onClick='PressData_dialog("add")'>
+							Add
+						</button>
+						<button id="PressData_edit" dojoType="dijit.form.Button" iconClass="plusIcon" onClick='PressData_dialog("edit")' disabled='true'>
+							Edit
+						</button>
+   						<button id="PressData_del" dojoType="dijit.form.Button" iconClass="plusIcon" onClick='PressData_dialog("del")' disabled='true'>
+							Del
+						</button>
+
+                </div>
+                <div dojoType="dijit.layout.ContentPane" class="myResPane">
+                    Результаты расчета по печати
+                </div>
+            </div>
+            <div>
+                <div id="workdata_pane" dojoType="dijit.TitlePane" title="Послепечатная обработка">
+                    {% block work_data %}
+                    <table id="workdata_table">
+                        {{ workdata_form.as_table }}
+                    </table>
+                    {% endblock work_data %}
+                </div>        
+                <div dojoType="dijit.layout.ContentPane" class="myResPane">
+                    Результаты расчета по послепечатке
+                </div>
+            </div>
+        </div>
+        
+    </div><!-- end of "main" BorderContainer -->
+	
+    {% block press_data%}
+        {% include "pressdata_form.html" %}
+    {% endblock press_data%}
+        
+<script type="text/javascript">
+
+    function OrderType_change(ordertype_id)
+    {
+        dojo.xhrGet({url: "/workdata/",
+                      handleAs: "json",
+                      content: {"order_type_id": ordertype_id},
+                      preventCache: true,
+                      load: function(response, ioargs) {
+                                if (response.success) {
+                                    dojo.byId("workdata_table").innerHTML = response.html;
+                                }
+                            },
+                      error: function(error,ioargs){ // This happens on a 500 error or alikes.
+                                alert ("An unexpected error occurred: " + error); 
+                                
+                             }
+                     });
+    }
+    
+    function CalculateOrder()
+    {
+        //{client:"fggdfg", title:"hgfhkh", id_sizetype:1, circ:1000, pressdata:[{id_paper:0, id_machine:0, id_press_type:0, sheet_amount:1, note:""},{}], workdata:[work_type:0,inst_workamount:1]}
+        var dic = {};
+        dic["client"] = "ClientName";
+        dic["title"] = "OrderTitle";
+        dic["id_sizetype"] = 1;
+        dic["circ"] = 1000;
+        var press_data = new Array();
+        dojo.forEach(PressData_store.query(), function(raw){
+                    press_data.push(raw);
+                });
+        dic["pressdata"] = JSON.stringify(press_data);
+        
+        
+        alert(dic["pressdata"]);
+        
+        dojo.xhrPost({url: "/calculate_order/",
+                      handleAs: "json",
+                      content: dic,
+                      preventCache: true,
+                      load: function(response, ioargs) {
+                            if (response.success){
+                                press_price=response["press_price"];
+                                work_price=response["work_price"];
+                                order_price=response["order_price"];
+                                //for (var i in response)
+                                //{
+                                //   dic = {};
+                                //   if (i!="success") 
+                                //   {
+                                //     dic["value"] = i;
+                                //     dic["label"] = response[i];
+                                     //alert (i+": "+ response[i]);
+
+                                //     data.push(dic); 
+                                //   }
+                            }
+                                
+                                //alert(dijit.byId(depend_control_name).get("id"));
+                      },
+                      error: function(error,ioargs){ // This happens on a 500 error or alikes.
+                                        dojo.byId("info").innerHTML = "An unexpected error occurred: " + error; 
+                                        // + " - " + ioargs.xhr.status;
+                             }
+        });
+
+    }
+    
+    dojo.require("dojo.json");
+    dojo.require("dojo.store.Memory");
+    dojo.require("dojo.data.ObjectStore");
+    
+    dojo.require("dojo.data.ItemFileWriteStore");
+    dojo.require("dojox.grid._CheckBoxSelector");
+    dojo.require("dojox.grid.DataGrid");
+    
+    dojo.require("dijit.registry");
+    dojo.require("dijit.layout.BorderContainer");
+    dojo.require("dijit.layout.LayoutContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.require("dijit.TitlePane");
+            
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit/form/Select");
+    dojo.require("dijit.form.NumberSpinner");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.CheckBox");
+    // scan page for widgets and instantiate them
+    //dojo.require("dojo.parser");	
+    require(["dojo/parser", "dojo/domReady!"]);
+    dojo.addOnLoad(function() {
+
+        dojo.parser.parse(dojo.byId('container')); 
+        
+    });
+    dojo.ready(function(){
+        //var someData = {id:1, paper_type: '1', 'paper': '1', 'machine': '1', 'press_type': '1', 'sheet_amount': '1', 'note': ''};
+
+        //PressData_store.add(someData);
+        
+        //var dataStore = new dojo.data.ObjectStore({objectStore: PressData_store});
+        
+        //var dataStore = new dojo.data.ObjectStore({ objectStore:new dojo.store.Memory({ data: someData }) });
+
+        //dijit.byId("grid_pane").setStore(dataStore);
+
+    });
+
+</script>
+
+{% endblock app_body %}

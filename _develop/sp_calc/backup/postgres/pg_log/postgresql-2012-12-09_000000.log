@@ -1,0 +1,57 @@
+2012-12-09 18:19:32 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:32 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:33 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:33 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:34 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:34 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:35 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:35 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:36 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:36 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:37 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:37 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:38 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:38 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:39 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:39 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:40 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:40 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:41 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:41 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:42 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:42 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:43 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-12-09 18:19:43 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-12-09 18:19:45 NOVT LOG:  server process (PID 7616) was terminated by exception 0xC000012D
+2012-12-09 18:19:45 NOVT HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2012-12-09 18:19:45 NOVT LOG:  terminating any other active server processes
+2012-12-09 18:19:53 NOVT WARNING:  terminating connection because of crash of another server process
+2012-12-09 18:19:53 NOVT DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2012-12-09 18:19:53 NOVT HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2012-12-09 18:20:17 NOVT LOG:  all server processes terminated; reinitializing
+2012-12-09 18:20:28 NOVT FATAL:  pre-existing shared memory block is still in use
+2012-12-09 18:20:28 NOVT HINT:  Check if there are any old server processes still running, and terminate them.

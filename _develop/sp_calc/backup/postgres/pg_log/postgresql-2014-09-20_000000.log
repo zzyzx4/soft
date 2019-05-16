@@ -1,0 +1,43 @@
+2014-09-20 19:16:46 NOVST ERROR:  syntax error at or near "form" at character 10
+2014-09-20 19:16:46 NOVST STATEMENT:  select * form tripdk
+2014-09-20 19:16:56 NOVST ERROR:  relation "tripdk" does not exist at character 15
+2014-09-20 19:16:56 NOVST STATEMENT:  select * from tripdk
+2014-09-20 19:19:17 NOVST ERROR:  syntax error at or near "calc_triporder" at character 38
+2014-09-20 19:19:17 NOVST STATEMENT:  select * from calc_tripdk
+	join outer calc_triporder on calc_triporder.dk_id=calc_tripdk.id 
+2014-09-20 19:19:33 NOVST ERROR:  syntax error at or near "outer" at character 47
+2014-09-20 19:19:33 NOVST STATEMENT:  select * from calc_tripdk
+	join calc_triporder outer on calc_triporder.dk_id=calc_tripdk.id 
+2014-09-20 20:10:57 NOVST ERROR:  syntax error at or near "INTEGER" at character 14
+2014-09-20 20:10:57 NOVST STATEMENT:  
+	DECLARE 
+		i INTEGER:=1;
+		cur RECORD;
+	BEGIN
+	for cur in
+		(select * from calc_triporder)
+	LOOP
+	END LOOP
+	
+2014-09-20 20:11:09 NOVST ERROR:  syntax error at or near "INTEGER" at character 72
+2014-09-20 20:11:09 NOVST STATEMENT:  EXPLAIN (ANALYZE off, VERBOSE off, COSTS on, BUFFERS off )
+	DECLARE 
+		i INTEGER:=1;
+		cur RECORD;
+	BEGIN
+	for cur in
+		(select * from calc_triporder)
+	LOOP
+	END LOOP
+	
+2014-09-20 20:14:31 NOVST ERROR:  syntax error at or near "DECLARE" at character 32
+2014-09-20 20:14:31 NOVST STATEMENT:  CREATE OR REPLACE VIEW test AS
+	DECLARE 
+		i INTEGER:=1;
+		cur RECORD;
+	BEGIN
+	for cur in
+		(select * from calc_triporder)
+	LOOP
+	END LOOP;
+	

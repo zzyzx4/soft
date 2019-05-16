@@ -1,0 +1,6 @@
+2014-04-27 19:10:07 NOVST ERROR:  column "hire_date" contains null values
+2014-04-27 19:10:07 NOVST STATEMENT:  ALTER TABLE calc_employee
+	   ADD COLUMN hire_date date NOT NULL;
+	
+2014-04-27 19:11:48 NOVST ERROR:  invalid input syntax for type date: """" at character 43
+2014-04-27 19:11:48 NOVST STATEMENT:  UPDATE public.calc_employee SET hire_date='""'::date WHERE id = '2'::integer

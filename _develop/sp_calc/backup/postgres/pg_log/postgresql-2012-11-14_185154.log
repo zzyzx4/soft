@@ -1,0 +1,10 @@
+2012-11-14 18:51:54 NOVT LOG:  database system was shut down at 2012-11-14 18:47:11 NOVT
+2012-11-14 18:51:55 NOVT FATAL:  the database system is starting up
+2012-11-14 18:51:55 NOVT LOG:  database system is ready to accept connections
+2012-11-14 18:51:55 NOVT LOG:  autovacuum launcher started
+2012-11-14 23:23:13 NOVT FATAL:  password authentication failed for user "postgres"
+2012-11-14 23:23:13 NOVT FATAL:  password authentication failed for user "postgres"
+2012-11-14 23:23:19 NOVT FATAL:  password authentication failed for user "postgres"
+2012-11-14 23:23:19 NOVT FATAL:  password authentication failed for user "postgres"
+2012-11-14 23:23:24 NOVT FATAL:  password authentication failed for user "postgres"
+2012-11-14 23:23:25 NOVT FATAL:  password authentication failed for user "postgres"

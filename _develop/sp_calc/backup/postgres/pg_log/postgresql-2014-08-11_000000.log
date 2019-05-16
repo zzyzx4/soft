@@ -1,0 +1,6 @@
+2014-08-11 02:12:10 NOVST ERROR:  relation "calc_globalrefbook" does not exist at character 22
+2014-08-11 02:12:10 NOVST STATEMENT:  SELECT COUNT(*) FROM "calc_globalrefbook"
+2014-08-11 02:12:10 NOVST ERROR:  relation "calc_globalrefbook" does not exist at character 167
+2014-08-11 02:12:10 NOVST STATEMENT:  SELECT "calc_globalrefbook"."id", "calc_globalrefbook"."name", "calc_globalrefbook"."a_date", "calc_globalrefbook"."num_value", "calc_globalrefbook"."str_value" FROM "calc_globalrefbook" ORDER BY "calc_globalrefbook"."id" DESC LIMIT 21
+2014-08-11 12:02:38 NOVST ERROR:  null value in column "dk_id" violates not-null constraint
+2014-08-11 12:02:38 NOVST STATEMENT:  INSERT INTO "calc_triporder" ("a_date", "destination_id", "dk_id") VALUES (E'2014-08-05', 9, NULL)

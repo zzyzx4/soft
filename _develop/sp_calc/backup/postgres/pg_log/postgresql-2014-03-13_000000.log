@@ -1,0 +1,6 @@
+2014-03-13 22:47:24 NOVT FATAL:  password authentication failed for user "postgres"
+2014-03-13 22:47:24 NOVT FATAL:  password authentication failed for user "postgres"
+2014-03-13 23:17:59 NOVT ERROR:  null value in column "id" violates not-null constraint
+2014-03-13 23:17:59 NOVT STATEMENT:  INSERT INTO public."Kartochka_Scheta"("Anal_KT", "Debet") VALUES ('dgfdfg'::text, ''::money)
+2014-03-13 23:18:02 NOVT ERROR:  null value in column "id" violates not-null constraint
+2014-03-13 23:18:02 NOVT STATEMENT:  INSERT INTO public."Kartochka_Scheta"("Anal_KT", "Debet") VALUES ('dgfdfg'::text, ''::money)

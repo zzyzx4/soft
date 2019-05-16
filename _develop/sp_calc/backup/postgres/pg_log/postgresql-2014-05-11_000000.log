@@ -1,0 +1,15 @@
+2014-05-11 00:23:49 NOVST ERROR:  column "pu_amount" contains null values
+2014-05-11 00:23:49 NOVST STATEMENT:  ALTER TABLE calc_machine
+	   ADD COLUMN pu_amount integer NOT NULL;
+	
+2014-05-11 01:14:55 NOVST ERROR:  column calc_sizetype.width does not exist at character 55
+2014-05-11 01:14:55 NOVST STATEMENT:  SELECT "calc_sizetype"."id", "calc_sizetype"."title", "calc_sizetype"."width", "calc_sizetype"."height", "calc_sizetype"."amount_on_ps" FROM "calc_sizetype"
+2014-05-11 01:19:43 NOVST ERROR:  cannot drop table calc_sizetype because other objects depend on it
+2014-05-11 01:19:43 NOVST DETAIL:  constraint calc_order_size_id_fkey on table calc_order depends on table calc_sizetype
+	constraint calc_ordertype_size_type_sizetype_id_fkey on table calc_ordertype_size_type depends on table calc_sizetype
+2014-05-11 01:19:43 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-11 01:19:43 NOVST STATEMENT:  DROP TABLE public.calc_sizetype
+2014-05-11 01:20:38 NOVST ERROR:  column "height" contains null values
+2014-05-11 01:20:38 NOVST STATEMENT:  ALTER TABLE calc_sizetype
+	   ADD COLUMN height integer NOT NULL;
+	

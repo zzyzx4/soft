@@ -1,0 +1,8 @@
+2015-04-16 22:05:33 NOVST FATAL:  the database system is starting up
+2015-04-16 22:05:33 NOVST LOG:  database system was interrupted; last known up at 2015-04-16 13:46:32 NOVST
+2015-04-16 22:05:33 NOVST LOG:  database system was not properly shut down; automatic recovery in progress
+2015-04-16 22:05:33 NOVST LOG:  consistent recovery state reached at 0/47E35D8
+2015-04-16 22:05:33 NOVST LOG:  record with zero length at 0/47E35D8
+2015-04-16 22:05:33 NOVST LOG:  redo is not required
+2015-04-16 22:05:33 NOVST LOG:  database system is ready to accept connections
+2015-04-16 22:05:33 NOVST LOG:  autovacuum launcher started

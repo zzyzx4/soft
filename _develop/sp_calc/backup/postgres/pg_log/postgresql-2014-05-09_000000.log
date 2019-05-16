@@ -1,0 +1,20 @@
+2014-05-09 01:23:47 NOVST ERROR:  relation "calc_machine_material_type" does not exist at character 84
+2014-05-09 01:23:47 NOVST STATEMENT:  SELECT "calc_machine"."id", "calc_machine"."m_name" FROM "calc_machine" INNER JOIN "calc_machine_material_type" ON ("calc_machine"."id" = "calc_machine_material_type"."machine_id") WHERE "calc_machine_material_type"."materialtype_id" = 1  LIMIT 21
+2014-05-09 01:23:47 NOVST ERROR:  relation "calc_machine_material_type" does not exist at character 84
+2014-05-09 01:23:47 NOVST STATEMENT:  SELECT "calc_machine"."id", "calc_machine"."m_name" FROM "calc_machine" INNER JOIN "calc_machine_material_type" ON ("calc_machine"."id" = "calc_machine_material_type"."machine_id") WHERE "calc_machine_material_type"."materialtype_id" = 1  LIMIT 21
+2014-05-09 01:23:47 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2014-05-09 01:23:47 NOVST STATEMENT:  SELECT "calc_machine"."id", "calc_machine"."m_name" FROM "calc_machine" INNER JOIN "calc_machine_material_type" ON ("calc_machine"."id" = "calc_machine_material_type"."machine_id") WHERE "calc_machine_material_type"."materialtype_id" = 1  LIMIT 21
+2014-05-09 01:24:01 NOVST ERROR:  relation "calc_machine_material_type" does not exist at character 84
+2014-05-09 01:24:01 NOVST STATEMENT:  SELECT "calc_machine"."id", "calc_machine"."m_name" FROM "calc_machine" INNER JOIN "calc_machine_material_type" ON ("calc_machine"."id" = "calc_machine_material_type"."machine_id") WHERE "calc_machine_material_type"."materialtype_id" = 1  LIMIT 21
+2014-05-09 01:24:01 NOVST ERROR:  relation "calc_machine_material_type" does not exist at character 84
+2014-05-09 01:24:01 NOVST STATEMENT:  SELECT "calc_machine"."id", "calc_machine"."m_name" FROM "calc_machine" INNER JOIN "calc_machine_material_type" ON ("calc_machine"."id" = "calc_machine_material_type"."machine_id") WHERE "calc_machine_material_type"."materialtype_id" = 1  LIMIT 21
+2014-05-09 01:24:01 NOVST ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2014-05-09 01:24:01 NOVST STATEMENT:  SELECT "calc_machine"."id", "calc_machine"."m_name" FROM "calc_machine" INNER JOIN "calc_machine_material_type" ON ("calc_machine"."id" = "calc_machine_material_type"."machine_id") WHERE "calc_machine_material_type"."materialtype_id" = 1  LIMIT 21
+2014-05-09 01:45:28 NOVST ERROR:  cannot drop table calc_presstype because other objects depend on it
+2014-05-09 01:45:28 NOVST DETAIL:  constraint calc_pressdata_press_type_id_fkey on table calc_pressdata depends on table calc_presstype
+2014-05-09 01:45:28 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-09 01:45:28 NOVST STATEMENT:  DROP TABLE public.calc_presstype
+2014-05-09 01:45:55 NOVST ERROR:  cannot drop table calc_pressdata because other objects depend on it
+2014-05-09 01:45:55 NOVST DETAIL:  constraint calc_pressout_press_data_id_fkey on table calc_pressout depends on table calc_pressdata
+2014-05-09 01:45:55 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-09 01:45:55 NOVST STATEMENT:  DROP TABLE public.calc_pressdata

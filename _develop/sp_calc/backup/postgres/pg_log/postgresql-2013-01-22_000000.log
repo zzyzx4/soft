@@ -1,0 +1,20 @@
+2013-01-22 00:41:51 NOVT ERROR:  there is no unique constraint matching given keys for referenced table "deposit"
+2013-01-22 00:41:51 NOVT STATEMENT:  ALTER TABLE deposit ADD CONSTRAINT parent_deposit_fk FOREIGN KEY (parent_deposit_id) REFERENCES deposit (deposit_id)
+	   ON UPDATE NO ACTION ON DELETE NO ACTION;
+	CREATE INDEX fki_parent_deposit_fk ON deposit(parent_deposit_id);
+	
+2013-01-22 00:42:19 NOVT ERROR:  cannot drop constraint deposit_pk on table deposit because other objects depend on it
+2013-01-22 00:42:19 NOVT DETAIL:  constraint deposit_fk on table finance depends on index deposit_pk
+2013-01-22 00:42:19 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-01-22 00:42:19 NOVT STATEMENT:  ALTER TABLE public.deposit DROP CONSTRAINT deposit_pk;
+2013-01-22 01:57:22 NOVT WARNING:  pgstat wait timeout
+2013-01-22 02:04:22 NOVT WARNING:  pgstat wait timeout
+2013-01-22 02:04:47 NOVT WARNING:  pgstat wait timeout
+2013-01-22 02:04:52 NOVT WARNING:  pgstat wait timeout
+2013-01-22 17:46:53 NOVT WARNING:  pgstat wait timeout
+2013-01-22 19:19:08 NOVT WARNING:  pgstat wait timeout
+2013-01-22 19:19:13 NOVT WARNING:  pgstat wait timeout
+2013-01-22 21:48:08 NOVT ERROR:  relation "eur_course" does not exist at character 13
+2013-01-22 21:48:08 NOVT STATEMENT:  INSERT INTO eur_course (num, data) VALUES (100, E'abc''def')
+2013-01-22 21:53:01 NOVT ERROR:  relation "eur_course" does not exist at character 13
+2013-01-22 21:53:01 NOVT STATEMENT:  INSERT INTO eur_course (num, data) VALUES (100, E'abc''def')

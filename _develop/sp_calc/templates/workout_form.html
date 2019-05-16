@@ -1,0 +1,66 @@
+<!--
+   workout_form.html
+   
+   Copyright 2012 user <user@VAIO>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+{% extends "dojango/base.html" %}
+
+{# setting the <title> attribute #}
+{% block dojango_page_title %}My first dojo page{% endblock %}
+{% block dojango_header_extra %}
+{% endblock %}
+{% block dojango_content %}
+      Тестовая страница
+<form action="/workout/" method="post">
+      <table>
+      {{ form.as_table }}
+      </table>
+      <input type="submit" value="Store" />
+      <input type="submit" value="Сменить сотрудника">
+</form>
+
+    <div>
+        <button id="btn2"></button>
+    </div>
+    <script>
+        require(["dijit/form/Button", "dojo/domReady!"], function(Button) {
+            var button2 = new Button({
+                iconClass:"dijitIconNewTask",
+                showLabel:false,
+                label: "Click Me!", // analogous to title when showLabel is false
+                onClick: function(){ console.log("Second button was clicked!"); }
+            }, "btn2");
+             
+            button2.startup();
+        });
+    </script>
+
+					<h3 id="editable" style="font-size:larger;" dojoType="dijit.InlineEditBox" onChange="myHandler(this.id,arguments[0])">
+						Edit me - I trigger the onChange callback
+					</h3>
+                    <script type="text/javascript">
+                    dojo.require("dijit.InlineEditBox");
+                    dojo.require("dijit.form.FilteringSelect");
+                    
+                    		// scan page for widgets and instantiate them
+             		dojo.require("dojo.parser");	
+                    </script>
+{% endblock %}

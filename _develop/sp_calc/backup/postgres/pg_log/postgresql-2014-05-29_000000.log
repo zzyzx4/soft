@@ -1,0 +1,8 @@
+2014-05-29 00:31:43 NOVST ERROR:  cannot drop table calc_pricecutoff because other objects depend on it
+2014-05-29 00:31:43 NOVST DETAIL:  constraint calc_pressdata_material_price_id_fkey on table calc_pressdata depends on table calc_pricecutoff
+2014-05-29 00:31:43 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-29 00:31:43 NOVST STATEMENT:  DROP TABLE public.calc_pricecutoff
+2014-05-29 00:32:14 NOVST ERROR:  cannot drop table calc_pressdata because other objects depend on it
+2014-05-29 00:32:14 NOVST DETAIL:  constraint calc_pressout_press_data_id_fkey on table calc_pressout depends on table calc_pressdata
+2014-05-29 00:32:14 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-29 00:32:14 NOVST STATEMENT:  DROP TABLE public.calc_pressdata

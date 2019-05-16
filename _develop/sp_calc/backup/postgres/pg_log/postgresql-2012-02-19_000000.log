@@ -1,0 +1,12 @@
+2012-02-20 09:33:38 NOVT ERROR:  cannot drop table books_client because other objects depend on it
+2012-02-20 09:33:38 NOVT DETAIL:  constraint books_order_client_id_fkey on table books_order depends on table books_client
+2012-02-20 09:33:38 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-20 09:33:38 NOVT STATEMENT:  DROP TABLE public.books_client
+2012-02-20 09:33:49 NOVT ERROR:  cannot drop table books_order because other objects depend on it
+2012-02-20 09:33:49 NOVT DETAIL:  constraint books_orderdata_order_id_fkey on table books_orderdata depends on table books_order
+2012-02-20 09:33:49 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-20 09:33:49 NOVT STATEMENT:  DROP TABLE public.books_order
+2012-02-20 09:37:02 NOVT ERROR:  cannot drop table books_client because other objects depend on it
+2012-02-20 09:37:02 NOVT DETAIL:  constraint books_order_client_id_fkey on table books_order depends on table books_client
+2012-02-20 09:37:02 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-20 09:37:02 NOVT STATEMENT:  DROP TABLE public.books_client

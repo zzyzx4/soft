@@ -1,0 +1,17 @@
+2012-07-07 22:20:58 NOVST LOG:  database system was interrupted; last known up at 2012-07-03 12:05:50 NOVST
+2012-07-07 22:20:58 NOVST FATAL:  the database system is starting up
+2012-07-07 22:20:58 NOVST LOG:  database system was not properly shut down; automatic recovery in progress
+2012-07-07 22:20:58 NOVST LOG:  consistent recovery state reached at 0/28D3F50
+2012-07-07 22:20:58 NOVST LOG:  record with zero length at 0/28D3F50
+2012-07-07 22:20:58 NOVST LOG:  redo is not required
+2012-07-07 22:20:59 NOVST LOG:  database system is ready to accept connections
+2012-07-07 22:20:59 NOVST LOG:  autovacuum launcher started
+2012-07-07 22:20:59 NOVST LOG:  background writer process (PID 5820) was terminated by exception 0xC000012D
+2012-07-07 22:20:59 NOVST HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2012-07-07 22:20:59 NOVST LOG:  terminating any other active server processes
+2012-07-07 22:21:00 NOVST WARNING:  terminating connection because of crash of another server process
+2012-07-07 22:21:00 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2012-07-07 22:21:00 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2012-07-07 22:21:00 NOVST LOG:  all server processes terminated; reinitializing
+2012-07-07 22:21:00 NOVST FATAL:  could not create shared memory segment: 1455
+2012-07-07 22:21:00 NOVST DETAIL:  Failed system call was CreateFileMapping(size=37142528, name=Global/PostgreSQL:C:/Develop/projects/db/postgres).

@@ -1,0 +1,34 @@
+2012-12-24 00:54:44 NOVT WARNING:  pgstat wait timeout
+2012-12-24 00:58:48 NOVT WARNING:  pgstat wait timeout
+2012-12-24 01:05:43 NOVT WARNING:  pgstat wait timeout
+2012-12-24 01:13:43 NOVT WARNING:  pgstat wait timeout
+2012-12-24 01:13:49 NOVT WARNING:  pgstat wait timeout
+2012-12-24 01:14:43 NOVT WARNING:  pgstat wait timeout
+2012-12-24 01:15:24 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:38:46 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:39:10 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:39:10 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:39:15 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:40:20 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:40:40 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:41:54 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:42:02 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:42:02 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:42:07 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:42:38 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:42:53 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:42:58 NOVT WARNING:  pgstat wait timeout
+2012-12-24 02:43:23 NOVT WARNING:  pgstat wait timeout
+2012-12-24 17:08:33 NOVT ERROR:  syntax error at end of input at character 64
+2012-12-24 17:08:33 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp DESC FETCH FIRST 1
+2012-12-24 17:09:31 NOVT ERROR:  syntax error at end of input at character 64
+2012-12-24 17:09:31 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp DESC FETCH FIRST 1
+2012-12-24 17:12:19 NOVT ERROR:  syntax error at or near "ONLY" at character 65
+2012-12-24 17:12:19 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp DESC FETCH FIRST 1 ONLY
+2012-12-24 17:14:55 NOVT ERROR:  syntax error at or near "1" at character 57
+2012-12-24 17:14:55 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp DESC FETCH 1
+2012-12-24 17:15:01 NOVT ERROR:  syntax error at end of input at character 56
+2012-12-24 17:15:01 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp DESC FETCH
+2012-12-24 17:15:38 NOVT ERROR:  syntax error at or near "ONLY" at character 57
+2012-12-24 17:15:38 NOVT STATEMENT:  SELECT * FROM eur_course ORDER BY time_stamp DESC FETCH ONLY
+2012-12-24 18:12:43 NOVT WARNING:  pgstat wait timeout

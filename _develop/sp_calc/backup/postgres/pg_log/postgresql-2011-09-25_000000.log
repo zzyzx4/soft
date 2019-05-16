@@ -1,0 +1,9 @@
+2011-09-25 15:07:49 NOVST LOG:  server process (PID 4952) was terminated by exception 0xC000012D
+2011-09-25 15:07:49 NOVST HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2011-09-25 15:07:49 NOVST LOG:  terminating any other active server processes
+2011-09-25 15:07:53 NOVST WARNING:  terminating connection because of crash of another server process
+2011-09-25 15:07:53 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2011-09-25 15:07:53 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2011-09-25 15:07:54 NOVST LOG:  all server processes terminated; reinitializing
+2011-09-25 15:07:55 NOVST FATAL:  could not create shared memory segment: 1455
+2011-09-25 15:07:55 NOVST DETAIL:  Failed system call was CreateFileMapping(size=37142528, name=Global/PostgreSQL:C:/djcode/db).

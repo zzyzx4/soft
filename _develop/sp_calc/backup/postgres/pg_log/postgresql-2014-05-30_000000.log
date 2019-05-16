@@ -1,0 +1,6 @@
+2014-05-30 00:55:23 NOVST ERROR:  column calc_presstype.turn does not exist at character 122
+2014-05-30 00:55:23 NOVST STATEMENT:  SELECT "calc_presstype"."id", "calc_presstype"."title", "calc_presstype"."machine_id", "calc_presstype"."paper_type_id", "calc_presstype"."turn", "calc_presstype"."selfback", "calc_presstype"."fitting_time", "calc_presstype"."fitting_paper", "calc_presstype"."press_speed", "calc_presstype"."iter_amount" FROM "calc_presstype" WHERE ("calc_presstype"."machine_id" IS NULL AND "calc_presstype"."paper_type_id" IS NULL)
+2014-05-30 00:57:45 NOVST ERROR:  column "turn" contains null values
+2014-05-30 00:57:45 NOVST STATEMENT:  ALTER TABLE calc_presstype
+	   ADD COLUMN turn boolean NOT NULL;
+	

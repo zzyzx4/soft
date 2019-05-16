@@ -1,0 +1,5 @@
+2013-05-10 11:49:49 NOVST LOG:  received fast shutdown request
+2013-05-10 11:49:49 NOVST LOG:  aborting any active transactions
+2013-05-10 11:49:50 NOVST LOG:  autovacuum launcher shutting down
+2013-05-10 11:49:55 NOVST LOG:  shutting down
+2013-05-10 11:49:56 NOVST LOG:  database system is shut down

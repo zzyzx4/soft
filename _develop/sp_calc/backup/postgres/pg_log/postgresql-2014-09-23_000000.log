@@ -1,0 +1,54 @@
+2014-09-23 01:46:45 NOVST ERROR:  type "datatype" does not exist at character 121
+2014-09-23 01:46:45 NOVST STATEMENT:  CREATE FUNCTION public."tripdk_dt-add" ( a_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  variable_name datatype;
+	BEGIN
+	  statements;
+	EXCEPTION
+	WHEN exception_name THEN
+	  statements;
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER
+2014-09-23 01:48:02 NOVST WARNING:  there is no transaction in progress
+2014-09-23 01:48:25 NOVST ERROR:  type "datatype" does not exist at character 121
+2014-09-23 01:48:25 NOVST STATEMENT:  CREATE FUNCTION public."tripdk_dt-add" ( a_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  variable_name datatype;
+	BEGIN
+	  statements;
+	EXCEPTION
+	WHEN exception_name THEN
+	  statements;
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER
+2014-09-23 01:48:46 NOVST WARNING:  there is no transaction in progress
+2014-09-23 01:49:44 NOVST ERROR:  type "datatype" does not exist at character 114
+2014-09-23 01:49:44 NOVST STATEMENT:  CREATE FUNCTION "tripdk_dt-add" ( a_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  variable_name datatype;
+	BEGIN
+	  statements;
+	EXCEPTION
+	WHEN exception_name THEN
+	  statements;
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER
+2014-09-23 01:49:48 NOVST WARNING:  there is no transaction in progress
+2014-09-23 01:50:44 NOVST ERROR:  syntax error at or near "statements" at character 118
+2014-09-23 01:50:44 NOVST STATEMENT:  CREATE FUNCTION public."tripdk_dt-add" ( a_date date, dt_amount real ) RETURNS void AS $body$
+	DECLARE
+	  
+	BEGIN
+	  statements;
+	EXCEPTION
+	WHEN exception_name THEN
+	  statements;
+	END;
+	$body$ LANGUAGE 'plpgsql' VOLATILE CALLED ON NULL INPUT SECURITY INVOKER
+2014-09-23 01:50:56 NOVST WARNING:  there is no transaction in progress
+2014-09-23 01:51:57 NOVST WARNING:  there is no transaction in progress
+2014-09-23 13:56:54 NOVST LOG:  received fast shutdown request
+2014-09-23 13:56:54 NOVST LOG:  aborting any active transactions
+2014-09-23 13:56:54 NOVST LOG:  autovacuum launcher shutting down
+2014-09-23 13:56:54 NOVST LOG:  shutting down
+2014-09-23 13:56:54 NOVST LOG:  database system is shut down

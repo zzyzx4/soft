@@ -1,0 +1,17 @@
+2012-05-07 11:52:12 NOVST ERROR:  relation "calc_client" does not exist at character 22
+2012-05-07 11:52:12 NOVST STATEMENT:  SELECT COUNT(*) FROM "calc_client"
+2012-05-07 11:52:12 NOVST ERROR:  relation "calc_client" does not exist at character 113
+2012-05-07 11:52:12 NOVST STATEMENT:  SELECT "calc_client"."id", "calc_client"."first_name", "calc_client"."last_name", "calc_client"."contacts" FROM "calc_client" ORDER BY "calc_client"."id" DESC LIMIT 21
+2012-05-07 11:52:22 NOVST ERROR:  relation "calc_employee" does not exist at character 22
+2012-05-07 11:52:22 NOVST STATEMENT:  SELECT COUNT(*) FROM "calc_employee"
+2012-05-07 11:52:22 NOVST ERROR:  relation "calc_employee" does not exist at character 119
+2012-05-07 11:52:22 NOVST STATEMENT:  SELECT "calc_employee"."id", "calc_employee"."first_name", "calc_employee"."last_name", "calc_employee"."salary" FROM "calc_employee" ORDER BY "calc_employee"."id" DESC LIMIT 21
+2012-05-07 12:05:47 NOVST LOG:  received SIGHUP, reloading configuration files
+2012-05-07 12:10:12 NOVST LOG:  received SIGHUP, reloading configuration files
+2012-05-07 13:19:49 NOVST WARNING:  pgstat wait timeout
+2012-05-07 13:20:20 NOVST WARNING:  pgstat wait timeout
+2012-05-07 15:24:16 NOVST LOG:  received fast shutdown request
+2012-05-07 15:24:16 NOVST LOG:  aborting any active transactions
+2012-05-07 15:24:16 NOVST LOG:  autovacuum launcher shutting down
+2012-05-07 15:24:17 NOVST LOG:  shutting down
+2012-05-07 15:24:17 NOVST LOG:  database system is shut down

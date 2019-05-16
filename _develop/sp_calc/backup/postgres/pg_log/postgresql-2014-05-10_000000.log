@@ -1,0 +1,37 @@
+2014-05-10 22:47:59 NOVST ERROR:  cannot drop table calc_material because other objects depend on it
+2014-05-10 22:47:59 NOVST DETAIL:  constraint calc_materialprice_material_id_fkey on table calc_materialprice depends on table calc_material
+	constraint calc_consumptionnorm_material_id_fkey on table calc_consumptionnorm depends on table calc_material
+	constraint calc_presstype_plate_id_fkey on table calc_presstype depends on table calc_material
+2014-05-10 22:47:59 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:47:59 NOVST STATEMENT:  DROP TABLE public.calc_material
+2014-05-10 22:48:39 NOVST ERROR:  cannot drop table calc_material because other objects depend on it
+2014-05-10 22:48:39 NOVST DETAIL:  constraint calc_materialprice_material_id_fkey on table calc_materialprice depends on table calc_material
+	constraint calc_consumptionnorm_material_id_fkey on table calc_consumptionnorm depends on table calc_material
+	constraint calc_presstype_plate_id_fkey on table calc_presstype depends on table calc_material
+2014-05-10 22:48:39 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:48:39 NOVST STATEMENT:  DROP TABLE public.calc_material
+2014-05-10 22:49:15 NOVST ERROR:  cannot drop table calc_material because other objects depend on it
+2014-05-10 22:49:15 NOVST DETAIL:  constraint calc_materialprice_material_id_fkey on table calc_materialprice depends on table calc_material
+	constraint calc_consumptionnorm_material_id_fkey on table calc_consumptionnorm depends on table calc_material
+2014-05-10 22:49:15 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:49:15 NOVST STATEMENT:  DROP TABLE public.calc_material
+2014-05-10 22:49:34 NOVST ERROR:  cannot drop table calc_material because other objects depend on it
+2014-05-10 22:49:34 NOVST DETAIL:  constraint calc_materialprice_material_id_fkey on table calc_materialprice depends on table calc_material
+2014-05-10 22:49:34 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:49:34 NOVST STATEMENT:  DROP TABLE public.calc_material
+2014-05-10 22:49:47 NOVST ERROR:  cannot drop table calc_materialprice because other objects depend on it
+2014-05-10 22:49:47 NOVST DETAIL:  constraint calc_material_price_id_fkey on table calc_material depends on table calc_materialprice
+2014-05-10 22:49:47 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:49:47 NOVST STATEMENT:  DROP TABLE public.calc_materialprice
+2014-05-10 22:50:09 NOVST ERROR:  cannot drop table calc_material because other objects depend on it
+2014-05-10 22:50:09 NOVST DETAIL:  constraint calc_materialprice_material_id_fkey on table calc_materialprice depends on table calc_material
+2014-05-10 22:50:09 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:50:09 NOVST STATEMENT:  DROP TABLE public.calc_material
+2014-05-10 22:51:00 NOVST ERROR:  cannot drop table calc_materialprice because other objects depend on it
+2014-05-10 22:51:00 NOVST DETAIL:  constraint calc_material_price_id_fkey on table calc_material depends on table calc_materialprice
+2014-05-10 22:51:00 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:51:00 NOVST STATEMENT:  DROP TABLE public.calc_materialprice
+2014-05-10 22:51:50 NOVST ERROR:  cannot drop table calc_material because other objects depend on it
+2014-05-10 22:51:50 NOVST DETAIL:  constraint calc_materialprice_material_id_fkey on table calc_materialprice depends on table calc_material
+2014-05-10 22:51:50 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2014-05-10 22:51:50 NOVST STATEMENT:  DROP TABLE public.calc_material

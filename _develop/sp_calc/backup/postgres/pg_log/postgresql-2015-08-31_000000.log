@@ -1,0 +1,43 @@
+2015-08-31 12:39:33 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-08-31 12:39:33 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-08-31 12:39:33 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-08-31 12:39:33 NOVST LOG:  could not write temporary statistics file "pg_stat_tmp/pgstat.tmp": No space left on device
+2015-08-31 12:39:38 NOVST WARNING:  pgstat wait timeout
+2015-08-31 13:12:03 NOVST WARNING:  worker took too long to start; cancelled
+2015-08-31 13:12:55 NOVST WARNING:  autovacuum worker started without a worker entry
+2015-08-31 13:15:08 NOVST WARNING:  pgstat wait timeout
+2015-08-31 13:15:13 NOVST WARNING:  pgstat wait timeout
+2015-08-31 13:15:38 NOVST WARNING:  pgstat wait timeout
+2015-08-31 13:15:43 NOVST WARNING:  pgstat wait timeout
+2015-08-31 13:18:21 NOVST WARNING:  pgstat wait timeout
+2015-08-31 13:18:27 NOVST WARNING:  pgstat wait timeout
+2015-08-31 14:23:28 NOVST WARNING:  worker took too long to start; cancelled
+2015-08-31 14:24:04 NOVST WARNING:  pgstat wait timeout
+2015-08-31 14:24:18 NOVST WARNING:  autovacuum worker started without a worker entry
+2015-08-31 14:27:04 NOVST WARNING:  pgstat wait timeout
+2015-08-31 14:27:29 NOVST WARNING:  pgstat wait timeout
+2015-08-31 14:27:34 NOVST WARNING:  pgstat wait timeout
+2015-08-31 14:50:04 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:40:29 NOVST WARNING:  worker took too long to start; cancelled
+2015-08-31 15:41:25 NOVST WARNING:  autovacuum worker started without a worker entry
+2015-08-31 15:41:34 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:41:37 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:41:39 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:42:04 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:42:09 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:42:34 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:42:39 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:43:04 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:44:04 NOVST WARNING:  pgstat wait timeout
+2015-08-31 15:44:09 NOVST WARNING:  pgstat wait timeout
+2015-08-31 16:12:56 NOVST WARNING:  worker took too long to start; cancelled
+2015-08-31 16:14:01 NOVST WARNING:  pgstat wait timeout
+2015-08-31 16:15:35 NOVST WARNING:  worker took too long to start; cancelled
+2015-08-31 16:15:35 NOVST WARNING:  autovacuum worker started without a worker entry
+2015-08-31 16:15:35 NOVST WARNING:  autovacuum worker started without a worker entry
+2015-08-31 16:30:41 NOVST WARNING:  pgstat wait timeout
+2015-08-31 16:30:46 NOVST WARNING:  pgstat wait timeout
+2015-08-31 16:32:48 NOVST WARNING:  worker took too long to start; cancelled
+2015-08-31 16:33:04 NOVST WARNING:  autovacuum worker started without a worker entry
+2015-08-31 17:23:25 NOVST WARNING:  pgstat wait timeout
+2015-08-31 17:32:23 NOVST WARNING:  pgstat wait timeout

@@ -1,0 +1,84 @@
+2012-02-21 00:48:14 NOVT ERROR:  cannot drop table books_publisher because other objects depend on it
+2012-02-21 00:48:14 NOVT DETAIL:  constraint books_book_publisher_id_fkey on table books_book depends on table books_publisher
+2012-02-21 00:48:14 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:48:14 NOVT STATEMENT:  DROP TABLE public.books_publisher
+2012-02-21 00:48:23 NOVT ERROR:  cannot drop table books_datatypes because other objects depend on it
+2012-02-21 00:48:23 NOVT DETAIL:  constraint books_ordertypes_data_type_datatypes_id_fkey on table books_ordertypes_data_type depends on table books_datatypes
+	constraint books_orderdata_data_type_id_fkey on table books_orderdata depends on table books_datatypes
+2012-02-21 00:48:23 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:48:23 NOVT STATEMENT:  DROP TABLE public.books_datatypes
+2012-02-21 00:48:41 NOVT ERROR:  cannot drop table books_datatypes because other objects depend on it
+2012-02-21 00:48:41 NOVT DETAIL:  constraint books_orderdata_data_type_id_fkey on table books_orderdata depends on table books_datatypes
+2012-02-21 00:48:41 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:48:41 NOVT STATEMENT:  DROP TABLE public.books_datatypes
+2012-02-21 00:48:56 NOVT ERROR:  cannot drop table books_datatypes because other objects depend on it
+2012-02-21 00:48:56 NOVT DETAIL:  constraint books_orderdata_data_type_id_fkey on table books_orderdata depends on table books_datatypes
+2012-02-21 00:48:56 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:48:56 NOVT STATEMENT:  DROP TABLE public.books_datatypes
+2012-02-21 00:49:04 NOVT ERROR:  cannot drop table books_order because other objects depend on it
+2012-02-21 00:49:04 NOVT DETAIL:  constraint books_orderdata_order_id_fkey on table books_orderdata depends on table books_order
+2012-02-21 00:49:04 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:49:04 NOVT STATEMENT:  DROP TABLE public.books_order
+2012-02-21 00:49:30 NOVT ERROR:  cannot drop table books_ordertypes because other objects depend on it
+2012-02-21 00:49:30 NOVT DETAIL:  constraint books_order_order_type_id_fkey on table books_order depends on table books_ordertypes
+2012-02-21 00:49:30 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:49:30 NOVT STATEMENT:  DROP TABLE public.books_ordertypes
+2012-02-21 00:49:42 NOVT ERROR:  cannot drop table books_ordertypes because other objects depend on it
+2012-02-21 00:49:42 NOVT DETAIL:  constraint books_order_order_type_id_fkey on table books_order depends on table books_ordertypes
+2012-02-21 00:49:42 NOVT HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2012-02-21 00:49:42 NOVT STATEMENT:  DROP TABLE public.books_ordertypes
+2012-02-21 17:04:12 NOVT LOG:  CreateProcess call failed: Unknown winsock error 10004 (error code 1455)
+2012-02-21 17:04:15 NOVT LOG:  could not fork autovacuum worker process: Unknown winsock error 10004
+2012-02-21 17:04:16 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:16 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:17 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:17 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:18 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:18 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:19 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:19 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:20 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:20 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:21 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:21 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:22 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:22 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:23 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:23 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:24 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:24 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:25 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:25 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 17:04:26 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2012-02-21 17:04:26 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2012-02-21 18:20:17 NOVT LOG:  server process (PID 5180) was terminated by exception 0xC000012D
+2012-02-21 18:20:17 NOVT HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2012-02-21 18:20:17 NOVT LOG:  terminating any other active server processes
+2012-02-21 18:20:22 NOVT WARNING:  terminating connection because of crash of another server process
+2012-02-21 18:20:22 NOVT DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2012-02-21 18:20:22 NOVT HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2012-02-21 18:20:24 NOVT LOG:  all server processes terminated; reinitializing
+2012-02-21 18:20:24 NOVT FATAL:  could not create shared memory segment: 1455
+2012-02-21 18:20:24 NOVT DETAIL:  Failed system call was CreateFileMapping(size=37142528, name=Global/PostgreSQL:C:/djcode/db).

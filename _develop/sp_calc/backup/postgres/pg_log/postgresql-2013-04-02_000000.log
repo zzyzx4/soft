@@ -1,0 +1,37 @@
+2013-04-02 22:35:17 NOVST ERROR:  cannot drop table vdep_courses because other objects depend on it
+2013-04-02 22:35:17 NOVST DETAIL:  constraint vdep_deposits_open_course_id_fkey on table vdep_deposits depends on table vdep_courses
+	constraint vdep_deposits_close_course_id_fkey on table vdep_deposits depends on table vdep_courses
+2013-04-02 22:35:17 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 22:35:17 NOVST STATEMENT:  DROP TABLE public.vdep_courses
+2013-04-02 22:35:24 NOVST ERROR:  cannot drop table vdep_currency because other objects depend on it
+2013-04-02 22:35:24 NOVST DETAIL:  constraint vdep_courses_source_currency_id_fkey on table vdep_courses depends on table vdep_currency
+	constraint vdep_courses_target_currrency_id_fkey on table vdep_courses depends on table vdep_currency
+	constraint vdep_financies_currency_id_fkey on table vdep_financies depends on table vdep_currency
+2013-04-02 22:35:24 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 22:35:24 NOVST STATEMENT:  DROP TABLE public.vdep_currency
+2013-04-02 22:35:36 NOVST ERROR:  cannot drop table vdep_reasons because other objects depend on it
+2013-04-02 22:35:36 NOVST DETAIL:  constraint vdep_financies_reason_id_fkey on table vdep_financies depends on table vdep_reasons
+2013-04-02 22:35:36 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 22:35:36 NOVST STATEMENT:  DROP TABLE public.vdep_reasons
+2013-04-02 22:35:47 NOVST ERROR:  cannot drop table vdep_currency because other objects depend on it
+2013-04-02 22:35:47 NOVST DETAIL:  constraint vdep_financies_currency_id_fkey on table vdep_financies depends on table vdep_currency
+2013-04-02 22:35:47 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 22:35:47 NOVST STATEMENT:  DROP TABLE public.vdep_currency
+2013-04-02 23:03:17 NOVST ERROR:  cannot drop table vdep_reason because other objects depend on it
+2013-04-02 23:03:17 NOVST DETAIL:  constraint vdep_finance_reason_id_fkey on table vdep_finance depends on table vdep_reason
+2013-04-02 23:03:17 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 23:03:17 NOVST STATEMENT:  DROP TABLE public.vdep_reason
+2013-04-02 23:03:27 NOVST ERROR:  cannot drop table vdep_finance because other objects depend on it
+2013-04-02 23:03:27 NOVST DETAIL:  constraint vdep_deposit_afteropen_finance_id_fkey on table vdep_deposit depends on table vdep_finance
+	constraint vdep_deposit_afterclose_finance_id_fkey on table vdep_deposit depends on table vdep_finance
+2013-04-02 23:03:27 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 23:03:27 NOVST STATEMENT:  DROP TABLE public.vdep_finance
+2013-04-02 23:09:58 NOVST ERROR:  cannot drop table vdep_source because other objects depend on it
+2013-04-02 23:09:58 NOVST DETAIL:  constraint vdep_finance_source_id_fkey on table vdep_finance depends on table vdep_source
+2013-04-02 23:09:58 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 23:09:58 NOVST STATEMENT:  DROP TABLE public.vdep_source
+2013-04-02 23:10:06 NOVST ERROR:  cannot drop table vdep_finance because other objects depend on it
+2013-04-02 23:10:06 NOVST DETAIL:  constraint vdep_deposit_afteropen_finance_id_fkey on table vdep_deposit depends on table vdep_finance
+	constraint vdep_deposit_afterclose_finance_id_fkey on table vdep_deposit depends on table vdep_finance
+2013-04-02 23:10:06 NOVST HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2013-04-02 23:10:06 NOVST STATEMENT:  DROP TABLE public.vdep_finance

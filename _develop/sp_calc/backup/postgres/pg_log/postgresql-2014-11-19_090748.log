@@ -1,0 +1,8 @@
+2014-11-19 09:07:48 NOVT LOG:  database system was shut down at 2014-11-19 09:07:11 NOVT
+2014-11-19 09:07:48 NOVT LOG:  database system is ready to accept connections
+2014-11-19 09:07:48 NOVT LOG:  autovacuum launcher started
+2014-11-19 09:15:38 NOVT LOG:  received fast shutdown request
+2014-11-19 09:15:38 NOVT LOG:  aborting any active transactions
+2014-11-19 09:15:38 NOVT LOG:  autovacuum launcher shutting down
+2014-11-19 09:15:38 NOVT LOG:  shutting down
+2014-11-19 09:15:38 NOVT LOG:  database system is shut down

@@ -1,0 +1,10 @@
+2014-05-28 11:55:50 NOVST ERROR:  column "packing" contains null values
+2014-05-28 11:55:50 NOVST STATEMENT:  ALTER TABLE calc_materialprice
+	   ADD COLUMN packing integer NOT NULL;
+	
+2014-05-28 12:00:16 NOVST ERROR:  value too long for type character varying(2)
+2014-05-28 12:00:16 NOVST STATEMENT:  UPDATE "calc_materialtype" SET "title" = E'Мастер-пленка', "unit_of_meas" = E'рулон', "one_for_order" = false, "type_group_id" = 2 WHERE "calc_materialtype"."id" = 5 
+2014-05-28 12:03:50 NOVST ERROR:  column "packing" contains null values
+2014-05-28 12:03:50 NOVST STATEMENT:  ALTER TABLE calc_materialprice
+	   ALTER COLUMN packing SET NOT NULL;
+	

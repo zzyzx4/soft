@@ -1,0 +1,15 @@
+2014-04-28 01:52:03 NOVST LOG:  server process (PID 95344) was terminated by exception 0xC000012D
+2014-04-28 01:52:03 NOVST HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2014-04-28 01:52:03 NOVST LOG:  terminating any other active server processes
+2014-04-28 01:52:04 NOVST WARNING:  terminating connection because of crash of another server process
+2014-04-28 01:52:04 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2014-04-28 01:52:04 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2014-04-28 01:52:04 NOVST WARNING:  terminating connection because of crash of another server process
+2014-04-28 01:52:04 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2014-04-28 01:52:04 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2014-04-28 01:52:04 NOVST WARNING:  terminating connection because of crash of another server process
+2014-04-28 01:52:04 NOVST DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2014-04-28 01:52:04 NOVST HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2014-04-28 01:52:04 NOVST LOG:  all server processes terminated; reinitializing
+2014-04-28 01:52:04 NOVST FATAL:  could not create shared memory segment: 1455
+2014-04-28 01:52:04 NOVST DETAIL:  Failed system call was CreateFileMapping(size=37142528, name=Global/PostgreSQL:C:/workspace/Develop/projects/db/postgres).

@@ -1,0 +1,46 @@
+2013-01-29 12:47:29 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:29 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:30 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:30 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:31 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:31 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:32 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:32 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:33 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:33 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:34 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:34 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:35 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:35 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:36 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:36 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:37 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:37 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:38 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 8)
+2013-01-29 12:47:38 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 12:47:39 NOVT LOG:  CreateProcess call failed: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	 (error code 1455)
+2013-01-29 12:47:39 NOVT LOG:  could not fork autovacuum worker process: A blocking operation was interrupted by a call to WSACancelBlockingCall.
+	
+2013-01-29 22:25:22 NOVT LOG:  received fast shutdown request
+2013-01-29 22:25:22 NOVT LOG:  aborting any active transactions
