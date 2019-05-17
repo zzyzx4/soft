@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+Загрузить документ
+{% endblock %}
+
+{% block content %}
+<h2>Отправить документы</h2>
+
+<form method="post" enctype="multipart/form-data">
+
+{% csrf_token %}
+ <div class="row">
+      <div class="col-6">
+{{ form|crispy }}
+ </div>
+ </div><hr>
+<button type="submit" class="btn btn-primary">Отправить документ</button>
+
+</form>
+    </div>
+{% endblock %}
