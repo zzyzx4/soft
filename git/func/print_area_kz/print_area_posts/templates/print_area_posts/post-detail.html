@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пост</title>
+</head>
+<body>
+<h1>{{ post.title }}</h1>
+<p>{{ post.content|safe }}</p>
+<p>Дата публикации: {{ post.published_date }} <br>Автор: {{ post.author }} <br> Тэги: {{ post.tags }}</p>
+<a href="#" class="image"><img src="{{ image }}" alt=""></a>
+
+</body>
+</html>

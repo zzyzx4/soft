@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/classy-nav.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/owl.carousel.min.css' %}">
+    <link rel="icon" href="{% static 'blog/img/Logo.png' %}">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    {#<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">#}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+{#navbar#}
+{#<div class="navbar-container">#}
+{#    <div class="container">#}
+{#        <div id='cssmenu'>#}
+{#            <ul>#}
+{#                <li class='active'><a href='{% url 'blog-home' %}'>Главная страница</a></li>#}
+{#                <li><a href='{% url 'blog-about' %}'>О нас</a></li>#}
+{#                {% if user.is_authenticated %}#}
+{#                    <li class="float-right"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Настройки <img class="circular--square" src="{{ user.profile.image.url }}" alt="avatar" width="30px"></a>#}
+{#                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                            <a class="dropdown-item" href="{% url 'profile' %}">Профиль</a>#}
+{#                            <a class="dropdown-item" href="{% url 'post-create' %}">Добавить пост</a>#}
+{#                            <div class="dropdown-divider"></div>#}
+{#                            <a class="dropdown-item" href="{% url 'logout' %}">Выйти</a>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                {% else %}#}
+{#                    <li class="float-right"><a href='{% url 'user_login' %}'>Логин</a></li>#}
+{#                    <li class="float-right"><a href='{% url 'register' %}'>Регистрация</a></li>#}
+{#                {% endif %}#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#end navbar#}
+
+
+
+
+
+  <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Navbar Area -->
+        <div class="mag-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="magNav">
+
+                    <!-- Nav brand -->
+                    <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Nav Content -->
+                    <div class="nav-content d-flex align-items-center">
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href="{% url 'blog-home' %}">Home</a></li>
+                                    <li><a href="archive.html">Archive</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'blog-home' %}">Home</a></li>
+                                            <li><a href="archive.html">Archive</a></li>
+                                            <li><a href="video-post.html">Single Video Post</a></li>
+                                            <li><a href="single-post.html">Single Post</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="submit-video.html">Submit Video</a></li>
+                                            <li><a href="login.html">Login</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Mega</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="archive.html">Archive</a></li>
+                                                <li><a href="video-post.html">Single Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="login.html">Login</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="archive.html">Archive</a></li>
+                                                <li><a href="video-post.html">Single Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="login.html">Login</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="archive.html">Archive</a></li>
+                                                <li><a href="video-post.html">Single Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="login.html">Login</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="archive.html">Archive</a></li>
+                                                <li><a href="video-post.html">Single Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+  {% if user.is_authenticated %}
+                                    <li><a href="#">{{ user }} <img class="circular--square" src="{{ user.profile.image.url }}" alt="avatar" width="30px"></a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'profile' %}">Профиль</a></li>
+                                            <li><a href="{% url 'post-create' %}">Добавить пост</a></li>
+                                            <li><a href="video-post.html">Single Video Post</a></li>
+                                            <li><a href="single-post.html">Single Post</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="submit-video.html">Submit Video</a></li>
+                                                <li><a href="{% url 'logout' %}">Выйти</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                 {% else %}
+                                 <li><a href="{% url 'user_login' %}">Войти в аккаунт</a></li>
+                                    <li><a href="{% url 'register' %}">Регистрация</a></li>
+                                {% endif %}
+                            </div>
+
+                            <!-- Nav End -->
+                        </div>
+
+
+                        <div class="top-meta-data d-flex align-items-center">
+                            <!-- Top Search Area -->
+                            <div class="top-search-area">
+                                <form action="index.html" method="post">
+                                    <input type="search" name="top-search" id="topSearch" placeholder="Search ...">
+                                    <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <!-- Logo -->
+                        <a href="{% url 'blog-home' %}" class="foo-logo"><img src="{% static 'blog/img/Logo.png' %}"  width="100px" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="footer-social-info">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Categories</h6>
+                        <nav class="footer-widget-nav">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Life Style</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Tech</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Travel</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Music</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Foods</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Fashion</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Game</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Football</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sports</a></li>
+                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> TV Show</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Footer Widget Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h6 class="widget-title">Тэги</h6>
+                        <ul class="footer-tags">
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Fashionista</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">DESIGN</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">TRENDING</a></li>
+                            <li><a href="#">VIDEO</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Foods</a></li>
+                            <li><a href="#">TV Show</a></li>
+                            <li><a href="#">Twitter Video</a></li>
+                            <li><a href="#">Playing</a></li>
+                            <li><a href="#">clips</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copywrite Area -->
+        <div class="copywrite-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-sm-6">
+                        <p class="copywrite-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Advertisement</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- ##### All Javascript Script ##### -->
+<!-- jQuery-2.2.4 js -->
+<script src="{% static 'blog/js/script.js' %}"></script>
+<script src="{% static 'blog/js/jquery/jquery-2.2.4.min.js' %}"></script>
+<!-- Popper js -->
+<script src="{% static 'blog/js/bootstrap/popper.min.js' %}"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'blog/js/bootstrap/bootstrap.min.js' %}"></script>
+<!-- All Plugins js -->
+<script src="{% static 'blog/js/plugins/plugins.js' %}"></script>
+<!-- Active js -->
+<script src="{% static 'blog/js/active.js' %}"></script>
+<script src="//kit.fontawesome.com/173d3aa988.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{#    <div class="content-section">#}
+{#        <form method="POST">#}
+{#            {% csrf_token %}#}
+{#            <fieldset class="form-group">#}
+{#                <legend class="border-bottom mb-4">Log In</legend>#}
+{#                {{ form|crispy }}#}
+{#            </fieldset>#}
+{#            <div class="form-group">#}
+{#                <button class="btn btn-outline-info" type="submit">Login</button>#}
+{#                <small class="text-muted ml-2">#}
+{#                    <a href="{% url 'password_reset' %}">Forgot Password?</a>#}
+{#                </small>#}
+{#            </div>#}
+{#        </form>#}
+{#        <div class="border-top pt-3">#}
+{#            <small class="text-muted">#}
+{#                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>#}
+{#            </small>#}
+{#        </div>#}
+{#    </div>#}
+
+
+  <!-- ##### Login Area Start ##### -->
+    <div class="mag-login-area py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="login-content bg-white p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h5>Введите логин и пароль</h5>
+                        </div>
+
+                        <form method="post" action="{% url 'user_login' %}" >
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password1" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn mag-btn mt-30">Логин</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Login Area End ##### -->
+
+
+{% endblock content %}

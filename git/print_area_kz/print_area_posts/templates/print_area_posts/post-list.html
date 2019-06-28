@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{{ posts }}
+{% for p in posts %}
+{{ p.title }}
+    {{ p.content }}
+{% endfor %}

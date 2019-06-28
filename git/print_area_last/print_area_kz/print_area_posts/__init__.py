@@ -1,0 +1,1 @@
+default_app_config = 'print_area_posts.apps.PrintAreaPostsConfig'

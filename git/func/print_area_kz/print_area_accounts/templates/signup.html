@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "print_area_accounts/css/registration.css" %}">
+</head>
+<body>
+<form id="msform" action="" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+  <fieldset>
+    <h2 class="fs-title">Создайте аккаунт</h2>
+    <h3 class="fs-subtitle">Print Area</h3>
+
+    <input type="email" name="email" placeholder="Email"/>
+    <input type="password" name="password1" placeholder="Password" />
+    <input type="password" name="password2" placeholder="Confirm Password" />
+{#    <input type="button" name="submit" class="next action-button" value="Регистрация" />#}
+    <button type="submit" class="next action-button">Регистрация</button>
+  </fieldset>
+</form>
+
+<script src="{% static "print_area_accounts/js/registration.js" %}"></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+</body>
+</html>
