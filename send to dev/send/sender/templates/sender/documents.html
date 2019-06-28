@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Список документов
+{% endblock %}
+
+{% block content %}
+<h2>Список документов</h2>
+<table class="table">
+<thead>
+<tr>
+    <th>Имя</th>
+    <th>Описание</th>
+    <th>Файл</th>
+    <th>Удаление</th>
+</tr>
+</thead>
+<tbody>
+{% for document in documents %}
+<tr>
+<td>{{ document.title }}</td>
+<td>{{ document.description }}</td>
+<td>
+    <a href="{{ document.document.url }}" class="btn btn-primary btn-sm" target="_blank">Посмотреть</a>
+</td>
+
+<td>
+    <a href="{% url 'delete_document' document.id %}" class="btn btn-danger btn-sm" target="">Удалить</a>
+</td>
+
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
