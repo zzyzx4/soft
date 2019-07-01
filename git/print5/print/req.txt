@@ -1,0 +1,12 @@
+Django==2.2.2
+django-autoslug==1.9.4
+django-comments-xtd==2.4.0
+django-contrib-comments==1.9.1
+django-crispy-forms==1.7.2
+djangorestframework==3.9.4
+docutils==0.14
+Pillow==6.0.0
+pytz==2019.1
+six==1.12.0
+sqlparse==0.3.0
+Unidecode==0.4.19

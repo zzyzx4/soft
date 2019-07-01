@@ -1,0 +1,366 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load comments %}
+{% load comments_xtd %}
+{% load i18n %}
+
+{% block title %}
+Главная страница
+{% endblock title %}
+{% block content %}
+{#<br>#}
+{#    <br>#}
+{#    <main role="main" class="container">#}
+{#      <div class="row">#}
+{#        <div class="col-md-8">#}
+{#          {% if messages %}#}
+{#            {% for message in messages %}#}
+{#              <div class="alert alert-{{ message.tags }}">#}
+{#                {{ message }}#}
+{#              </div>#}
+{#                </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#          {% endif %}#}
+{##}
+{##}
+{##}
+{#    {% for post in posts %}#}
+{#        <article class="media content-section">#}
+{#          <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">#}
+{#          <div class="media-body">#}
+{#            <div class="article-metadata">#}
+{#              <a class="mr-2" href="{% url 'user-posts'  post.author.email %}">{{ post.author }}</a>#}
+{#              <small class="text-muted">{{ post.publish|date:"F d, Y" }}</small>#}
+{#                <small class="text-muted">{% get_comment_count for post as comment_count %}<a><i class=" fa fa-comments-o" aria-hidden="true"> {{ comment_count }} </i></a></small>#}
+{#            </div>#}
+{#               <img src="{{ post.image.url }}">#}
+{#            <a href="{% url 'post-detail' post.id %}"><h3>{{ post.title }}</h3></a>#}
+{#            <p class="article-content">{{ post.content|truncatewords:50 }}</p>#}
+{##}
+{#          </div>#}
+{#        </article>#}
+{#    {% endfor %}#}
+{#    {% if is_paginated %}#}
+{##}
+{#      {% if page_obj.has_previous %}#}
+{#        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>#}
+{#        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>#}
+{#      {% endif %}#}
+{##}
+{#      {% for num in page_obj.paginator.page_range %}#}
+{#        {% if page_obj.number == num %}#}
+{#          <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>#}
+{#        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}#}
+{#          <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>#}
+{#        {% endif %}#}
+{#      {% endfor %}#}
+{##}
+{#      {% if page_obj.has_next %}#}
+{#        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>#}
+{#        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>#}
+{#      {% endif %}#}
+{##}
+{#    {% endif %}#}
+{#    #}
+{#    </main>#}
+{##}
+
+
+    <!-- ##### Mag Posts Area Start ##### -->
+    <section class="mag-posts-area d-flex flex-wrap">
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Left Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Самые популярные</h5>
+                </div>
+                <!-- Single Blog Post -->
+                {% for post in posts %}
+                    <div class="single-blog-post d-flex">
+                        <div class="post-thumbnail"><a href="{% url 'post-detail' post.id %}">
+                            <img src="{{ post.image.url }}" alt=""></a>
+                        </div>
+                        <div class="post-content">
+                            <a href="{% url 'post-detail' post.id %}" class="post-title">{{ post.title }}</a>
+                            <div class="post-meta d-flex justify-content-between">
+                                {% get_comment_count for post as comment_count %}
+                                <a href="{% url 'post-detail' post.id %}"><i class="fa fa-comments-o" aria-hidden="true"></i>{{ comment_count }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+     </div>
+
+        </div>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+             Main Posts Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+            <!-- Trending Now Posts Area -->
+
+            <!-- Feature Video Posts Area -->
+            <div class="feature-video-posts mb-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Контент</h5>
+                </div>
+
+                <div class="featured-video-posts">
+                    {% for post1 in posts %}
+                    <div class="row">
+                        <div class="col-12 col-lg-7">
+                            <!-- Single Featured Post -->
+                            <div class="single-featured-post">
+                                <!-- Thumbnail -->
+
+                                <!-- Post Contetnt -->
+                                <div class="post-content">
+
+                                    <a href="{% url 'post-detail' post1.id %}" class="post-title">{{ post1.title }}</a>
+                                    <div class="post-meta">
+                                        <a href="#">{{ post1.publish.date }}</a>
+                                        <a href="#">{{ post1.category }}</a>
+                                        {% get_comment_count for post1 as comment_count %}
+                                         <a href="{% url 'post-detail' post1.id %}"><i class="fa fa-comments-o" aria-hidden="true"></i>{{ comment_count }}</a>
+                                    </div>
+{#                                    <p>{{ post1.content|truncatewords:50 }}</p>#}
+
+                                </div>
+                                 <div class="post-thumbnail mb-50">
+                                    <img src="{{ post1.image.url }}" alt="">
+                                </div>
+                                <hr >
+                                <!-- Post Share Area -->
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-12 col-lg-5">
+                            <!-- Featured Video Posts Slide -->
+                            <div class="featured-video-posts-slide owl-carousel">
+
+                                <div class="single--slide">
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="{% static 'blog/img/bg-img/23.jpg' %}" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Global Resorts Network Grn Putting Timeshares To Shame</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="{% static 'blog/img/bg-img/24.jpg' %}" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/25.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">American Standards And European Culture How To Avoid</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/26.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Mother Earth Hosts Our Travels</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/27.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="single--slide">
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/23.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Global Resorts Network Grn Putting Timeshares To Shame</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/24.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/25.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">American Standards And European Culture How To Avoid</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/26.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Mother Earth Hosts Our Travels</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/27.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Right Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area right-sidebar mt-30 mb-30 box-shadow">
+            <!-- Sidebar Widget -->
+
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Категории</h5>
+                </div>
+
+                <!-- Catagory Widget -->
+                <ul class="catagory-widgets">
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Life Style</span> <span>35</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Travel</span> <span>30</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Foods</span> <span>13</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Game</span> <span>06</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sports</span> <span>28</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> Football</span> <span>08</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> TV Show</span> <span>13</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget">
+                <a href="#" class="add-img"><img src="img/bg-img/add2.png" alt=""></a>
+            </div>
+
+
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Newsletter</h5>
+                </div>
+
+                <div class="newsletter-form">
+                    <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
+                    <form action="#" method="get">
+                        <input type="search" name="widget-search" placeholder="Enter your email">
+                        <button type="submit" class="btn mag-btn w-100">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock content %}
